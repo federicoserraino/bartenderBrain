@@ -99,13 +99,9 @@
 		81AE05452CD0389600FE2323 /* BartenderBrain */ = {
 			isa = PBXGroup;
 			children = (
-				81AE05462CD0389600FE2323 /* AppDelegate.swift */,
-				81AE05482CD0389600FE2323 /* SceneDelegate.swift */,
-				81AE054A2CD0389600FE2323 /* ViewController.swift */,
-				81AE054C2CD0389600FE2323 /* Main.storyboard */,
-				81AE054F2CD0389700FE2323 /* Assets.xcassets */,
-				81AE05512CD0389700FE2323 /* LaunchScreen.storyboard */,
-				81AE05542CD0389700FE2323 /* Info.plist */,
+				81AE05782CD03F5500FE2323 /* SupportingFiles */,
+				81AE05762CD03F1800FE2323 /* Resources */,
+				81AE05772CD03F2400FE2323 /* Sources */,
 			);
 			path = BartenderBrain;
 			sourceTree = "<group>";
@@ -125,6 +121,34 @@
 				81AE05692CD0389800FE2323 /* BartenderBrainUITestsLaunchTests.swift */,
 			);
 			path = BartenderBrainUITests;
+			sourceTree = "<group>";
+		};
+		81AE05762CD03F1800FE2323 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				81AE054F2CD0389700FE2323 /* Assets.xcassets */,
+				81AE05512CD0389700FE2323 /* LaunchScreen.storyboard */,
+				81AE054C2CD0389600FE2323 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		81AE05772CD03F2400FE2323 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				81AE05462CD0389600FE2323 /* AppDelegate.swift */,
+				81AE05482CD0389600FE2323 /* SceneDelegate.swift */,
+				81AE054A2CD0389600FE2323 /* ViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		81AE05782CD03F5500FE2323 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				81AE05542CD0389700FE2323 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,18 +467,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BartenderBrain/Info.plist;
+				INFOPLIST_FILE = BartenderBrain/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "f.serraino-reply.it.BartenderBrain";
+				PRODUCT_BUNDLE_IDENTIFIER = f.serraino.BartenderBrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -472,18 +496,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BartenderBrain/Info.plist;
+				INFOPLIST_FILE = BartenderBrain/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "f.serraino-reply.it.BartenderBrain";
+				PRODUCT_BUNDLE_IDENTIFIER = f.serraino.BartenderBrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
