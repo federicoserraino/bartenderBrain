@@ -16,6 +16,9 @@
 		81AE055E2CD0389800FE2323 /* BartenderBrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE055D2CD0389800FE2323 /* BartenderBrainTests.swift */; };
 		81AE05682CD0389800FE2323 /* BartenderBrainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05672CD0389800FE2323 /* BartenderBrainUITests.swift */; };
 		81AE056A2CD0389800FE2323 /* BartenderBrainUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05692CD0389800FE2323 /* BartenderBrainUITestsLaunchTests.swift */; };
+		8EB4A26ECA7AB393A002B381 /* Pods_BartenderBrainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89158684CDD4BE1632054765 /* Pods_BartenderBrainTests.framework */; };
+		90ED9437139E61CEB891F664 /* Pods_BartenderBrain_BartenderBrainUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BFD4648FEE375C81D737293 /* Pods_BartenderBrain_BartenderBrainUITests.framework */; };
+		9B11DAEB77939EA36E90BCA9 /* Pods_BartenderBrain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CC5F0FECEE3CD8D7C05B90 /* Pods_BartenderBrain.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08CC5F0FECEE3CD8D7C05B90 /* Pods_BartenderBrain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BartenderBrain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F6B79EB781FED465BDB8A5A /* Pods-BartenderBrain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrain.debug.xcconfig"; path = "Target Support Files/Pods-BartenderBrain/Pods-BartenderBrain.debug.xcconfig"; sourceTree = "<group>"; };
+		7BFD4648FEE375C81D737293 /* Pods_BartenderBrain_BartenderBrainUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BartenderBrain_BartenderBrainUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DABE23EE67F2463F7F95C6D /* Pods-BartenderBrain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrain.release.xcconfig"; path = "Target Support Files/Pods-BartenderBrain/Pods-BartenderBrain.release.xcconfig"; sourceTree = "<group>"; };
 		81AE05432CD0389600FE2323 /* BartenderBrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BartenderBrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AE05462CD0389600FE2323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81AE05482CD0389600FE2323 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +56,11 @@
 		81AE05632CD0389800FE2323 /* BartenderBrainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BartenderBrainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AE05672CD0389800FE2323 /* BartenderBrainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartenderBrainUITests.swift; sourceTree = "<group>"; };
 		81AE05692CD0389800FE2323 /* BartenderBrainUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartenderBrainUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		89158684CDD4BE1632054765 /* Pods_BartenderBrainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BartenderBrainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B97BCC21691ED9D4B90744 /* Pods-BartenderBrainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrainTests.release.xcconfig"; path = "Target Support Files/Pods-BartenderBrainTests/Pods-BartenderBrainTests.release.xcconfig"; sourceTree = "<group>"; };
+		A91800AB41B6E96D5A11BCE0 /* Pods-BartenderBrain-BartenderBrainUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrain-BartenderBrainUITests.release.xcconfig"; path = "Target Support Files/Pods-BartenderBrain-BartenderBrainUITests/Pods-BartenderBrain-BartenderBrainUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C5DC3A247A69A1879035F664 /* Pods-BartenderBrain-BartenderBrainUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrain-BartenderBrainUITests.debug.xcconfig"; path = "Target Support Files/Pods-BartenderBrain-BartenderBrainUITests/Pods-BartenderBrain-BartenderBrainUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D04C49569613458D9060F82E /* Pods-BartenderBrainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrainTests.debug.xcconfig"; path = "Target Support Files/Pods-BartenderBrainTests/Pods-BartenderBrainTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B11DAEB77939EA36E90BCA9 /* Pods_BartenderBrain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB4A26ECA7AB393A002B381 /* Pods_BartenderBrainTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90ED9437139E61CEB891F664 /* Pods_BartenderBrain_BartenderBrainUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				81AE055C2CD0389800FE2323 /* BartenderBrainTests */,
 				81AE05662CD0389800FE2323 /* BartenderBrainUITests */,
 				81AE05442CD0389600FE2323 /* Products */,
+				E84D38D2AFF550AF42C34D6E /* Pods */,
+				E2D02A891668157B6C2E8296 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +168,30 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		E2D02A891668157B6C2E8296 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08CC5F0FECEE3CD8D7C05B90 /* Pods_BartenderBrain.framework */,
+				7BFD4648FEE375C81D737293 /* Pods_BartenderBrain_BartenderBrainUITests.framework */,
+				89158684CDD4BE1632054765 /* Pods_BartenderBrainTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E84D38D2AFF550AF42C34D6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F6B79EB781FED465BDB8A5A /* Pods-BartenderBrain.debug.xcconfig */,
+				7DABE23EE67F2463F7F95C6D /* Pods-BartenderBrain.release.xcconfig */,
+				C5DC3A247A69A1879035F664 /* Pods-BartenderBrain-BartenderBrainUITests.debug.xcconfig */,
+				A91800AB41B6E96D5A11BCE0 /* Pods-BartenderBrain-BartenderBrainUITests.release.xcconfig */,
+				D04C49569613458D9060F82E /* Pods-BartenderBrainTests.debug.xcconfig */,
+				A7B97BCC21691ED9D4B90744 /* Pods-BartenderBrainTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81AE056D2CD0389800FE2323 /* Build configuration list for PBXNativeTarget "BartenderBrain" */;
 			buildPhases = (
+				3E232E6D0395AAA81F44EE27 /* [CP] Check Pods Manifest.lock */,
 				81AE053F2CD0389600FE2323 /* Sources */,
 				81AE05402CD0389600FE2323 /* Frameworks */,
 				81AE05412CD0389600FE2323 /* Resources */,
@@ -175,6 +217,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81AE05702CD0389800FE2323 /* Build configuration list for PBXNativeTarget "BartenderBrainTests" */;
 			buildPhases = (
+				666B00347089E49415DDD9AE /* [CP] Check Pods Manifest.lock */,
 				81AE05552CD0389800FE2323 /* Sources */,
 				81AE05562CD0389800FE2323 /* Frameworks */,
 				81AE05572CD0389800FE2323 /* Resources */,
@@ -193,6 +236,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81AE05732CD0389800FE2323 /* Build configuration list for PBXNativeTarget "BartenderBrainUITests" */;
 			buildPhases = (
+				71EFCBD9E975D7B8C102E3F9 /* [CP] Check Pods Manifest.lock */,
 				81AE055F2CD0389800FE2323 /* Sources */,
 				81AE05602CD0389800FE2323 /* Frameworks */,
 				81AE05612CD0389800FE2323 /* Resources */,
@@ -276,6 +320,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E232E6D0395AAA81F44EE27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BartenderBrain-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		666B00347089E49415DDD9AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BartenderBrainTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71EFCBD9E975D7B8C102E3F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BartenderBrain-BartenderBrainUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		81AE053F2CD0389600FE2323 /* Sources */ = {
@@ -461,6 +574,7 @@
 		};
 		81AE056E2CD0389800FE2323 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F6B79EB781FED465BDB8A5A /* Pods-BartenderBrain.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +604,7 @@
 		};
 		81AE056F2CD0389800FE2323 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DABE23EE67F2463F7F95C6D /* Pods-BartenderBrain.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -519,6 +634,7 @@
 		};
 		81AE05712CD0389800FE2323 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D04C49569613458D9060F82E /* Pods-BartenderBrainTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +656,7 @@
 		};
 		81AE05722CD0389800FE2323 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7B97BCC21691ED9D4B90744 /* Pods-BartenderBrainTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -561,6 +678,7 @@
 		};
 		81AE05742CD0389800FE2323 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5DC3A247A69A1879035F664 /* Pods-BartenderBrain-BartenderBrainUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -580,6 +698,7 @@
 		};
 		81AE05752CD0389800FE2323 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A91800AB41B6E96D5A11BCE0 /* Pods-BartenderBrain-BartenderBrainUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
