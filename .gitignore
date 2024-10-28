@@ -1,0 +1,6 @@
+*.xcbkptlist
+
+.DS_Store
+xcuserdata
+
+.Gemfile.lock
