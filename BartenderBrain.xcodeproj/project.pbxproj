@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810C0E972CD2175C009953DE /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0E962CD2175C009953DE /* HomeCoordinator.swift */; };
 		81AE05472CD0389600FE2323 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05462CD0389600FE2323 /* AppDelegate.swift */; };
 		81AE05492CD0389600FE2323 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05482CD0389600FE2323 /* SceneDelegate.swift */; };
 		81AE054B2CD0389600FE2323 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE054A2CD0389600FE2323 /* ViewController.swift */; };
-		81AE054E2CD0389600FE2323 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AE054C2CD0389600FE2323 /* Main.storyboard */; };
 		81AE05502CD0389700FE2323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81AE054F2CD0389700FE2323 /* Assets.xcassets */; };
 		81AE05532CD0389700FE2323 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AE05512CD0389700FE2323 /* LaunchScreen.storyboard */; };
 		81AE055E2CD0389800FE2323 /* BartenderBrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE055D2CD0389800FE2323 /* BartenderBrainTests.swift */; };
@@ -53,11 +53,11 @@
 		0F6B79EB781FED465BDB8A5A /* Pods-BartenderBrain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrain.debug.xcconfig"; path = "Target Support Files/Pods-BartenderBrain/Pods-BartenderBrain.debug.xcconfig"; sourceTree = "<group>"; };
 		7BFD4648FEE375C81D737293 /* Pods_BartenderBrain_BartenderBrainUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BartenderBrain_BartenderBrainUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DABE23EE67F2463F7F95C6D /* Pods-BartenderBrain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrain.release.xcconfig"; path = "Target Support Files/Pods-BartenderBrain/Pods-BartenderBrain.release.xcconfig"; sourceTree = "<group>"; };
+		810C0E962CD2175C009953DE /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		81AE05432CD0389600FE2323 /* BartenderBrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BartenderBrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AE05462CD0389600FE2323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81AE05482CD0389600FE2323 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		81AE054A2CD0389600FE2323 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		81AE054D2CD0389600FE2323 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81AE054F2CD0389700FE2323 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81AE05522CD0389700FE2323 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81AE05542CD0389700FE2323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -165,7 +165,6 @@
 			children = (
 				81AE054F2CD0389700FE2323 /* Assets.xcassets */,
 				81AE05512CD0389700FE2323 /* LaunchScreen.storyboard */,
-				81AE054C2CD0389600FE2323 /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -175,6 +174,7 @@
 			children = (
 				81FCD4B52CD0BCE700BD04AA /* NetworkLayer */,
 				81AE054A2CD0389600FE2323 /* ViewController.swift */,
+				810C0E962CD2175C009953DE /* HomeCoordinator.swift */,
 				81AE05462CD0389600FE2323 /* AppDelegate.swift */,
 				81AE05482CD0389600FE2323 /* SceneDelegate.swift */,
 			);
@@ -354,7 +354,6 @@
 			files = (
 				81AE05532CD0389700FE2323 /* LaunchScreen.storyboard in Resources */,
 				81AE05502CD0389700FE2323 /* Assets.xcassets in Resources */,
-				81AE054E2CD0389600FE2323 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +452,7 @@
 				81BCD8F12CD16A72003EA3F4 /* CocktailImageApiCatalog.swift in Sources */,
 				81AE054B2CD0389600FE2323 /* ViewController.swift in Sources */,
 				81FCD4BA2CD0C05400BD04AA /* HTTPMethod.swift in Sources */,
+				810C0E972CD2175C009953DE /* HomeCoordinator.swift in Sources */,
 				81BCD8EC2CD15A86003EA3F4 /* RandomConcktailApiCatalog.swift in Sources */,
 				81AE05472CD0389600FE2323 /* AppDelegate.swift in Sources */,
 				81BCD8F32CD16E84003EA3F4 /* NetworkProvier.swift in Sources */,
@@ -497,14 +497,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		81AE054C2CD0389600FE2323 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				81AE054D2CD0389600FE2323 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		81AE05512CD0389700FE2323 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -647,7 +639,6 @@
 				INFOPLIST_FILE = BartenderBrain/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -678,7 +669,6 @@
 				INFOPLIST_FILE = BartenderBrain/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
