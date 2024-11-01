@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		810C0E972CD2175C009953DE /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0E962CD2175C009953DE /* HomeCoordinator.swift */; };
+		810C0E9B2CD21F61009953DE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0E9A2CD21F61009953DE /* Coordinator.swift */; };
+		810C0E9D2CD21FF1009953DE /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0E9C2CD21FF1009953DE /* GameCoordinator.swift */; };
+		810C0EA12CD25810009953DE /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0EA02CD25810009953DE /* BaseViewModel.swift */; };
+		810C0EA32CD25936009953DE /* BaseSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0EA22CD25936009953DE /* BaseSwiftUIView.swift */; };
+		810C0EA52CD28770009953DE /* BaseSwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0EA42CD28770009953DE /* BaseSwiftUIViewController.swift */; };
+		810C0EA82CD28DB5009953DE /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0EA72CD28DB5009953DE /* HomePageView.swift */; };
+		810C0EAA2CD28DC4009953DE /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0EA92CD28DC4009953DE /* HomePageViewModel.swift */; };
+		811C91162CD29404004207E1 /* BaseSwiftUIViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C91152CD29404004207E1 /* BaseSwiftUIViewController2.swift */; };
+		8169A4F12CD2C0C20081DBDD /* ScrollSideBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169A4F02CD2C0C20081DBDD /* ScrollSideBasedView.swift */; };
 		81AE05472CD0389600FE2323 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05462CD0389600FE2323 /* AppDelegate.swift */; };
 		81AE05492CD0389600FE2323 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05482CD0389600FE2323 /* SceneDelegate.swift */; };
 		81AE054B2CD0389600FE2323 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE054A2CD0389600FE2323 /* ViewController.swift */; };
@@ -54,6 +63,15 @@
 		7BFD4648FEE375C81D737293 /* Pods_BartenderBrain_BartenderBrainUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BartenderBrain_BartenderBrainUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DABE23EE67F2463F7F95C6D /* Pods-BartenderBrain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrain.release.xcconfig"; path = "Target Support Files/Pods-BartenderBrain/Pods-BartenderBrain.release.xcconfig"; sourceTree = "<group>"; };
 		810C0E962CD2175C009953DE /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		810C0E9A2CD21F61009953DE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		810C0E9C2CD21FF1009953DE /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
+		810C0EA02CD25810009953DE /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		810C0EA22CD25936009953DE /* BaseSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwiftUIView.swift; sourceTree = "<group>"; };
+		810C0EA42CD28770009953DE /* BaseSwiftUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwiftUIViewController.swift; sourceTree = "<group>"; };
+		810C0EA72CD28DB5009953DE /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		810C0EA92CD28DC4009953DE /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		811C91152CD29404004207E1 /* BaseSwiftUIViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwiftUIViewController2.swift; sourceTree = "<group>"; };
+		8169A4F02CD2C0C20081DBDD /* ScrollSideBasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSideBasedView.swift; sourceTree = "<group>"; };
 		81AE05432CD0389600FE2323 /* BartenderBrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BartenderBrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AE05462CD0389600FE2323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81AE05482CD0389600FE2323 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +129,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		810C0E982CD21F42009953DE /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				810C0E992CD21F50009953DE /* Coordinators */,
+				810C0E9E2CD257E9009953DE /* Pages */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		810C0E992CD21F50009953DE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				810C0E9A2CD21F61009953DE /* Coordinator.swift */,
+				810C0E962CD2175C009953DE /* HomeCoordinator.swift */,
+				810C0E9C2CD21FF1009953DE /* GameCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		810C0E9E2CD257E9009953DE /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				810C0EA62CD28D94009953DE /* HomePage */,
+				810C0E9F2CD257F6009953DE /* Common */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		810C0E9F2CD257F6009953DE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8169A4EF2CD2C0540081DBDD /* Views */,
+				810C0EA02CD25810009953DE /* BaseViewModel.swift */,
+				810C0EA22CD25936009953DE /* BaseSwiftUIView.swift */,
+				810C0EA42CD28770009953DE /* BaseSwiftUIViewController.swift */,
+				811C91152CD29404004207E1 /* BaseSwiftUIViewController2.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		810C0EA62CD28D94009953DE /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				810C0EA72CD28DB5009953DE /* HomePageView.swift */,
+				810C0EA92CD28DC4009953DE /* HomePageViewModel.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		8169A4EF2CD2C0540081DBDD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8169A4F02CD2C0C20081DBDD /* ScrollSideBasedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8195E47E2CD36EE5006B2CEE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		81AE053A2CD0389600FE2323 = {
 			isa = PBXGroup;
 			children = (
@@ -173,8 +255,9 @@
 			isa = PBXGroup;
 			children = (
 				81FCD4B52CD0BCE700BD04AA /* NetworkLayer */,
+				810C0E982CD21F42009953DE /* PresentationLayer */,
+				8195E47E2CD36EE5006B2CEE /* Extensions */,
 				81AE054A2CD0389600FE2323 /* ViewController.swift */,
-				810C0E962CD2175C009953DE /* HomeCoordinator.swift */,
 				81AE05462CD0389600FE2323 /* AppDelegate.swift */,
 				81AE05482CD0389600FE2323 /* SceneDelegate.swift */,
 			);
@@ -448,19 +531,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				81BCD8EF2CD15B6D003EA3F4 /* CodableVoid.swift in Sources */,
+				810C0EA52CD28770009953DE /* BaseSwiftUIViewController.swift in Sources */,
+				810C0EAA2CD28DC4009953DE /* HomePageViewModel.swift in Sources */,
 				81FCD4B72CD0BD0800BD04AA /* ApiCatalog.swift in Sources */,
+				810C0EA12CD25810009953DE /* BaseViewModel.swift in Sources */,
+				810C0EA32CD25936009953DE /* BaseSwiftUIView.swift in Sources */,
+				810C0E9B2CD21F61009953DE /* Coordinator.swift in Sources */,
 				81BCD8F12CD16A72003EA3F4 /* CocktailImageApiCatalog.swift in Sources */,
 				81AE054B2CD0389600FE2323 /* ViewController.swift in Sources */,
 				81FCD4BA2CD0C05400BD04AA /* HTTPMethod.swift in Sources */,
 				810C0E972CD2175C009953DE /* HomeCoordinator.swift in Sources */,
 				81BCD8EC2CD15A86003EA3F4 /* RandomConcktailApiCatalog.swift in Sources */,
 				81AE05472CD0389600FE2323 /* AppDelegate.swift in Sources */,
+				8169A4F12CD2C0C20081DBDD /* ScrollSideBasedView.swift in Sources */,
 				81BCD8F32CD16E84003EA3F4 /* NetworkProvier.swift in Sources */,
 				81AE05492CD0389600FE2323 /* SceneDelegate.swift in Sources */,
+				810C0EA82CD28DB5009953DE /* HomePageView.swift in Sources */,
 				81BCD8E82CD14047003EA3F4 /* BodyCoding.swift in Sources */,
 				81FCD4BE2CD0C38F00BD04AA /* NetworkManager.swift in Sources */,
 				81BCD8E62CD0E418003EA3F4 /* ApiRequest.swift in Sources */,
+				810C0E9D2CD21FF1009953DE /* GameCoordinator.swift in Sources */,
 				81BCD8EA2CD14B7E003EA3F4 /* NetworkError.swift in Sources */,
+				811C91162CD29404004207E1 /* BaseSwiftUIViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,7 +733,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -671,7 +763,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
