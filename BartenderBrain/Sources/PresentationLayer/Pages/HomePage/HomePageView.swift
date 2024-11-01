@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomePageView: BaseSwiftUIView {
     @ObservedObject var viewModel: HomePageViewModel
-    @State private var sliderValue: Double = 4
     
     init(viewModel: HomePageViewModel) {
         self.viewModel = viewModel
@@ -31,26 +30,31 @@ struct HomePageView: BaseSwiftUIView {
                     VStack(alignment: .center, spacing: 5) {
                         Text("🃏🃏")
                             .font(.system(size: 80))
-                        Text("\(Int(sliderValue))")
+                        Text(String(viewModel.cocktailPairsNum.toInt()))
                             .font(.system(size: 30))
                     }
                     .padding(.top, 30)
                     .frame(maxWidth: .infinity)
                     
                     HStack(spacing: 15) {
-                        Text("4")
-                        Slider(value: $sliderValue, in: 4...15)
+                        Text(String(HomePageViewModel.minCocktailPairs.toInt()))
+                        Slider(value: $viewModel.cocktailPairsNum, in: HomePageViewModel.minCocktailPairs...15)
                             .padding()
-                        Text("15")
+                        Text(String(HomePageViewModel.maxCocktailPairs.toInt()))
                     }
                     
-                    Text("Livello: principiante/intermedio/avanzato/esperto")
+                    Text("Challenge mode: \(viewModel.challengeMode.emoji) \(viewModel.challengeMode.description)")
                 }
                 .padding(.horizontal, 20)
             }
             .padding(.bottom, 50)
             
-            Button(action: {}, label: { Text("START")})
+            Button(
+                action: viewModel.didTapStartButton,
+                label: {
+                    Text("START")
+                }
+            )
         }
     }
 }

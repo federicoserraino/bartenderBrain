@@ -14,10 +14,19 @@ final class HomeCoordinator: Coordinator {
     var child: Coordinator?
     
     func start(from window: UIWindow) {
-        let vc = BaseSwiftUIViewController<HomePageViewModel, HomePageView>(viewModel: .init())
+        let vm: HomePageViewModel = .init()
+        vm.delegate = self
+        let vc = BaseSwiftUIViewController<HomePageViewModel, HomePageView>(viewModel: vm)
         self.rootViewController = vc
         window.rootViewController = vc
         window.makeKeyAndVisible()
     }
     
+}
+
+extension HomeCoordinator: HomePageViewModelDelegate {
+    func startGame(with cocktailPairsNum: Int) {
+        //TODO
+        print("startGame")
+    }
 }
