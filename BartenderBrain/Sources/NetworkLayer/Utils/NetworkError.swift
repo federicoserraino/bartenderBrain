@@ -12,7 +12,7 @@ enum NetworkError: Error {
     case inputFormatError(msg: String)
     case outputFormatError(msg: String)
     case serviceError(msg: String)
-    case unknownError
+    case unknownError(code: String)
     
     var localizedDescription: String {
         switch self {
@@ -24,8 +24,8 @@ enum NetworkError: Error {
             "Output format error: \(msg)"
         case .serviceError(let msg):
             "Service error: \(msg)"
-        case .unknownError:
-            "Unknown Error"
+        case .unknownError(let code):
+            "Unknown Error, code: \(code)"
         }
     }
            

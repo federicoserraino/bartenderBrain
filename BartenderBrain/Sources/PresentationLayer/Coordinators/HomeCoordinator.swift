@@ -26,7 +26,7 @@ final class HomeCoordinator: Coordinator {
 
 extension HomeCoordinator: HomePageViewModelDelegate {
     func startGame(with cocktailPairsNum: Int) {
-        //TODO
-        print("startGame")
+        let gameCoordinator: GameCoordinator = .init(cocktailPairsNum: cocktailPairsNum)
+        gameCoordinator.start(from: self)
     }
 }

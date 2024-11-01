@@ -18,7 +18,9 @@ class RandomCocktailApiCatalog: ApiCatalog {
     
 }
 
-struct RandomCocktailOutput: Decodable {
+struct RandomCocktailOutput: Decodable, Hashable {
+    /// Assuming that API returns unique cocktails based on the idDrink,
+    /// so it cannot happen that cocktails with different idDrinks have the same strDrinkThumb.
     let id: String
     let thumbUrl: String
     
@@ -37,5 +39,13 @@ struct RandomCocktailOutput: Decodable {
     private enum DrinkKeys: String, CodingKey {
         case idDrink
         case strDrinkThumb
+    }
+    
+    static func == (lhs: RandomCocktailOutput, rhs: RandomCocktailOutput) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }

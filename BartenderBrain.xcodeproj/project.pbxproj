@@ -21,6 +21,9 @@
 		818E75A92CD4DEA800B34F1C /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75A82CD4DEA800B34F1C /* Double.swift */; };
 		818E75AB2CD4E33500B34F1C /* ChallengeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75AA2CD4E33500B34F1C /* ChallengeMode.swift */; };
 		818E75AF2CD4E46500B34F1C /* TopScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75AE2CD4E46500B34F1C /* TopScoreManager.swift */; };
+		818E75B22CD4ED9400B34F1C /* GamePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75B12CD4ED9400B34F1C /* GamePageView.swift */; };
+		818E75B42CD4EDA200B34F1C /* GamePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75B32CD4EDA200B34F1C /* GamePageViewModel.swift */; };
+		818E75B72CD4FB9400B34F1C /* CocktailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75B62CD4FB9400B34F1C /* CocktailCard.swift */; };
 		81AE05472CD0389600FE2323 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05462CD0389600FE2323 /* AppDelegate.swift */; };
 		81AE05492CD0389600FE2323 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05482CD0389600FE2323 /* SceneDelegate.swift */; };
 		81AE054B2CD0389600FE2323 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE054A2CD0389600FE2323 /* ViewController.swift */; };
@@ -80,6 +83,9 @@
 		818E75A82CD4DEA800B34F1C /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		818E75AA2CD4E33500B34F1C /* ChallengeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMode.swift; sourceTree = "<group>"; };
 		818E75AE2CD4E46500B34F1C /* TopScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScoreManager.swift; sourceTree = "<group>"; };
+		818E75B12CD4ED9400B34F1C /* GamePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePageView.swift; sourceTree = "<group>"; };
+		818E75B32CD4EDA200B34F1C /* GamePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePageViewModel.swift; sourceTree = "<group>"; };
+		818E75B62CD4FB9400B34F1C /* CocktailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailCard.swift; sourceTree = "<group>"; };
 		81AE05432CD0389600FE2323 /* BartenderBrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BartenderBrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AE05462CD0389600FE2323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81AE05482CD0389600FE2323 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				810C0EA62CD28D94009953DE /* HomePage */,
+				818E75B02CD4ED6000B34F1C /* GamePage */,
 				810C0E9F2CD257F6009953DE /* Common */,
 			);
 			path = Pages;
@@ -210,6 +217,24 @@
 				818E75AE2CD4E46500B34F1C /* TopScoreManager.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		818E75B02CD4ED6000B34F1C /* GamePage */ = {
+			isa = PBXGroup;
+			children = (
+				818E75B52CD4FB7000B34F1C /* Models */,
+				818E75B12CD4ED9400B34F1C /* GamePageView.swift */,
+				818E75B32CD4EDA200B34F1C /* GamePageViewModel.swift */,
+			);
+			path = GamePage;
+			sourceTree = "<group>";
+		};
+		818E75B52CD4FB7000B34F1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				818E75B62CD4FB9400B34F1C /* CocktailCard.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8195E47E2CD36EE5006B2CEE /* Extensions */ = {
@@ -563,18 +588,21 @@
 				810C0EAA2CD28DC4009953DE /* HomePageViewModel.swift in Sources */,
 				81FCD4B72CD0BD0800BD04AA /* ApiCatalog.swift in Sources */,
 				818E75AB2CD4E33500B34F1C /* ChallengeMode.swift in Sources */,
+				818E75B42CD4EDA200B34F1C /* GamePageViewModel.swift in Sources */,
 				810C0EA12CD25810009953DE /* BaseViewModel.swift in Sources */,
 				810C0EA32CD25936009953DE /* BaseSwiftUIView.swift in Sources */,
 				810C0E9B2CD21F61009953DE /* Coordinator.swift in Sources */,
 				81BCD8F12CD16A72003EA3F4 /* CocktailImageApiCatalog.swift in Sources */,
 				818E75A92CD4DEA800B34F1C /* Double.swift in Sources */,
 				818E75A62CD4CFF800B34F1C /* View.swift in Sources */,
+				818E75B22CD4ED9400B34F1C /* GamePageView.swift in Sources */,
 				81AE054B2CD0389600FE2323 /* ViewController.swift in Sources */,
 				81FCD4BA2CD0C05400BD04AA /* HTTPMethod.swift in Sources */,
 				810C0E972CD2175C009953DE /* HomeCoordinator.swift in Sources */,
 				81BCD8EC2CD15A86003EA3F4 /* RandomConcktailApiCatalog.swift in Sources */,
 				81AE05472CD0389600FE2323 /* AppDelegate.swift in Sources */,
 				818E75AF2CD4E46500B34F1C /* TopScoreManager.swift in Sources */,
+				818E75B72CD4FB9400B34F1C /* CocktailCard.swift in Sources */,
 				8169A4F12CD2C0C20081DBDD /* ScrollSideBasedView.swift in Sources */,
 				81BCD8F32CD16E84003EA3F4 /* NetworkProvier.swift in Sources */,
 				81AE05492CD0389600FE2323 /* SceneDelegate.swift in Sources */,
@@ -684,7 +712,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -741,7 +769,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
