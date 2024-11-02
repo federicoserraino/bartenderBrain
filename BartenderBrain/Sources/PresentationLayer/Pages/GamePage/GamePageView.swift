@@ -18,8 +18,6 @@ struct GamePageView: BaseSwiftUIView {
     
     var body: some View {
         ZStack {
-            Color.green
-                .edgesIgnoringSafeArea(.all)
             GameGridView(
                 items: viewModel.cardsDeck,
                 didTapOnItem: viewModel.didTapOnCard
@@ -52,6 +50,7 @@ struct GamePageView: BaseSwiftUIView {
                             withAnimation(.easeInOut(duration: 0.1)) {
                                 animateScore = true
                             }
+                            // Adddd delay to enhance UX
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 withAnimation(.easeInOut(duration: 0.1)) {
                                     animateScore = false
@@ -85,14 +84,14 @@ struct GamePageView: BaseSwiftUIView {
             .padding(.bottom, 20)
             .edgesIgnoringSafeArea(.bottom)
         }
+        .background(
+            Image("background_game")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+        )
         .onAppear(perform: viewModel.prepareGame)
         .onDisappear(perform: viewModel.cleanGameMemory)
     }
     
 }
-
-/*
-#Preview{
-    //GamePageView(viewModel: .init())
-}
-*/
