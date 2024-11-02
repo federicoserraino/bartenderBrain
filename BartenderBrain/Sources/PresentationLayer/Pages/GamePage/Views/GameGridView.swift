@@ -20,6 +20,7 @@ struct GameGridView: View {
             ForEach(items, id: \.id) { item in
                 GameCardView(
                     item: item,
+                    itemSize: itemSize,
                     didTapOnItem: didTapOnItem
                 )
                 .size(itemSize)
