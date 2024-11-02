@@ -37,6 +37,17 @@ class GamePageViewModel: BaseViewModel {
         setupCardsDeck()
     }
     
+    func prepareGame() {
+        resetScore()
+        startPreviewGame()
+    }
+    
+    func cleanGameMemory() {
+        cancellables.removeAll()
+    }
+    
+    // MARK - Private Methods
+    
     private func setupCardsDeck() {
         var cardsDeck: [GameCard] = cockstails
             .map{ GameCard(id: $0.id, image: $0.image) }
@@ -44,11 +55,6 @@ class GamePageViewModel: BaseViewModel {
             .shuffled()
         //TODO: Aggiungere logica logo card
         self.cardsDeck = cardsDeck
-    }
-    
-    func prepareGame() {
-        resetScore()
-        startPreviewGame()
     }
     
     private func resetScore() {

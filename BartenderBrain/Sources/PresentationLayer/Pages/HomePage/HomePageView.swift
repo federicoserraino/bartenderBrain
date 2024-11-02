@@ -59,7 +59,3 @@ struct HomePageView: BaseSwiftUIView {
     }
 }
 
-#Preview{
-    HomePageView(viewModel: .init())
-}
-

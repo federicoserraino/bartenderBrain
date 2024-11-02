@@ -86,6 +86,7 @@ struct GamePageView: BaseSwiftUIView {
             .edgesIgnoringSafeArea(.bottom)
         }
         .onAppear(perform: viewModel.prepareGame)
+        .onDisappear(perform: viewModel.cleanGameMemory)
     }
     
 }
