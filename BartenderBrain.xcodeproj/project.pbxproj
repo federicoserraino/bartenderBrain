@@ -28,6 +28,8 @@
 		818E75C02CD537B000B34F1C /* GameGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75BF2CD537B000B34F1C /* GameGridView.swift */; };
 		818E75C32CD58FB600B34F1C /* GameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75C22CD58FB600B34F1C /* GameCard.swift */; };
 		818E75C52CD6109B00B34F1C /* CocktailDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75C42CD6109B00B34F1C /* CocktailDetails.swift */; };
+		818E75C72CD6880E00B34F1C /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75C62CD6880E00B34F1C /* PopupView.swift */; };
+		818E75C92CD695A700B34F1C /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75C82CD695A700B34F1C /* FloatingButtonView.swift */; };
 		81AE05472CD0389600FE2323 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05462CD0389600FE2323 /* AppDelegate.swift */; };
 		81AE05492CD0389600FE2323 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05482CD0389600FE2323 /* SceneDelegate.swift */; };
 		81AE05502CD0389700FE2323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81AE054F2CD0389700FE2323 /* Assets.xcassets */; };
@@ -93,6 +95,8 @@
 		818E75BF2CD537B000B34F1C /* GameGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridView.swift; sourceTree = "<group>"; };
 		818E75C22CD58FB600B34F1C /* GameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCard.swift; sourceTree = "<group>"; };
 		818E75C42CD6109B00B34F1C /* CocktailDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetails.swift; sourceTree = "<group>"; };
+		818E75C62CD6880E00B34F1C /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		818E75C82CD695A700B34F1C /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
 		81AE05432CD0389600FE2323 /* BartenderBrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BartenderBrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AE05462CD0389600FE2323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81AE05482CD0389600FE2323 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				8169A4F02CD2C0C20081DBDD /* ScrollSideBasedView.swift */,
+				818E75C62CD6880E00B34F1C /* PopupView.swift */,
+				818E75C82CD695A700B34F1C /* FloatingButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -603,6 +609,7 @@
 				81BCD8EF2CD15B6D003EA3F4 /* CodableVoid.swift in Sources */,
 				810C0EA52CD28770009953DE /* BaseSwiftUIViewController.swift in Sources */,
 				810C0EAA2CD28DC4009953DE /* HomePageViewModel.swift in Sources */,
+				818E75C92CD695A700B34F1C /* FloatingButtonView.swift in Sources */,
 				81FCD4B72CD0BD0800BD04AA /* ApiCatalog.swift in Sources */,
 				818E75AB2CD4E33500B34F1C /* ChallengeMode.swift in Sources */,
 				818E75B42CD4EDA200B34F1C /* GamePageViewModel.swift in Sources */,
@@ -627,6 +634,7 @@
 				810C0EA82CD28DB5009953DE /* HomePageView.swift in Sources */,
 				81BCD8E82CD14047003EA3F4 /* BodyCoding.swift in Sources */,
 				81FCD4BE2CD0C38F00BD04AA /* NetworkManager.swift in Sources */,
+				818E75C72CD6880E00B34F1C /* PopupView.swift in Sources */,
 				81BCD8E62CD0E418003EA3F4 /* ApiRequest.swift in Sources */,
 				810C0E9D2CD21FF1009953DE /* GameCoordinator.swift in Sources */,
 				818E75B92CD50ADC00B34F1C /* Int.swift in Sources */,
