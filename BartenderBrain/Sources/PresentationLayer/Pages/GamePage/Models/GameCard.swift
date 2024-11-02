@@ -24,29 +24,21 @@ class GameCard: ObservableObject {
         self.isLogoCard = isLogoCard
     }
     
-    func copyWith(
-        id: String? = nil,
-        image: UIImage? = nil,
-        isFlipped: Bool? = nil,
-        isLogoCard: Bool? = nil
-    ) -> GameCard {
+    func makeDuplicate() -> GameCard {
         .init(
-            id: id ?? self.id,
-            image: image ?? self.image,
-            isFlipped: isFlipped ?? self.isFlipped,
-            isLogoCard: isLogoCard ?? self.isLogoCard
+            id: id + "_2",
+            image: image,
+            isFlipped: isFlipped,
+            isLogoCard: isLogoCard
         )
     }
     
-    /*
-    
     static func makeLogoCard() -> GameCard {
-        CocktailCard(
+        .init(
             id: logoId,
             image: UIImage(),
             isLogoCard: true
         )
     }
-     */
     
 }

@@ -46,9 +46,9 @@ struct GameGridView: View {
         
         var size: CGSize {
             switch self {
-            case .L: .init(width: 80, height: 120)
-            case .M: .init(width: 60, height: 90)
-            case .S: .init(width: 50, height: 75)
+            case .L: .init(width: 100, height: 150)
+            case .M: .init(width: 70, height: 105)
+            case .S: .init(width: 55, height: 82.5)
             }
         }
     }

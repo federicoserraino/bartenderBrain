@@ -6,17 +6,26 @@
 //
 
 import Foundation
+import UIKit
 import Combine
 
 class GamePageViewModel: BaseViewModel {
-    
+    // Unique Cocktails to find
     private let cockstails: [CocktailDetails]
+    // Score Properties
+    private let matchesToFind: Int
+    private var matchesFound: Int = 0
+    private var attempsPerImage: [UIImage:Int] = [:]
+    @Published var score: Int = 0
+    // CardsDeck Properties
     @Published var cardsDeck: [GameCard] = []
-    @Published var timerValue: String = ""
     private var selectedCard: GameCard?
+    // Timer Properties
+    @Published var timerValue: String = ""
     
     init(cockstails: [CocktailDetails]) {
         self.cockstails = cockstails
+        matchesToFind = cockstails.count
         super.init()
         setupCardsDeck()
     }
@@ -24,13 +33,24 @@ class GamePageViewModel: BaseViewModel {
     private func setupCardsDeck() {
         var cardsDeck: [GameCard] = cockstails
             .map{ GameCard(id: $0.id, image: $0.image) }
-            .flatMap{ [$0, $0.copyWith(id: $0.id + "_2")] }
+            .flatMap{ [$0, $0.makeDuplicate()] }
             .shuffled()
         //TODO: Aggiungere logica logo card
         self.cardsDeck = cardsDeck
     }
     
     func prepareGame() {
+        resetScore()
+        startPreviewGame()
+    }
+    
+    private func resetScore() {
+        score = 0
+        matchesFound = 0
+        attempsPerImage.removeAll()
+    }
+    
+    private func startPreviewGame() {
         var previewTimerValue: Int = 3
         timerValue = "\(previewTimerValue)"
         Timer.publish(every: 1, on: .main, in: .common)
@@ -77,15 +97,47 @@ class GamePageViewModel: BaseViewModel {
         if let selectedCard {
             if selectedCard.image == card.image {
                 // Match Found! :D
+                handleMatchFound(for: card.image)
             } else {
                 // Wrong match :(
+                increaseAttempsPerImage(card.image)
                 flipCards(cards: [card, selectedCard])
-                // TODO: gestione punti in caso di errore
             }
             self.selectedCard = nil
         } else {
+            increaseAttempsPerImage(card.image)
             selectedCard = card
         }
+    }
+    
+    private func increaseAttempsPerImage(_ image: UIImage) {
+        if let attemps = attempsPerImage[image] {
+            attempsPerImage[image] = attemps + 1
+        } else {
+            attempsPerImage[image] = 1
+        }
+    }
+    
+    private func handleMatchFound(for image: UIImage) {
+        matchesFound += 1
+        if let attemps = attempsPerImage[image] {
+            let cardScore: Int
+            switch attemps {
+            case 0..<2:
+                cardScore = 4
+            case 2..<4:
+                cardScore = 2
+            default:
+                cardScore = 1
+            }
+            score += cardScore
+        }
+        checkIfGameIsOver()
+    }
+    
+    private func checkIfGameIsOver() {
+        guard matchesFound == matchesToFind else { return }
+        print("Game over!")
     }
     
 }

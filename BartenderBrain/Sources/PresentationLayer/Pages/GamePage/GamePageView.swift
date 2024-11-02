@@ -10,6 +10,7 @@ import SwiftUI
 
 struct GamePageView: BaseSwiftUIView {
     @ObservedObject var viewModel: GamePageViewModel
+    @State var animateScore: Bool = false
     
     init(viewModel: GamePageViewModel) {
         self.viewModel = viewModel
@@ -43,9 +44,21 @@ struct GamePageView: BaseSwiftUIView {
                 
                 // Bottom View
                 VStack(spacing: 0) {
-                    Text("5")
+                    Text("\(viewModel.score)")
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
+                        .scaleEffect(animateScore ? 1.3 : 1)
+                        .onChange(of: viewModel.score) { _ in
+                            withAnimation(.easeInOut(duration: 0.2)) {
+                                animateScore = true
+                            }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                                withAnimation(.easeInOut(duration: 0.2)) {
+                                    animateScore = false
+                                }
+                            }
+                        }
+                    
                     Text("Score")
                         .foregroundColor(.white)
                     
