@@ -8,13 +8,23 @@
 import SwiftUI
 
 extension View {
-    func scrollable(if condition: Bool) -> some View {
+    func scrollable(if condition: Bool, scrollTopPadding: Double = 0, scrollBottomPadding: Double = 0) -> some View {
         Group {
             if condition {
-                ScrollView { self }
+                ScrollSideBasedView {
+                    Spacer()
+                        .frame(height: scrollTopPadding)
+                    self
+                    Spacer()
+                        .frame(height: scrollBottomPadding)
+                }
             } else {
                 self
             }
         }
     }
+    
+    func size(_ size: CGSize) -> some View {
+          self.frame(width: size.width, height: size.height)
+      }
 }
