@@ -13,6 +13,7 @@ class GamePageViewModel: BaseViewModel {
     private let cockstails: [CocktailDetails]
     @Published var cardsDeck: [GameCard] = []
     @Published var timerValue: String = ""
+    private var selectedCard: GameCard?
     
     init(cockstails: [CocktailDetails]) {
         self.cockstails = cockstails
@@ -63,15 +64,28 @@ class GamePageViewModel: BaseViewModel {
         }
     }
     
-    func didTapOnCard(_ card: GameCard) {
-        card.isFlipped.toggle()
-        /*
-        guard !card.isFlipped else { return }
-        if let index = cardsDeck.firstIndex(where: { $0.id == card.id }) {
-            cardsDeck[index] = card.copyWith(isFlipped: true)
-            //objectWillChange.send()
+    private func flipCards(cards: [GameCard], after time: TimeInterval = 0.8) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + time) {
+            cards.forEach{ $0.isFlipped = true }
         }
-         */
+    }
+    
+    func didTapOnCard(_ card: GameCard) {
+        guard !card.isLogoCard, card.isFlipped else { return }
+        
+        card.isFlipped = false
+        if let selectedCard {
+            if selectedCard.image == card.image {
+                // Match Found! :D
+            } else {
+                // Wrong match :(
+                flipCards(cards: [card, selectedCard])
+                // TODO: gestione punti in caso di errore
+            }
+            self.selectedCard = nil
+        } else {
+            selectedCard = card
+        }
     }
     
 }
