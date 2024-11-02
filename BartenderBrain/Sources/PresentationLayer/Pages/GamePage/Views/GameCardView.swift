@@ -20,6 +20,8 @@ struct GameCardView: View {
                     .degrees(item.isFlipped ? 180 : 0),
                     axis: (x: 0, y: 1, z: 0)
                 )
+                .animation(.easeInOut(duration: 0.5), value: item.isFlipped)
+            
             // Upright card
             CardView(color: .red, text: item.id)
                 .opacity(item.isFlipped ? 1 : 0)
@@ -27,12 +29,9 @@ struct GameCardView: View {
                     .degrees(item.isFlipped ? 0 : -180),
                     axis: (x: 0, y: 1, z: 0)
                 )
+                .animation(.easeInOut(duration: 0.5), value: item.isFlipped)
         }
-        .onTapGesture {
-            withAnimation(.easeInOut(duration: 0.5)) {
-                didTapOnItem(item)
-            }
-        }
+        .onTapGesture { didTapOnItem(item) }
     }
 }
 

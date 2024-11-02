@@ -22,6 +22,7 @@ class HomePageViewModel: BaseViewModel {
     @Published var challengeMode: ChallengeMode = .beginner
     
     override func bindingProperties() {
+        super.bindingProperties()
         $cocktailPairsNum
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] value in

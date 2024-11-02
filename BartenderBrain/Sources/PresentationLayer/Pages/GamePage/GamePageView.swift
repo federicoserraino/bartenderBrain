@@ -31,9 +31,9 @@ struct GamePageView: BaseSwiftUIView {
             
             VStack(spacing: 0) {
                 // Timer View
-                Text("⏳ " + "00:00")
-                    .padding(.horizontal, 20)
+                Text("⏳ " + viewModel.timerValue)
                     .padding(.vertical, 10)
+                    .frame(width: 115)
                     .foregroundColor(.white)
                     .background(Color.black.opacity(0.6))
                     .cornerRadius(20)
@@ -72,6 +72,7 @@ struct GamePageView: BaseSwiftUIView {
             .padding(.bottom, 20)
             .edgesIgnoringSafeArea(.bottom)
         }
+        .onAppear(perform: viewModel.prepareGame)
     }
     
 }

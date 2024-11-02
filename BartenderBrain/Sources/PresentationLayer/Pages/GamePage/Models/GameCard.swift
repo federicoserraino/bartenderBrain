@@ -14,7 +14,7 @@ class GameCard: ObservableObject {
     let image: UIImage
     @Published var isFlipped: Bool
     // Logo cards are used to create a game grid that is as square as possible
-    var isLogoCard: Bool
+    let isLogoCard: Bool
     static let logoId: String = "logo_card"
     
     init(id: String, image: UIImage, isFlipped: Bool = false, isLogoCard: Bool = false) {
