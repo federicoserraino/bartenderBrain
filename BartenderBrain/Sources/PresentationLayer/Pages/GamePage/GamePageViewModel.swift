@@ -9,7 +9,13 @@ import Foundation
 import UIKit
 import Combine
 
+protocol GamePageViewModelDelegate: AnyObject {
+    func didPressCloseButton()
+    func didEndGame(with score: Int)
+}
+
 class GamePageViewModel: BaseViewModel {
+    weak var delegate: GamePageViewModelDelegate?
     // Unique Cocktails to find
     private let cockstails: [CocktailDetails]
     // Score Properties
@@ -23,8 +29,9 @@ class GamePageViewModel: BaseViewModel {
     // Timer Properties
     @Published var timerValue: String = ""
     
-    init(cockstails: [CocktailDetails]) {
+    init(cockstails: [CocktailDetails], delegate: GamePageViewModelDelegate) {
         self.cockstails = cockstails
+        self.delegate = delegate
         matchesToFind = cockstails.count
         super.init()
         setupCardsDeck()
@@ -137,6 +144,8 @@ class GamePageViewModel: BaseViewModel {
     
     private func checkIfGameIsOver() {
         guard matchesFound == matchesToFind else { return }
+        //TODO: Calcolare punti in base a difficoltà e tempo
+        delegate?.didEndGame(with: score)
         print("Game over!")
     }
     

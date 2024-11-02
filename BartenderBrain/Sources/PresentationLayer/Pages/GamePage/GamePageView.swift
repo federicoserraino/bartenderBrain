@@ -49,11 +49,11 @@ struct GamePageView: BaseSwiftUIView {
                         .frame(maxWidth: .infinity)
                         .scaleEffect(animateScore ? 1.3 : 1)
                         .onChange(of: viewModel.score) { _ in
-                            withAnimation(.easeInOut(duration: 0.2)) {
+                            withAnimation(.easeInOut(duration: 0.1)) {
                                 animateScore = true
                             }
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                                withAnimation(.easeInOut(duration: 0.2)) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                withAnimation(.easeInOut(duration: 0.1)) {
                                     animateScore = false
                                 }
                             }

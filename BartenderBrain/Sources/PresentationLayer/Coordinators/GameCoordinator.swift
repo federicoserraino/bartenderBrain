@@ -32,11 +32,11 @@ final class GameCoordinator: Coordinator {
             }
             
             await MainActor.run { [weak self] in guard let self else { return }
-                let vm = GamePageViewModel(cockstails: cocktails)
+                let vm = GamePageViewModel(cockstails: cocktails, delegate: self)
                 let vc = BaseSwiftUIViewController<GamePageViewModel, GamePageView>(viewModel: vm)
                 rootViewController = vc
                 rootViewController.modalPresentationStyle = .fullScreen
-                coordinator?.rootViewController.present(rootViewController, animated: true)
+                parent?.rootViewController.present(rootViewController, animated: true)
             }
         }
     }
@@ -91,6 +91,19 @@ final class GameCoordinator: Coordinator {
         }
         
         return cocktailCards
+    }
+    
+}
+
+extension GameCoordinator: GamePageViewModelDelegate {
+    func didPressCloseButton() {
+        // TODO Mostrare popup are u sure?
+        dismissCoordinator()
+    }
+    
+    func didEndGame(with score: Int) {
+        // TODO Mostrare popup con recap punti, tap su OK dismette coordinator
+        dismissCoordinator()
     }
     
 }

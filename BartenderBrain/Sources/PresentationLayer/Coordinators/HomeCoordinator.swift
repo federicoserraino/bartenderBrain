@@ -14,8 +14,7 @@ final class HomeCoordinator: Coordinator {
     var child: Coordinator?
     
     func start(from window: UIWindow) {
-        let vm: HomePageViewModel = .init()
-        vm.delegate = self
+        let vm: HomePageViewModel = .init(delegate: self)
         let vc = BaseSwiftUIViewController<HomePageViewModel, HomePageView>(viewModel: vm)
         self.rootViewController = vc
         window.rootViewController = vc
@@ -27,6 +26,7 @@ final class HomeCoordinator: Coordinator {
 extension HomeCoordinator: HomePageViewModelDelegate {
     func startGame(with cocktailPairsNum: Int) {
         let gameCoordinator: GameCoordinator = .init(cocktailPairsNum: cocktailPairsNum)
+        child = gameCoordinator
         gameCoordinator.start(from: self)
     }
 }

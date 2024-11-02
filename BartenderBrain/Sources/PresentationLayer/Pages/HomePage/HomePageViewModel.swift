@@ -21,6 +21,11 @@ class HomePageViewModel: BaseViewModel {
     @Published var cocktailPairsNum: Double = 4.0
     @Published var challengeMode: ChallengeMode = .beginner
     
+    init(delegate: HomePageViewModelDelegate) {
+        self.delegate = delegate
+        super.init()
+    }
+    
     override func bindingProperties() {
         super.bindingProperties()
         $cocktailPairsNum
