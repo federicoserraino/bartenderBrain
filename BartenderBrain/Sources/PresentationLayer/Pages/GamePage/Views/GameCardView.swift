@@ -16,7 +16,7 @@ struct GameCardView: View {
         ZStack {
             // Flipped card
             CardView(
-                image: .init(named: "icon_cardBack"),
+                image: .icon_cardBack,
                 size: itemSize
             )
             .opacity(item.isFlipped ? 1 : 0)
@@ -43,11 +43,11 @@ struct GameCardView: View {
 }
 
 private struct CardView: View {
-    let image: UIImage?
+    let image: UIImage
     let size: CGSize
     
     var body: some View {
-        Image(uiImage: image ?? UIImage())
+        Image(uiImage: image)
             .resizable()
             .scaledToFill()
             .size(size)

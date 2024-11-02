@@ -30,6 +30,7 @@
 		818E75C52CD6109B00B34F1C /* CocktailDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75C42CD6109B00B34F1C /* CocktailDetails.swift */; };
 		818E75C72CD6880E00B34F1C /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75C62CD6880E00B34F1C /* PopupView.swift */; };
 		818E75C92CD695A700B34F1C /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75C82CD695A700B34F1C /* FloatingButtonView.swift */; };
+		818E75CB2CD6B9F500B34F1C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75CA2CD6B9F500B34F1C /* UIImage.swift */; };
 		81AE05472CD0389600FE2323 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05462CD0389600FE2323 /* AppDelegate.swift */; };
 		81AE05492CD0389600FE2323 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05482CD0389600FE2323 /* SceneDelegate.swift */; };
 		81AE05502CD0389700FE2323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81AE054F2CD0389700FE2323 /* Assets.xcassets */; };
@@ -97,6 +98,7 @@
 		818E75C42CD6109B00B34F1C /* CocktailDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetails.swift; sourceTree = "<group>"; };
 		818E75C62CD6880E00B34F1C /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		818E75C82CD695A700B34F1C /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
+		818E75CA2CD6B9F500B34F1C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		81AE05432CD0389600FE2323 /* BartenderBrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BartenderBrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AE05462CD0389600FE2323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81AE05482CD0389600FE2323 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				818E75A52CD4CFF800B34F1C /* View.swift */,
 				818E75A82CD4DEA800B34F1C /* Double.swift */,
 				818E75B82CD50ADC00B34F1C /* Int.swift */,
+				818E75CA2CD6B9F500B34F1C /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				810C0E9D2CD21FF1009953DE /* GameCoordinator.swift in Sources */,
 				818E75B92CD50ADC00B34F1C /* Int.swift in Sources */,
 				81BCD8EA2CD14B7E003EA3F4 /* NetworkError.swift in Sources */,
+				818E75CB2CD6B9F500B34F1C /* UIImage.swift in Sources */,
 				818E75BE2CD5279C00B34F1C /* GameCardView.swift in Sources */,
 				811C91162CD29404004207E1 /* BaseSwiftUIViewController2.swift in Sources */,
 			);

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 final class GameCoordinator: Coordinator {
     var rootViewController: UIViewController!
@@ -16,6 +17,7 @@ final class GameCoordinator: Coordinator {
     private let cocktailPairsNum: Int
     private var cocktails: [CocktailDetails] = []
     private let networkProvier: NetworkProvier
+    private var popupVC: UIViewController?
     
     init(cocktailPairsNum: Int, networkProvier: NetworkProvier = AppNetworkProvier.shared) {
         self.cocktailPairsNum = cocktailPairsNum
@@ -96,14 +98,40 @@ final class GameCoordinator: Coordinator {
 }
 
 extension GameCoordinator: GamePageViewModelDelegate {
-    func didPressCloseButton() {
+    func didTapOnMenuButton() {
         // TODO Mostrare popup are u sure?
-        dismissCoordinator()
+        popupVC = PopupView(
+            items: [
+                //.text(text: "Menu", font: .system(size: 24, weight: .bold), topPadding: 30)
+                //.iconWithText(icon: <#T##UIImage#>, text: <#T##String#>, topPadding: <#T##CGFloat#>, action: <#T##() -> Void#>)
+                
+            ],
+            bottomButton: (text: "Chiudi", action: { [weak self] in
+                self?.popupVC?.dismiss(animated: true)
+            })
+        ).viewControllerEmbedded
     }
     
     func didEndGame(with score: Int) {
         // TODO Mostrare popup con recap punti, tap su OK dismette coordinator
-        dismissCoordinator()
+        popupVC = PopupView(
+            items: [/*.text(text: "Hai totalizzato: \(score)", font: .system(size: 20), topPadding: 50)*/],
+            bottomButton: (text: "ok", action: { [weak self] in
+                self?.dismissCoordinatorFromPopup()
+            })
+        ).viewControllerEmbedded
+       
+        // Adddd delay to enhance UX
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [weak self] in
+            guard let self, let popupVC else { return }
+            rootViewController.present(popupVC, animated: true)
+        }
+    }
+    
+    private func dismissCoordinatorFromPopup() {
+        popupVC?.dismiss(animated: false) { [weak self] in
+            self?.dismissCoordinator()
+        }
     }
     
 }

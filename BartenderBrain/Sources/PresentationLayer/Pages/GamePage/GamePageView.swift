@@ -85,7 +85,7 @@ struct GamePageView: BaseSwiftUIView {
             .edgesIgnoringSafeArea(.bottom)
         }
         .background(
-            Image("background_game")
+            Image(uiImage: .background_game)
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()

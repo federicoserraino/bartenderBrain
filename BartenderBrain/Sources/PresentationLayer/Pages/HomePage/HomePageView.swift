@@ -27,9 +27,14 @@ struct HomePageView: BaseSwiftUIView {
                         .padding(.top, 20)
                         .frame(maxWidth: .infinity)
                     
-                    VStack(alignment: .center, spacing: 5) {
-                        Text("🃏🃏")
-                            .font(.system(size: 80))
+                    VStack(alignment: .center, spacing: 10) {
+                        Image("icon_cards")
+                            .resizable()
+                            .scaledToFill()
+                            //.scaleEffect(0.7)
+                            .size(.init(width: 220, height: 200))
+                            //.clipped()
+                        
                         Text(String(viewModel.cocktailPairsNum.toInt()))
                             .font(.system(size: 30))
                     }
