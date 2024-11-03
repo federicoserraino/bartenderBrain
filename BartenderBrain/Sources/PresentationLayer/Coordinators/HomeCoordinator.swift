@@ -13,14 +13,27 @@ final class HomeCoordinator: Coordinator {
     var parent: Coordinator?
     var child: Coordinator?
     
+    private lazy var topScoreManager: TopScoreManager = { AppTopScoreManager.shared }()
+    private lazy var topScoreSender: SubjectSender<Double> = .init()
+    
     func start(from window: UIWindow) {
-        let vm: HomePageViewModel = .init(delegate: self)
+        let vm: HomePageViewModel = .init(delegate: self, topScoreSender: topScoreSender)
         let vc = BaseSwiftUIViewController<HomePageViewModel, HomePageView>(viewModel: vm)
         self.rootViewController = vc
         window.rootViewController = vc
         window.makeKeyAndVisible()
+        sendTopScore()
     }
     
+    private func sendTopScore() {
+        guard let topScore = topScoreManager.getTopScore() else { return }
+        topScoreSender.sendValue(topScore)
+    }
+    
+    func removeChild() {
+        child = nil
+        sendTopScore()
+    }
 }
 
 extension HomeCoordinator: HomePageViewModelDelegate {

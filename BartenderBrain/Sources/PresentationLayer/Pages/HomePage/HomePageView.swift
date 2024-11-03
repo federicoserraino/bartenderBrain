@@ -47,6 +47,10 @@ struct HomePageView: BaseSwiftUIView {
                     }
                     
                     Text("Challenge mode: \(viewModel.challengeMode.description)")
+                    
+                    if let topScore = viewModel.topScore {
+                        Text("Top score: \(topScore)")
+                    }
                 }
                 .padding(.horizontal, 20)
             }

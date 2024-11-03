@@ -15,6 +15,7 @@ protocol GamePageViewModelDelegate: AnyObject {
 }
 
 class GamePageViewModel: BaseViewModel {
+    // Delegate
     weak var delegate: GamePageViewModelDelegate?
     // Unique Cocktails to find
     private let cockstails: [CocktailDetails]
