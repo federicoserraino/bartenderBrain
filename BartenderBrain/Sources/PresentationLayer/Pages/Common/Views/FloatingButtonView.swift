@@ -14,8 +14,7 @@ struct FloatingButtonView: View {
     var cornerRadius: CGFloat
     var fontSize: CGFloat
     var fontWeight: Font.Weight
-    var verticalPadding: CGFloat
-    var horizontalPadding: CGFloat
+    var elementSize: CGSize
     var action: () -> Void
     
     init(
@@ -25,8 +24,7 @@ struct FloatingButtonView: View {
         cornerRadius: CGFloat = 30,
         fontSize: CGFloat = 14,
         fontWeight: Font.Weight = .bold,
-        verticalPadding: CGFloat = 10,
-        horizontalPadding: CGFloat = 20,
+        elementSize: CGSize = .init(width: 100, height: 40),
         action: @escaping () -> Void
     ) {
         self.text = text
@@ -35,8 +33,7 @@ struct FloatingButtonView: View {
         self.cornerRadius = cornerRadius
         self.fontSize = fontSize
         self.fontWeight = fontWeight
-        self.verticalPadding = verticalPadding
-        self.horizontalPadding = horizontalPadding
+        self.elementSize = elementSize
         self.action = action
     }
     
@@ -44,15 +41,10 @@ struct FloatingButtonView: View {
         Button(action: action) {
             Text(text.uppercased())
                 .font(.system(size: fontSize, weight: fontWeight))
-                .padding(.horizontal, horizontalPadding)
-                .padding(.vertical, verticalPadding)
+                .size(elementSize)
                 .background(backgroundColor)
                 .foregroundColor(foregroundColor)
                 .cornerRadius(cornerRadius)
         }
     }
-}
-
-#Preview {
-    FloatingButtonView(text: "lorem ipsum", action: {})
 }

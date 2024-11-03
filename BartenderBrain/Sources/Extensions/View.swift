@@ -25,6 +25,6 @@ extension View {
     }
     
     func size(_ size: CGSize) -> some View {
-          self.frame(width: size.width, height: size.height)
-      }
+        self.frame(width: size.width, height: size.height)
+    }
 }
