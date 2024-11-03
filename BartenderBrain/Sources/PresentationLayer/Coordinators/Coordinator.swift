@@ -25,8 +25,6 @@ extension Coordinator {
         parent?.removeChild()
         parent = nil
         child = nil
-        rootViewController.dismiss(animated: true) { [weak self] in
-            self?.rootViewController = nil
-        }
+        rootViewController.dismiss(animated: true)
     }
 }

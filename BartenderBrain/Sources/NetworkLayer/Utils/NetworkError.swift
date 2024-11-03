@@ -28,5 +28,20 @@ enum NetworkError: Error {
             "Unknown Error, code: \(code)"
         }
     }
+    
+    var codeError: String {
+        switch self {
+        case .urlError(let msg):
+            "BR01"
+        case .inputFormatError(let msg):
+            "BR02"
+        case .outputFormatError(let msg):
+            "BR03"
+        case .serviceError(let msg):
+            "BR04"
+        case .unknownError(let code):
+            "BR00"
+        }
+    }
            
 }

@@ -30,7 +30,8 @@ final class GameCoordinator: Coordinator {
             do {
                 cocktails = try await fetchCocktails()
             } catch {
-                // TODO: Mostrare popup di errore e terminare la navigazione
+                await MainActor.run { [weak self] in self?.showNetworkErrorPopup(for: error as? NetworkError) }
+                return
             }
             
             await MainActor.run { [weak self] in guard let self else { return }
@@ -93,6 +94,27 @@ final class GameCoordinator: Coordinator {
         }
         
         return cocktailCards
+    }
+    
+    @MainActor
+    private func showNetworkErrorPopup(for error: NetworkError?) {
+        guard let parentVC = parent?.rootViewController else { return }
+        var popupItems: [PopupItem] = [
+            .title(text: "Attenzione"),
+            .text(text: "Si è verificato un problema tecnico.\nSi prega di riprovare più tardi.", font: .system(size: 14), topPadding: 20),
+        ]
+        
+        if let codeError = error?.codeError {
+            popupItems.append(.text(text: "CODE ERROR: \(codeError)", font: .system(size: 10, weight: .semibold)))
+        }
+        
+        rootViewController = PopupView(
+            items: popupItems,
+            estimatedSize: .init(width: 300, height: 220),
+            bottomButton: (text: "ok", action: { [weak self] in self?.dismissCoordinator() })
+        ).viewControllerEmbedded
+        
+        parentVC.present(rootViewController, animated: true)
     }
     
 }

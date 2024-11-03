@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PopupView: View {
     let items: [PopupItem]
+    var estimatedSize: CGSize = .init(width: 300, height: 300)
     var bottomButton: (text: String, action: () -> Void)?
     
     var body: some View {
@@ -18,7 +19,7 @@ struct PopupView: View {
             
             ZStack(alignment: .bottom) {
                 ScrollSideBasedView {
-                    VStack {
+                    VStack(spacing: 0) {
                         ForEach(items.indices, id: \.self) { index in
                             items[index].view()
                         }
@@ -31,7 +32,7 @@ struct PopupView: View {
                     .padding(.bottom, 15)
                 }
             }
-            .size(.init(width: 300, height: 300))
+            .size(estimatedSize)
             .background(.white)
             .cornerRadius(10)
         }
@@ -47,19 +48,35 @@ struct PopupView: View {
 }
 
 enum PopupItem {
-    case text(text: String, font: Font, topPadding: CGFloat)
-    case iconWithText(icon: UIImage, text: String, topPadding: CGFloat, action: () -> Void)
+    case title(text: String, topPadding: CGFloat = 30)
+    case text(text: String, font: Font, alignment: TextAlignment = .center, topPadding: CGFloat = 15, horizzontalPadding: CGFloat = 20)
+    case iconWithText(icon: UIImage, text: String, topPadding: CGFloat = 15, action: () -> Void)
+    case divider(topPadding: CGFloat = 15)
 
     @ViewBuilder
     func view() -> some View {
         switch self {
-        case .text(let text, let font, let topPadding):
+        case .title(let text, let topPadding):
             Text(text)
-                .font(font)
+                .font(.system(size: 24, weight: .bold))
                 .padding(.top, topPadding)
-
+        case .text(let text, let font, let alignment, let topPadding, let horizontalPadding):
+            HStack {
+                if alignment == .trailing {
+                    Spacer()
+                }
+                Text(text)
+                    .font(font)
+                    .multilineTextAlignment(alignment)
+                    .padding(.top, topPadding)
+                    .padding(.horizontal, horizontalPadding)
+                if alignment == .leading {
+                    Spacer()
+                }
+            }
+            
         case .iconWithText(let icon, let text, let topPadding, let action):
-            HStack(spacing: 5) {
+            VStack(spacing: 5) {
                 Image(uiImage: icon)
                     .resizable()
                     .scaledToFit()
@@ -70,6 +87,13 @@ enum PopupItem {
             }
             .padding(.top, topPadding)
             .onTapGesture(perform: action)
+            
+        case .divider(let topPadding):
+            Divider()
+                .frame(height: 1)
+                .background(Color.black.opacity(0.8))
+                .padding(.horizontal, 15)
+                .padding(.top, topPadding)
         }
     }
 }
