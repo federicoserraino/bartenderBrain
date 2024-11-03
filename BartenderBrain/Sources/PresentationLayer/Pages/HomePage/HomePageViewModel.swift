@@ -29,10 +29,9 @@ class HomePageViewModel: BaseViewModel {
     override func bindingProperties() {
         super.bindingProperties()
         $cocktailPairsNum
+            .map{ ChallengeMode(for: $0) }
             .receive(on: RunLoop.main)
-            .sink(receiveValue: { [weak self] value in
-                self?.challengeMode.setMode(for: value)
-            })
+            .assign(to: \.challengeMode, on: self)
             .store(in: &cancellables)
     }
     

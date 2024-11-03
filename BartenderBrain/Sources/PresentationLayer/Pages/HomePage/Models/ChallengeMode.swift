@@ -7,23 +7,27 @@
 
 import Foundation
 
-enum ChallengeMode {
+enum ChallengeMode: String {
     case easy
     case medium
     case hard
     case pro
     
-    var description: String {
-        switch self {
-        case .easy:
-            "Easy"
-        case .medium:
-            "Medium"
-        case .hard:
-            "Hard"
-        case .pro:
-            "Pro"
+    init(for level: Double) {
+        switch level {
+        case 0..<7:
+            self = .easy
+        case 7..<10:
+            self = .medium
+        case 10..<13:
+            self = .hard
+        default:
+            self = .pro
         }
+    }
+    
+    var description: String {
+        self.rawValue.capitalized + " " + self.emoji
     }
     
     var emoji: String {
@@ -39,16 +43,4 @@ enum ChallengeMode {
         }
     }
     
-    mutating func setMode(for level: Double) {
-        switch level {
-        case 0..<7:
-            self = .easy
-        case 7..<10:
-            self = .medium
-        case 10..<13:
-            self = .hard
-        default:
-            self = .pro
-        }
-    }
 }

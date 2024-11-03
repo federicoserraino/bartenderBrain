@@ -52,12 +52,7 @@ struct HomePageView: BaseSwiftUIView {
             }
             .padding(.bottom, 50)
             
-            Button(
-                action: viewModel.didTapStartButton,
-                label: {
-                    Text("START")
-                }
-            )
+            FloatingButtonView(text: "start game", action: viewModel.didTapStartButton)
         }
     }
 }
