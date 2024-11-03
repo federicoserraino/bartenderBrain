@@ -73,6 +73,7 @@ class GamePageViewModel: BaseViewModel {
         score = 0
         matchesFound = 0
         attempsPerImage.removeAll()
+        selectedCard = nil
     }
     
     private func setupCardsDeck() {
