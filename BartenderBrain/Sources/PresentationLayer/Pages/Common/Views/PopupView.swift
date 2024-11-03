@@ -49,8 +49,8 @@ struct PopupView: View {
 
 enum PopupItem {
     case title(text: String, topPadding: CGFloat = 30)
-    case text(text: String, font: Font, alignment: TextAlignment = .center, topPadding: CGFloat = 15, horizzontalPadding: CGFloat = 20)
-    case iconWithText(icon: UIImage, text: String, topPadding: CGFloat = 15, action: () -> Void)
+    case text(text: String, font: Font = .system(size: 14), alignment: TextAlignment = .center, topPadding: CGFloat = 15, horizzontalPadding: CGFloat = 20)
+    case iconWithText(icon: UIImage, size: CGSize, text: String, topPadding: CGFloat = 15, action: () -> Void)
     case divider(topPadding: CGFloat = 15)
 
     @ViewBuilder
@@ -68,19 +68,19 @@ enum PopupItem {
                 Text(text)
                     .font(font)
                     .multilineTextAlignment(alignment)
-                    .padding(.top, topPadding)
-                    .padding(.horizontal, horizontalPadding)
                 if alignment == .leading {
                     Spacer()
                 }
             }
+            .padding(.top, topPadding)
+            .padding(.horizontal, horizontalPadding)
             
-        case .iconWithText(let icon, let text, let topPadding, let action):
+        case .iconWithText(let icon, let size, let text, let topPadding, let action):
             VStack(spacing: 5) {
                 Image(uiImage: icon)
                     .resizable()
                     .scaledToFit()
-                    .size(.init(width: 30, height: 30))
+                    .size(size)
                 
                 Text(text)
                     .font(.system(size: 14))
@@ -98,15 +98,34 @@ enum PopupItem {
     }
 }
 
+/*
+ #Preview {
+ PopupView(items: [
+ .title(text: "Well done!"),
+ .text(text: "Score: 10", font: .system(size: 14)),
+ .text(text: "Time: 10", font: .system(size: 14)),
+ .text(text: "Mode: 10", font: .system(size: 14)),
+ .divider(),
+ .text(text: "Total score:\t 10", font: .system(size: 14, weight: .semibold)),
+ .text(text: "🔥 NEW RECORD ", font: .system(size: 10, weight: .bold)),
+ ],
+ bottomButton: (text: "ok", action: {})
+ )
+ }
+ */
+
+
 #Preview {
     PopupView(items: [
-        .text(text: "prova", font: .system(size: 12), topPadding: 10),
-        .text(text: "prova", font: .system(size: 12), topPadding: 10),
-        .text(text: "prova", font: .system(size: 12), topPadding: 10),
-        .text(text: "prova", font: .system(size: 12), topPadding: 10),
-        .text(text: "prova", font: .system(size: 12), topPadding: 10),
-        .text(text: "prova", font: .system(size: 12), topPadding: 10)
+        .title(text: "Attenzione"),
+        .text(text: "Si è verificato un problema tecnico.\nSi prega di riprova più tardi.", font: .system(size: 14), topPadding: 20),
+        .text(text: "CODE ERROR: BR00", font: .system(size: 10, weight: .semibold)),
+       // .text(text: "Mode: 10", font: .system(size: 14)),
+        //.divider(),
+        //.text(text: "Total score:\t 10", font: .system(size: 14, weight: .semibold)),
+        //.text(text: "🔥 NEW RECORD ", font: .system(size: 10, weight: .bold)),
     ],
-          bottomButton: (text: "prova", action: {})
+              bottomButton: (text: "ok", action: {})
     )
 }
+

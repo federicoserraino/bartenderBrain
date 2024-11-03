@@ -30,7 +30,7 @@ struct GamePageView: BaseSwiftUIView {
             
             VStack(spacing: 0) {
                 // Timer View
-                Text("⏳ " + viewModel.timerValue)
+                Text("⏳ " + viewModel.timerValueDescription)
                     .padding(.vertical, 10)
                     .frame(width: 115)
                     .foregroundColor(.white)
@@ -44,6 +44,7 @@ struct GamePageView: BaseSwiftUIView {
                 VStack(spacing: 0) {
                     Text("\(viewModel.score)")
                         .foregroundColor(.white)
+                        .font(.system(size: 16, weight: .bold))
                         .frame(maxWidth: .infinity)
                         .scaleEffect(animateScore ? 1.3 : 1)
                         .onChange(of: viewModel.score) { _ in
@@ -58,24 +59,28 @@ struct GamePageView: BaseSwiftUIView {
                             }
                         }
                     
-                    Text("Score")
+                    Text("SCORE")
+                        .font(.system(size: 10))
                         .foregroundColor(.white)
-                    
                 }
                 .padding(.vertical, 5)
                 .background(Color.black.opacity(0.6))
                 .overlay {
                     HStack() {
-                        VStack(spacing: -5) {
+                        VStack(spacing: 3) {
                             Image(systemName: "line.horizontal.3")
                                 .resizable()
-                                .scaledToFit()
+                                .scaledToFill()
+                                .frame(width: 10, height: 12)
                                 .foregroundColor(.white)
-                                .frame(width: 25, height: 30)
+                            
                             Text("Menu")
+                                .font(.system(size: 10))
                                 .foregroundColor(.white)
+                            
                         }
                         .padding(.leading, 15)
+                        .onTapGesture(perform: viewModel.didtapOnMenu)
                         
                         Spacer()
                     }
@@ -90,8 +95,8 @@ struct GamePageView: BaseSwiftUIView {
                 .scaledToFill()
                 .ignoresSafeArea()
         )
-        .onAppear(perform: viewModel.prepareGame)
-        .onDisappear(perform: viewModel.cleanGameMemory)
+        .onAppear(perform: viewModel.prepareAndStartGame)
+        .onDisappear(perform: viewModel.endGame)
     }
     
 }

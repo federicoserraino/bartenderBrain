@@ -10,8 +10,8 @@ import UIKit
 import Combine
 
 protocol GamePageViewModelDelegate: AnyObject {
-    func didTapOnMenuButton()
-    func didEndGame(with score: Int)
+    func didTapOnMenuButton(onNewGamePressed: @escaping () -> Void)
+    func gameDidEnd(with score: Int, after time: Int)
 }
 
 class GamePageViewModel: BaseViewModel {
@@ -27,68 +27,93 @@ class GamePageViewModel: BaseViewModel {
     @Published var cardsDeck: [GameCard] = []
     private var selectedCard: GameCard?
     // Timer Properties
-    @Published var timerValue: String = ""
+    @Published private var previewTimerValue: Int = 3
+    @Published private var timerValue: Int = 0
+    @Published var timerValueDescription: String = ""
+    private var previewTimerCancellables: AnyCancellable?
     
     init(cockstails: [CocktailDetails], delegate: GamePageViewModelDelegate) {
         self.cockstails = cockstails
         self.delegate = delegate
         matchesToFind = cockstails.count
         super.init()
-        setupCardsDeck()
     }
     
-    func prepareGame() {
+    override func bindingProperties() {
+        super.bindingProperties()
+        $previewTimerValue
+            .map{ "\($0)" }
+            .receive(on: RunLoop.main)
+            .assign(to: \.timerValueDescription, on: self)
+            .store(in: &cancellables)
+        
+        $timerValue
+            .map{ $0.timeFormatFromSeconds }
+            .receive(on: RunLoop.main)
+            .assign(to: \.timerValueDescription, on: self)
+            .store(in: &cancellables)
+    }
+    
+    func prepareAndStartGame() {
         resetScore()
+        setupCardsDeck()
         startPreviewGame()
     }
     
-    func cleanGameMemory() {
+    func endGame() {
         cancellables.removeAll()
     }
     
-    // MARK - Private Methods
-    
-    private func setupCardsDeck() {
-        var cardsDeck: [GameCard] = cockstails
-            .map{ GameCard(id: $0.id, image: $0.image) }
-            .flatMap{ [$0, $0.makeDuplicate()] }
-            .shuffled()
-        //TODO: Aggiungere logica logo card
-        self.cardsDeck = cardsDeck
+    func didtapOnMenu() {
+        delegate?.didTapOnMenuButton(onNewGamePressed: restartGame)
     }
     
+    // MARK - Private Methods
     private func resetScore() {
         score = 0
         matchesFound = 0
         attempsPerImage.removeAll()
     }
     
+    private func setupCardsDeck() {
+        //TODO: Aggiungere logica logo card
+        var cardsDeck: [GameCard] = cockstails
+            .map{ GameCard(id: $0.id, image: $0.image) }
+            .flatMap{ [$0, $0.makeDuplicate()] }
+            .shuffled()
+        self.cardsDeck = cardsDeck
+    }
+    
     private func startPreviewGame() {
-        var previewTimerValue: Int = 3
-        timerValue = "\(previewTimerValue)"
-        Timer.publish(every: 1, on: .main, in: .common)
+        previewTimerValue = 3
+        let previewTimerCancellables = Timer.publish(every: 1, on: .main, in: .common)
             .autoconnect()
             .sink(receiveValue: { [weak self] _ in guard let self else { return }
                 if previewTimerValue > 0 {
                     previewTimerValue -= 1
-                    timerValue = "\(previewTimerValue)"
                 } else {
-                    cancellables.removeAll()
+                    self.previewTimerCancellables?.cancel()
                     startGame()
                 }
             })
-            .store(in: &cancellables)
+        self.previewTimerCancellables = previewTimerCancellables
+        cancellables.insert(previewTimerCancellables)
     }
     
     private func startGame() {
-        timerValue = 0.timeFormatFromSeconds
-        Timer.publish(every: 1, on: .main, in: .common)
+        timerValue = 0
+        Timer.publish(every: 1, on: .current, in: .common)
             .autoconnect()
             .scan(0) { count, _ in count + 1 }
-            .map { $0.timeFormatFromSeconds }
             .assign(to: \.timerValue, on: self)
             .store(in: &cancellables)
         flipAllCards()
+    }
+    
+    private func restartGame() {
+        endGame()
+        bindingProperties()
+        prepareAndStartGame()
     }
     
     private func flipAllCards() {
@@ -98,6 +123,7 @@ class GamePageViewModel: BaseViewModel {
     }
     
     private func flipCards(cards: [GameCard], after time: TimeInterval = 0.8) {
+        // Adddd delay to enhance UX
         DispatchQueue.main.asyncAfter(deadline: .now() + time) {
             cards.forEach{ $0.isFlipped = true }
         }
@@ -150,9 +176,8 @@ class GamePageViewModel: BaseViewModel {
     
     private func checkIfGameIsOver() {
         guard matchesFound == matchesToFind else { return }
-        //TODO: Calcolare punti in base a difficoltà e tempo
-        cleanGameMemory()
-        delegate?.didEndGame(with: score)
+        endGame()
+        delegate?.gameDidEnd(with: score, after: timerValue)
     }
     
 }

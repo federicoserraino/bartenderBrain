@@ -101,7 +101,7 @@ final class GameCoordinator: Coordinator {
         guard let parentVC = parent?.rootViewController else { return }
         var popupItems: [PopupItem] = [
             .title(text: "Attenzione"),
-            .text(text: "Si è verificato un problema tecnico.\nSi prega di riprovare più tardi.", font: .system(size: 14), topPadding: 20),
+            .text(text: "Si è verificato un problema tecnico.\nSi prega di riprovare più tardi.", topPadding: 20),
         ]
         
         if let codeError = error?.codeError {
@@ -120,30 +120,52 @@ final class GameCoordinator: Coordinator {
 }
 
 extension GameCoordinator: GamePageViewModelDelegate {
-    func didTapOnMenuButton() {
-        // TODO Mostrare popup are u sure?
+    func didTapOnMenuButton(onNewGamePressed: @escaping () -> Void) {
         popupVC = PopupView(
             items: [
-                //.text(text: "Menu", font: .system(size: 24, weight: .bold), topPadding: 30)
-                //.iconWithText(icon: <#T##UIImage#>, text: <#T##String#>, topPadding: <#T##CGFloat#>, action: <#T##() -> Void#>)
-                
+                .title(text: "Menu"),
+                .iconWithText(
+                    icon: .icon_cards,
+                    size: .init(width: 40, height: 40),
+                    text: "Restart Game",
+                    topPadding: 20,
+                    action: { [weak self] in self?.popupVC?.dismiss(animated: true, completion: onNewGamePressed) }
+                ),
+                .iconWithText(
+                    icon: .icon_cancel,
+                    size: .init(width: 20, height: 20),
+                    text: "Quit Game",
+                    topPadding: 25,
+                    action: { [weak self] in self?.dismissCoordinatorFromPopup() }
+                )
             ],
-            bottomButton: (text: "Chiudi", action: { [weak self] in
-                self?.popupVC?.dismiss(animated: true)
-            })
+            bottomButton: (text: "Close", action: { [weak self] in self?.popupVC?.dismiss(animated: true) })
         ).viewControllerEmbedded
+        
+        rootViewController.present(popupVC!, animated: true)
     }
     
-    func didEndGame(with score: Int) {
-        // TODO Mostrare popup con recap punti, tap su OK dismette coordinator
+    func gameDidEnd(with score: Int, after time: Int) {
+        // TODO: Compute new score
+        var popupItems: [PopupItem] = [
+            .title(text: "Well done!"),
+            .text(text: "Score: \(score)", alignment: .leading),
+            .text(text: "Time: \(time.timeFormatFromSeconds)", alignment: .leading),
+            .text(text: "Mode: \(ChallengeMode(for: Double(cocktailPairsNum)).emoji)", alignment: .leading),
+            .divider(),
+            .text(text: "Total score:\t \(score*2)", font: .system(size: 14, weight: .semibold))
+        ]
+        let newScoreAdded = TopScoreManager.shared.setTopScore(score)
+        if newScoreAdded {
+            popupItems.append(.text(text: "🔥 NEW RECORD ", font: .system(size: 10, weight: .bold)))
+        }
+        
         popupVC = PopupView(
-            items: [/*.text(text: "Hai totalizzato: \(score)", font: .system(size: 20), topPadding: 50)*/],
-            bottomButton: (text: "ok", action: { [weak self] in
-                self?.dismissCoordinatorFromPopup()
-            })
+            items: popupItems,
+            bottomButton: (text: "ok", action: { [weak self] in self?.dismissCoordinatorFromPopup() })
         ).viewControllerEmbedded
        
-        // Adddd delay to enhance UX
+        // Add delay to enhance UX
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [weak self] in
             guard let self, let popupVC else { return }
             rootViewController.present(popupVC, animated: true)

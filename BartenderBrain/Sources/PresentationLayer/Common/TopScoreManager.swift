@@ -18,11 +18,13 @@ final class TopScoreManager {
         userDefaults.object(forKey: topScoreKey) as? Int
     }
     
-    func setTopScore(_ newScore: Int) {
+    func setTopScore(_ newScore: Int) -> Bool {
         let currentTopScore = getTopScore()
         if currentTopScore == nil || newScore > currentTopScore! {
             userDefaults.setValue(newScore, forKey: topScoreKey)
+            return true
         }
+        return false
     }
     
 }

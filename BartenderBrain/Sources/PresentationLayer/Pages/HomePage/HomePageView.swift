@@ -46,7 +46,7 @@ struct HomePageView: BaseSwiftUIView {
                         Text(String(HomePageViewModel.maxCocktailPairs.toInt()))
                     }
                     
-                    Text("Challenge mode: \(viewModel.challengeMode.emoji) \(viewModel.challengeMode.description)")
+                    Text("Challenge mode: \(viewModel.challengeMode.description)")
                 }
                 .padding(.horizontal, 20)
             }
