@@ -19,6 +19,7 @@ final class GameCoordinator: Coordinator {
     private let networkProvier: NetworkProvier
     private var popupVC: UIViewController?
     
+    private lazy var coreDataManager: CoreDataManager = { AppCoreDataManager.shared }()
     private lazy var loaderManager: LoaderManager = { AppLoaderManager.shared }()
     private lazy var topScoreManager: TopScoreManager = { AppTopScoreManager.shared }()
     
@@ -57,7 +58,8 @@ final class GameCoordinator: Coordinator {
     
     private func downloadRandomCocktails() async throws -> Set<RandomCocktailOutput> {
         var cocktails: Set<RandomCocktailOutput> = Set()
-        
+        // Try to retrieve CocktailIds used during previous rounds - Error is not locking
+        let previousRoundCocktailIds: [String] = (try? coreDataManager.fetchCocktailIds()) ?? []
         try await withThrowingTaskGroup(of: RandomCocktailOutput.self) { group in
             let getRandomCocktail: @Sendable () async throws -> RandomCocktailOutput = { [weak self] in
                 guard let self else { throw NetworkError.unknownError(code: "RC01") }
@@ -69,7 +71,7 @@ final class GameCoordinator: Coordinator {
             }
             
             for try await result in group {
-                if cocktails.contains(result) { // TODO: aggiungere controllo su cocktail dei precedenti round
+                if cocktails.contains(result) || previousRoundCocktailIds.contains(result.id) {
                     group.addTask(operation: getRandomCocktail)
                 } else {
                     cocktails.insert(result)
@@ -123,6 +125,10 @@ final class GameCoordinator: Coordinator {
         parentVC.present(rootViewController, animated: true)
     }
     
+    private func storeCocktails() {
+        // Try to save CocktailIds used during round - Error is not locking
+        try? coreDataManager.saveCocotailIds(cocktails.map{ $0.id })
+    }
 }
 
 extension GameCoordinator: GamePageViewModelDelegate {
@@ -179,6 +185,9 @@ extension GameCoordinator: GamePageViewModelDelegate {
             guard let self, let popupVC else { return }
             rootViewController.present(popupVC, animated: true)
         }
+        
+        // Store cocktails used during round
+        storeCocktails()
     }
     
     private func dismissCoordinatorFromPopup() {

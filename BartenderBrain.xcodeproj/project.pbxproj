@@ -39,6 +39,10 @@
 		81AE055E2CD0389800FE2323 /* BartenderBrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE055D2CD0389800FE2323 /* BartenderBrainTests.swift */; };
 		81AE05682CD0389800FE2323 /* BartenderBrainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05672CD0389800FE2323 /* BartenderBrainUITests.swift */; };
 		81AE056A2CD0389800FE2323 /* BartenderBrainUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05692CD0389800FE2323 /* BartenderBrainUITestsLaunchTests.swift */; };
+		81AFFEDE2CD7FB140062003B /* BartenderBrain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81AFFEDC2CD7FB140062003B /* BartenderBrain.xcdatamodeld */; };
+		81AFFEF32CD7FEAC0062003B /* GameRoundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AFFEF22CD7FEAC0062003B /* GameRoundEntity.swift */; };
+		81AFFEF52CD8036D0062003B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AFFEF42CD8036D0062003B /* CoreDataManager.swift */; };
+		81AFFEF72CD80B2B0062003B /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AFFEF62CD80B2B0062003B /* CoreDataError.swift */; };
 		81BCD8E62CD0E418003EA3F4 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCD8E52CD0E418003EA3F4 /* ApiRequest.swift */; };
 		81BCD8E82CD14047003EA3F4 /* BodyCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCD8E72CD14047003EA3F4 /* BodyCoding.swift */; };
 		81BCD8EA2CD14B7E003EA3F4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCD8E92CD14B7E003EA3F4 /* NetworkError.swift */; };
@@ -113,6 +117,10 @@
 		81AE05632CD0389800FE2323 /* BartenderBrainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BartenderBrainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AE05672CD0389800FE2323 /* BartenderBrainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartenderBrainUITests.swift; sourceTree = "<group>"; };
 		81AE05692CD0389800FE2323 /* BartenderBrainUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartenderBrainUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		81AFFEDD2CD7FB140062003B /* BartenderBrain.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BartenderBrain.xcdatamodel; sourceTree = "<group>"; };
+		81AFFEF22CD7FEAC0062003B /* GameRoundEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoundEntity.swift; sourceTree = "<group>"; };
+		81AFFEF42CD8036D0062003B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		81AFFEF62CD80B2B0062003B /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
 		81BCD8E52CD0E418003EA3F4 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		81BCD8E72CD14047003EA3F4 /* BodyCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCoding.swift; sourceTree = "<group>"; };
 		81BCD8E92CD14B7E003EA3F4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -342,6 +350,7 @@
 			children = (
 				81FCD4B52CD0BCE700BD04AA /* NetworkLayer */,
 				810C0E982CD21F42009953DE /* PresentationLayer */,
+				81AFFEDB2CD7FAFD0062003B /* CoreData */,
 				8195E47E2CD36EE5006B2CEE /* Extensions */,
 				81AE05462CD0389600FE2323 /* AppDelegate.swift */,
 				81AE05482CD0389600FE2323 /* SceneDelegate.swift */,
@@ -355,6 +364,25 @@
 				81AE05542CD0389700FE2323 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		81AFFEDB2CD7FAFD0062003B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				81AFFEED2CD7FCDA0062003B /* Entities */,
+				81AFFEF42CD8036D0062003B /* CoreDataManager.swift */,
+				81AFFEF62CD80B2B0062003B /* CoreDataError.swift */,
+				81AFFEDC2CD7FB140062003B /* BartenderBrain.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		81AFFEED2CD7FCDA0062003B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				81AFFEF22CD7FEAC0062003B /* GameRoundEntity.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		81BCD8F42CD18565003EA3F4 /* ApiCatalog */ = {
@@ -634,9 +662,12 @@
 				81FCD4BA2CD0C05400BD04AA /* HTTPMethod.swift in Sources */,
 				81DC66A82CD7E61D00C52D07 /* SubjectSender.swift in Sources */,
 				810C0E972CD2175C009953DE /* HomeCoordinator.swift in Sources */,
+				81AFFEF72CD80B2B0062003B /* CoreDataError.swift in Sources */,
 				81BCD8EC2CD15A86003EA3F4 /* RandomConcktailApiCatalog.swift in Sources */,
 				81AE05472CD0389600FE2323 /* AppDelegate.swift in Sources */,
 				818E75AF2CD4E46500B34F1C /* TopScoreManager.swift in Sources */,
+				81AFFEDE2CD7FB140062003B /* BartenderBrain.xcdatamodeld in Sources */,
+				81AFFEF52CD8036D0062003B /* CoreDataManager.swift in Sources */,
 				8169A4F12CD2C0C20081DBDD /* ScrollSideBasedView.swift in Sources */,
 				81BCD8F32CD16E84003EA3F4 /* NetworkProvier.swift in Sources */,
 				81AE05492CD0389600FE2323 /* SceneDelegate.swift in Sources */,
@@ -653,6 +684,7 @@
 				818E75CB2CD6B9F500B34F1C /* UIImage.swift in Sources */,
 				818E75BE2CD5279C00B34F1C /* GameCardView.swift in Sources */,
 				811C91162CD29404004207E1 /* BaseSwiftUIViewController2.swift in Sources */,
+				81AFFEF32CD7FEAC0062003B /* GameRoundEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1003,6 +1035,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		81AFFEDC2CD7FB140062003B /* BartenderBrain.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				81AFFEDD2CD7FB140062003B /* BartenderBrain.xcdatamodel */,
+			);
+			currentVersion = 81AFFEDD2CD7FB140062003B /* BartenderBrain.xcdatamodel */;
+			path = BartenderBrain.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 81AE053B2CD0389600FE2323 /* Project object */;
 }
