@@ -19,7 +19,7 @@ class HomePageViewModel: BaseViewModel {
     static let minCocktailPairs: Double = 4
     static let maxCocktailPairs: Double = 15
     @Published var cocktailPairsNum: Double = 4.0
-    @Published var challengeMode: ChallengeMode = .beginner
+    @Published var challengeMode: ChallengeMode = .easy
     
     init(delegate: HomePageViewModelDelegate) {
         self.delegate = delegate
