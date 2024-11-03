@@ -31,9 +31,7 @@ struct HomePageView: BaseSwiftUIView {
                         Image("icon_cards")
                             .resizable()
                             .scaledToFill()
-                            //.scaleEffect(0.7)
                             .size(.init(width: 220, height: 200))
-                            //.clipped()
                         
                         Text(String(viewModel.cocktailPairsNum.toInt()))
                             .font(.system(size: 30))

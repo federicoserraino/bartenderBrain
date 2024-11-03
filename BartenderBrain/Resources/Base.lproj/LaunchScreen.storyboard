@@ -17,18 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TN6-p2-hic">
-                                <rect key="frame" x="139.66666666666666" y="428.33333333333331" width="113.66666666666666" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_app" translatesAutoresizingMaskIntoConstraints="NO" id="JNj-DR-CEn">
+                                <rect key="frame" x="30" y="313.66666666666669" width="333.33333333333331" height="250.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="1sr-bv-Kg8"/>
+                                    <constraint firstAttribute="width" secondItem="JNj-DR-CEn" secondAttribute="height" multiplier="4:3" id="nOa-b8-fhJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bartender Brain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpX-Iy-MPK">
+                                <rect key="frame" x="94" y="593.66666666666663" width="205" height="33.666666666666629"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TN6-p2-hic" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="NoZ-Pp-KYJ"/>
-                            <constraint firstItem="TN6-p2-hic" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Yw8-3d-8ka"/>
+                            <constraint firstItem="JNj-DR-CEn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ED9-pJ-9pL"/>
+                            <constraint firstItem="FpX-Iy-MPK" firstAttribute="centerX" secondItem="JNj-DR-CEn" secondAttribute="centerX" id="GZl-UD-ad1"/>
+                            <constraint firstItem="FpX-Iy-MPK" firstAttribute="top" secondItem="JNj-DR-CEn" secondAttribute="bottom" constant="30" id="atH-Df-osd"/>
+                            <constraint firstItem="JNj-DR-CEn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oub-ea-b7q"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,6 +46,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon_app" width="374" height="525"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
