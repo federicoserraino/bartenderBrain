@@ -7,10 +7,14 @@
 
 import Foundation
 
-final class TopScoreManager {
-    
+protocol TopScoreManager: AnyObject {
+    func getTopScore() -> Int?
+    func setTopScore(_ newScore: Int) -> Bool
+}
+
+final class AppTopScoreManager: TopScoreManager {
+    static let shared: TopScoreManager = AppTopScoreManager()
     private init() {}
-    static let shared: TopScoreManager = .init()
     private let userDefaults: UserDefaults = UserDefaults.standard
     private let topScoreKey: String = "BARTENDER_BRAIN.TOP_SCORE.KEY"
     

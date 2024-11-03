@@ -16,6 +16,7 @@
 		810C0EA82CD28DB5009953DE /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0EA72CD28DB5009953DE /* HomePageView.swift */; };
 		810C0EAA2CD28DC4009953DE /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0EA92CD28DC4009953DE /* HomePageViewModel.swift */; };
 		811C91162CD29404004207E1 /* BaseSwiftUIViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C91152CD29404004207E1 /* BaseSwiftUIViewController2.swift */; };
+		815AD4C72CD79E85007E9543 /* LoaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815AD4C62CD79E85007E9543 /* LoaderManager.swift */; };
 		8169A4F12CD2C0C20081DBDD /* ScrollSideBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169A4F02CD2C0C20081DBDD /* ScrollSideBasedView.swift */; };
 		818E75A62CD4CFF800B34F1C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75A52CD4CFF800B34F1C /* View.swift */; };
 		818E75A92CD4DEA800B34F1C /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75A82CD4DEA800B34F1C /* Double.swift */; };
@@ -84,6 +85,7 @@
 		810C0EA72CD28DB5009953DE /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		810C0EA92CD28DC4009953DE /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		811C91152CD29404004207E1 /* BaseSwiftUIViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwiftUIViewController2.swift; sourceTree = "<group>"; };
+		815AD4C62CD79E85007E9543 /* LoaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderManager.swift; sourceTree = "<group>"; };
 		8169A4F02CD2C0C20081DBDD /* ScrollSideBasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSideBasedView.swift; sourceTree = "<group>"; };
 		818E75A52CD4CFF800B34F1C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		818E75A82CD4DEA800B34F1C /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				818E75AE2CD4E46500B34F1C /* TopScoreManager.swift */,
+				815AD4C62CD79E85007E9543 /* LoaderManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				818E75C72CD6880E00B34F1C /* PopupView.swift in Sources */,
 				81BCD8E62CD0E418003EA3F4 /* ApiRequest.swift in Sources */,
 				810C0E9D2CD21FF1009953DE /* GameCoordinator.swift in Sources */,
+				815AD4C72CD79E85007E9543 /* LoaderManager.swift in Sources */,
 				818E75B92CD50ADC00B34F1C /* Int.swift in Sources */,
 				81BCD8EA2CD14B7E003EA3F4 /* NetworkError.swift in Sources */,
 				818E75CB2CD6B9F500B34F1C /* UIImage.swift in Sources */,

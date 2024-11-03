@@ -19,6 +19,9 @@ final class GameCoordinator: Coordinator {
     private let networkProvier: NetworkProvier
     private var popupVC: UIViewController?
     
+    private lazy var loaderManager: LoaderManager = { AppLoaderManager.shared }()
+    private lazy var topScoreManager: TopScoreManager = { AppTopScoreManager.shared }()
+    
     init(cocktailPairsNum: Int, networkProvier: NetworkProvier = AppNetworkProvier.shared) {
         self.cocktailPairsNum = cocktailPairsNum
         self.networkProvier = networkProvier
@@ -26,15 +29,18 @@ final class GameCoordinator: Coordinator {
     
     func start(from coordinator: Coordinator?) {
         parent = coordinator
-        Task {
+        Task { [weak self] in guard let self else { return }
             do {
+                await loaderManager.showLoader()
                 cocktails = try await fetchCocktails()
             } catch {
-                await MainActor.run { [weak self] in self?.showNetworkErrorPopup(for: error as? NetworkError) }
+                await loaderManager.hideLoader()
+                await showNetworkErrorPopup(for: error as? NetworkError)
                 return
             }
             
             await MainActor.run { [weak self] in guard let self else { return }
+                loaderManager.hideLoader()
                 let vm = GamePageViewModel(cockstails: cocktails, delegate: self)
                 let vc = BaseSwiftUIViewController<GamePageViewModel, GamePageView>(viewModel: vm)
                 rootViewController = vc
@@ -155,7 +161,7 @@ extension GameCoordinator: GamePageViewModelDelegate {
             .divider(),
             .text(text: "Total score:\t \(score*2)", font: .system(size: 14, weight: .semibold))
         ]
-        let newScoreAdded = TopScoreManager.shared.setTopScore(score)
+        let newScoreAdded = topScoreManager.setTopScore(score)
         if newScoreAdded {
             popupItems.append(.text(text: "🔥 NEW RECORD ", font: .system(size: 10, weight: .bold)))
         }
