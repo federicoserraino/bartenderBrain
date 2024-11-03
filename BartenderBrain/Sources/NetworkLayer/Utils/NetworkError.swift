@@ -31,15 +31,15 @@ enum NetworkError: Error {
     
     var codeError: String {
         switch self {
-        case .urlError(let msg):
+        case .urlError:
             "BR01"
-        case .inputFormatError(let msg):
+        case .inputFormatError:
             "BR02"
-        case .outputFormatError(let msg):
+        case .outputFormatError:
             "BR03"
-        case .serviceError(let msg):
+        case .serviceError:
             "BR04"
-        case .unknownError(let code):
+        case .unknownError:
             "BR00"
         }
     }
