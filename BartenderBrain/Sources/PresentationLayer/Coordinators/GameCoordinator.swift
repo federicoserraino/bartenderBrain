@@ -106,8 +106,8 @@ final class GameCoordinator: Coordinator {
     private func showNetworkErrorPopup(for error: NetworkError?) {
         guard let parentVC = parent?.rootViewController else { return }
         var popupItems: [PopupItem] = [
-            .title(text: "Attenzione"),
-            .text(text: "Si è verificato un problema tecnico.\nSi prega di riprovare più tardi.", topPadding: 20),
+            .title(text: "Oops..."),
+            .text(text: "Si è verificato un inaspettato problema tecnico.\nSi prega di riprovare più tardi.", topPadding: 20),
         ]
         
         if let codeError = error?.codeError {
@@ -152,16 +152,19 @@ extension GameCoordinator: GamePageViewModelDelegate {
     }
     
     func gameDidEnd(with score: Int, after time: Int) {
-        // TODO: Compute new score
+        let challegeMode = ChallengeMode(for: cocktailPairsNum.toDouble())
+        let timePenalty = time / 10
+        let bonusMultiplier = challegeMode.bonusScoreMultiplier
+        let totalScore: Double = (score - timePenalty).toDouble() * bonusMultiplier
         var popupItems: [PopupItem] = [
             .title(text: "Well done!"),
-            .text(text: "Score: \(score)", alignment: .leading),
-            .text(text: "Time: \(time.timeFormatFromSeconds)", alignment: .leading),
-            .text(text: "Mode: \(ChallengeMode(for: Double(cocktailPairsNum)).emoji)", alignment: .leading),
+            .text(text: "Base score → \(score)", alignment: .leading),
+            .text(text: "Duration → \(time.timeFormatFromSeconds)", alignment: .leading),
+            .text(text: "Mode → \(challegeMode.emoji)", alignment: .leading),
             .divider(),
-            .text(text: "Total score:\t \(score*2)", font: .system(size: 14, weight: .semibold))
+            .text(text: "Final score → \(totalScore.stringFormatted)", font: .system(size: 14, weight: .semibold))
         ]
-        let newScoreAdded = topScoreManager.setTopScore(score)
+        let newScoreAdded = topScoreManager.setTopScore(totalScore)
         if newScoreAdded {
             popupItems.append(.text(text: "🔥 NEW RECORD ", font: .system(size: 10, weight: .bold)))
         }

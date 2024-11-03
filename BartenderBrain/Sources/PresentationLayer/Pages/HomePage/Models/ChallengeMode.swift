@@ -43,4 +43,17 @@ enum ChallengeMode: String {
         }
     }
     
+    var bonusScoreMultiplier: Double {
+        switch self {
+        case .easy:
+            1
+        case .medium:
+            1.5
+        case .hard:
+            2
+        case .pro:
+            3
+        }
+    }
+    
 }

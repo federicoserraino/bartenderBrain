@@ -13,4 +13,8 @@ extension Int {
         let resSec = self % 60
         return String(format: "%02d:%02d", min, resSec)
     }
+    
+    func toDouble() -> Double {
+        Double(self)
+    }
 }

@@ -8,8 +8,8 @@
 import Foundation
 
 protocol TopScoreManager: AnyObject {
-    func getTopScore() -> Int?
-    func setTopScore(_ newScore: Int) -> Bool
+    func getTopScore() -> Double?
+    func setTopScore(_ newScore: Double) -> Bool
 }
 
 final class AppTopScoreManager: TopScoreManager {
@@ -18,11 +18,11 @@ final class AppTopScoreManager: TopScoreManager {
     private let userDefaults: UserDefaults = UserDefaults.standard
     private let topScoreKey: String = "BARTENDER_BRAIN.TOP_SCORE.KEY"
     
-    func getTopScore() -> Int? {
-        userDefaults.object(forKey: topScoreKey) as? Int
+    func getTopScore() -> Double? {
+        userDefaults.object(forKey: topScoreKey) as? Double
     }
     
-    func setTopScore(_ newScore: Int) -> Bool {
+    func setTopScore(_ newScore: Double) -> Bool {
         let currentTopScore = getTopScore()
         if currentTopScore == nil || newScore > currentTopScore! {
             userDefaults.setValue(newScore, forKey: topScoreKey)
