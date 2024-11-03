@@ -10,7 +10,7 @@ import UIKit
 import Combine
 
 protocol GamePageViewModelDelegate: AnyObject {
-    func didPressCloseButton()
+    func didTapOnMenuButton()
     func didEndGame(with score: Int)
 }
 
@@ -151,8 +151,8 @@ class GamePageViewModel: BaseViewModel {
     private func checkIfGameIsOver() {
         guard matchesFound == matchesToFind else { return }
         //TODO: Calcolare punti in base a difficoltà e tempo
+        cleanGameMemory()
         delegate?.didEndGame(with: score)
-        print("Game over!")
     }
     
 }
