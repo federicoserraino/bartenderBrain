@@ -15,7 +15,8 @@ class GameCard: ObservableObject {
     @Published var isFlipped: Bool
     // Logo cards are used to create a game grid that is as square as possible
     let isLogoCard: Bool
-    static let logoId: String = "logo_card"
+    static private let logoCardId: String = "logo_card"
+    static private var logoCardCounter: Int = 0
     
     init(id: String, image: UIImage, isFlipped: Bool = false, isLogoCard: Bool = false) {
         self.id = id
@@ -34,9 +35,10 @@ class GameCard: ObservableObject {
     }
     
     static func makeLogoCard() -> GameCard {
-        .init(
-            id: logoId,
-            image: UIImage(),
+        logoCardCounter += 1
+        return .init(
+            id: logoCardId + "_\(logoCardCounter)",
+            image: .icon_logoCard,
             isLogoCard: true
         )
     }

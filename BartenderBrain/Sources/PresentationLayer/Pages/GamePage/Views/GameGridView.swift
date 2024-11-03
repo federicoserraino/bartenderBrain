@@ -9,10 +9,10 @@ import SwiftUI
 
 struct GameGridView: View {
     let items: [GameCard]
+    let columnsCount: Int
     let didTapOnItem: (GameCard) -> Void
 
     var body: some View {
-        let columnsCount = Int(sqrt(Double(items.count)).rounded())
         let columns = Array(repeating: GridItem(.flexible()), count: columnsCount)
         let itemSize = GridItemSize(columnsCount: columnsCount).size
         
@@ -47,11 +47,10 @@ struct GameGridView: View {
         
         var size: CGSize {
             switch self {
-            case .L: .init(width: 100, height: 150)
+            case .L: .init(width: 90, height: 135)
             case .M: .init(width: 70, height: 105)
             case .S: .init(width: 55, height: 82.5)
             }
         }
     }
 }
-
