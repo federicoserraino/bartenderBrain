@@ -20,10 +20,11 @@ struct GamePageView: BaseSwiftUIView {
         ZStack {
             GameGridView(
                 items: viewModel.cardsDeck,
+                columnsCount: viewModel.columnsCount,
                 didTapOnItem: viewModel.didTapOnCard
             )
             .scrollable(
-                if: false,
+                if: viewModel.rowsCount > 5,
                 scrollTopPadding: 60,
                 scrollBottomPadding: 40
             )
@@ -95,7 +96,7 @@ struct GamePageView: BaseSwiftUIView {
                 .scaledToFill()
                 .ignoresSafeArea()
         )
-        .onAppear(perform: viewModel.prepareAndStartGame)
+        .onAppear(perform: viewModel.beginGame)
         .onDisappear(perform: viewModel.endGame)
     }
     

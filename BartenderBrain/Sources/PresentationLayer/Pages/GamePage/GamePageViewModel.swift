@@ -18,6 +18,10 @@ class GamePageViewModel: BaseViewModel {
     weak var delegate: GamePageViewModelDelegate?
     // Unique Cocktails to find
     private let cockstails: [CocktailDetails]
+    // Grid dimension
+    private(set) var columnsCount: Int = 0
+    private(set) var rowsCount: Int = 0
+    private var missingElementsToCompleteGrid: Int = 0
     // Score Properties
     private let matchesToFind: Int
     private var matchesFound: Int = 0
@@ -37,6 +41,8 @@ class GamePageViewModel: BaseViewModel {
         self.delegate = delegate
         matchesToFind = cockstails.count
         super.init()
+        setupGameGrid()
+        setupCardsDeck()
     }
     
     override func bindingProperties() {
@@ -54,10 +60,9 @@ class GamePageViewModel: BaseViewModel {
             .store(in: &cancellables)
     }
     
-    func prepareAndStartGame() {
-        resetScore()
-        setupCardsDeck()
-        startPreviewGame()
+    // MARK: - Public Method
+    func beginGame() {
+        showCardsPreviewAndStartGame()
     }
     
     func endGame() {
@@ -69,6 +74,43 @@ class GamePageViewModel: BaseViewModel {
     }
     
     // MARK - Private Methods
+    private func setupGameGrid() {
+        guard matchesToFind > 0 else { return }
+        let itemsCount = matchesToFind * 2
+        columnsCount = Int(sqrt(Double(itemsCount)).rounded())
+        rowsCount = (itemsCount + columnsCount - 1) / columnsCount
+        missingElementsToCompleteGrid = (columnsCount * rowsCount) % itemsCount
+    }
+    
+    private func setupCardsDeck() {
+        var cardsDeck: [GameCard] = cockstails
+            .map{ GameCard(id: $0.id, image: $0.image) }
+            .flatMap{ [$0, $0.makeDuplicate()] }
+            .shuffled()
+        // Add Logo cards to make the grid as square as possible
+        switch missingElementsToCompleteGrid {
+        case 1: // Add logo to center
+            cardsDeck.insert(GameCard.makeLogoCard(), at: cardsDeck.count/2)
+        case 2: // Add logos in top-left and bottom-right corners
+            cardsDeck.insert(GameCard.makeLogoCard(), at: 0)
+            cardsDeck.append(GameCard.makeLogoCard())
+        case 3: // Add logos center, in top-left and bottom-right corners
+            cardsDeck.insert(GameCard.makeLogoCard(), at: cardsDeck.count/2)
+            cardsDeck.insert(GameCard.makeLogoCard(), at: 0)
+            cardsDeck.append(GameCard.makeLogoCard())
+        case 4: // Add logos in corners
+            let topRightIndex = columnsCount - 1
+            let bottomLeftIndex = (rowsCount - 1) * columnsCount
+            cardsDeck.insert(GameCard.makeLogoCard(), at: 0)
+            cardsDeck.insert(GameCard.makeLogoCard(), at: topRightIndex)
+            cardsDeck.insert(GameCard.makeLogoCard(), at: bottomLeftIndex)
+            cardsDeck.append(GameCard.makeLogoCard())
+        default:
+            break
+        }
+        self.cardsDeck = cardsDeck
+    }
+    
     private func resetScore() {
         score = 0
         matchesFound = 0
@@ -76,16 +118,7 @@ class GamePageViewModel: BaseViewModel {
         selectedCard = nil
     }
     
-    private func setupCardsDeck() {
-        //TODO: Aggiungere logica logo card
-        var cardsDeck: [GameCard] = cockstails
-            .map{ GameCard(id: $0.id, image: $0.image) }
-            .flatMap{ [$0, $0.makeDuplicate()] }
-            .shuffled()
-        self.cardsDeck = cardsDeck
-    }
-    
-    private func startPreviewGame() {
+    private func showCardsPreviewAndStartGame() {
         previewTimerValue = 3
         let previewTimerCancellables = Timer.publish(every: 1, on: .main, in: .common)
             .autoconnect()
@@ -113,8 +146,10 @@ class GamePageViewModel: BaseViewModel {
     
     private func restartGame() {
         endGame()
+        resetScore()
         bindingProperties()
-        prepareAndStartGame()
+        setupCardsDeck()
+        showCardsPreviewAndStartGame()
     }
     
     private func flipAllCards() {
