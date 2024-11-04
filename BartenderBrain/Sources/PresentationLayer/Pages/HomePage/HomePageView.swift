@@ -17,53 +17,95 @@ struct HomePageView: BaseSwiftUIView {
     var body: some View {
         ZStack(alignment: .bottom) {
             ScrollSideBasedView {
-                VStack(alignment: .leading, spacing: 0) {
+                VStack(spacing: 0) {
+                    Text("HOME_PAGE.TITLE".localized)
+                        .font(.system(size: 20, weight: .bold))
+                        .foregroundColor(.accentColor)
+                        .padding(.top, 30)
                     
-                    Text("Nome gioco")
-                        .padding(.top, 50)
-                        .frame(maxWidth: .infinity)
+                    Image(uiImage: .icon_cards)
+                        .resizable()
+                        .scaledToFill()
+                        .size(.init(width: 220, height: 200))
+                        .padding(.top, 40)
                     
-                    Text("HOME_PAGE.FIND_COCKTAILS".localized)
+                    Text(viewModel.cocktailsNumValue)
+                        .font(.system(size: 26, weight: .semibold))
+                        .foregroundColor(.accentColorSecondary)
+                        .background(
+                            Circle()
+                                .fill(Color.accentColor)
+                                .size(.init(width: 40, height: 40))
+                        )
                         .padding(.top, 20)
-                        .frame(maxWidth: .infinity)
-                    
-                    VStack(alignment: .center, spacing: 10) {
-                        Image(uiImage: .icon_cards)
-                            .resizable()
-                            .scaledToFill()
-                            .size(.init(width: 220, height: 200))
-                        
-                        Text(String(viewModel.cocktailPairsNum.toInt()))
-                            .font(.system(size: 30))
-                    }
-                    .padding(.top, 30)
-                    .frame(maxWidth: .infinity)
                     
                     HStack(spacing: 15) {
-                        Text(String(HomePageViewModel.minCocktailPairs.toInt()))
-                        Slider(value: $viewModel.cocktailPairsNum, in: HomePageViewModel.minCocktailPairs...15)
-                            .padding()
-                        Text(String(HomePageViewModel.maxCocktailPairs.toInt()))
+                        VStack(spacing: 0) {
+                            Text(String(HomePageViewModel.minCocktailPairs.toInt()))
+                                .font(.system(size: 16, weight: .bold))
+                                .foregroundColor(.accentColor)
+                            Text("HOME_PAGE.MIN".localized)
+                                .font(.system(size: 10, weight: .bold))
+                                .foregroundColor(.accentColor)
+                        }
+                        
+                        Slider(
+                            value: $viewModel.cocktailPairsNum,
+                            in: HomePageViewModel.minCocktailPairs...15
+                        )
+                        .tint(.accentColor)
+                        .padding()
+                        
+                        VStack(spacing: 0) {
+                            Text(String(HomePageViewModel.maxCocktailPairs.toInt()))
+                                .font(.system(size: 16, weight: .bold))
+                                .foregroundColor(.accentColor)
+                            Text("HOME_PAGE.MAX".localized)
+                                .font(.system(size: 10, weight: .bold))
+                                .foregroundColor(.accentColor)
+                        }
                     }
+                    .padding(.top, 5)
                     
-                    Text("HOME_PAGE.CHALLENGE_MODE".localized + ": \(viewModel.challengeMode.description)")
+                    Text("HOME_PAGE.CHALLENGE_MODE".localized)
+                        .font(.system(size: 20, weight: .bold))
+                        .foregroundColor(.accentColor)
+                        .padding(.top, 15)
                     
-                    if let topScore = viewModel.topScore {
-                        Text("HOME_PAGE.TOP_SCORE".localized + " \(topScore)")
-                    }
+                    Text(viewModel.challengeMode.emoji)
+                        .font(.system(size: 40))
+                        .padding(.top, 15)
+                    
+                    Text(viewModel.challengeMode.description)
+                        .font(.system(size: 12, weight: .bold))
+                        .foregroundColor(.accentColor)
+                        .padding(.top, 5)
                 }
                 .padding(.horizontal, 20)
             }
             .padding(.bottom, 50)
             
-            FloatingButtonView(
-                text: "START_BUTTON".localized,
-                fontSize: 16,
-                elementSize: .init(width: 150, height: 50),
-                action: viewModel.didTapStartButton
-            )
-            .padding(.bottom, 10)
+            VStack(spacing: 8) {
+                if let topScore = viewModel.topScore {
+                    Text("HOME_PAGE.TOP_SCORE".localized + " \(topScore)")
+                        .font(.system(size: 12, weight: .bold))
+                }
+                
+                FloatingButtonView(
+                    text: "START_BUTTON".localized,
+                    fontSize: 16,
+                    elementSize: .init(width: 150, height: 50),
+                    action: viewModel.didTapStartButton
+                )
+                .padding(.bottom, 10)
+            }
         }
+        .background(
+            Image(uiImage: .background)
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+        )
     }
 }
 

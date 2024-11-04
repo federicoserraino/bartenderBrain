@@ -20,6 +20,7 @@ class HomePageViewModel: BaseViewModel {
     static let minCocktailPairs: Double = 4
     static let maxCocktailPairs: Double = 15
     @Published var cocktailPairsNum: Double = 4.0
+    @Published var cocktailsNumValue: String = ""
     @Published var challengeMode: ChallengeMode = .easy
     @Published var topScore: String?
     
@@ -32,9 +33,11 @@ class HomePageViewModel: BaseViewModel {
     override func bindingProperties() {
         super.bindingProperties()
         $cocktailPairsNum
-            .map{ ChallengeMode(for: $0) }
             .receive(on: RunLoop.main)
-            .assign(to: \.challengeMode, on: self)
+            .sink(receiveValue: { [weak self] value in
+                self?.cocktailsNumValue = String(value.toInt())
+                self?.challengeMode = .init(for: value)
+            })
             .store(in: &cancellables)
         
         topScoreSender?.subject

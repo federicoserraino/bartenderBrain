@@ -27,7 +27,7 @@ enum ChallengeMode: String {
     }
     
     var description: String {
-        self.rawValue.capitalized + " " + self.emoji
+        self.rawValue.uppercased()
     }
     
     var emoji: String {

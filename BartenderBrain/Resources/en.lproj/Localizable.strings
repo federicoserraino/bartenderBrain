@@ -12,9 +12,11 @@
 "CLOSE_BUTTON" = "Close";
 
 // Mark: - HomePage
-"HOME_PAGE.FIND_COCKTAILS" = "Pairs of cocktails to find";
+"HOME_PAGE.TITLE" = "Pairs of cocktails to find";
 "HOME_PAGE.CHALLENGE_MODE" = "Challenge mode";
-"HOME_PAGE.TOP_SCORE" = "Record: ";
+"HOME_PAGE.MIN" = "MIN";
+"HOME_PAGE.MAX" = "MAX";
+"HOME_PAGE.TOP_SCORE" = "RECORD: ";
 
 // Mark: - Game Page
 "GAME_PAGE.SCORE" = "SCORE";

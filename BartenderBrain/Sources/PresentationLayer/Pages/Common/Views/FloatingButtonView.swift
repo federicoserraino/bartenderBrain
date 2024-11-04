@@ -19,8 +19,8 @@ struct FloatingButtonView: View {
     
     init(
         text: String,
-        backgroundColor: Color = .red,
-        foregroundColor: Color = .white,
+        backgroundColor: Color = .accentColor,
+        foregroundColor: Color = .accentColorSecondary,
         cornerRadius: CGFloat = 30,
         fontSize: CGFloat = 14,
         fontWeight: Font.Weight = .bold,
