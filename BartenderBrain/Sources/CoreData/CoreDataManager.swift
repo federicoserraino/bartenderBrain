@@ -52,7 +52,7 @@ class AppCoreDataManager: CoreDataManager {
             newEntity.cocktailIds = ids
             try context.save()
         } catch {
-            throw CoreDataError.saveCocotailIds
+            throw CoreDataError.saveCocktailIds
         }
     }
 }

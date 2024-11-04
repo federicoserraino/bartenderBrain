@@ -9,14 +9,14 @@ import Foundation
 
 enum CoreDataError: Error {
     case fetchCocktailIdsError
-    case saveCocotailIds
+    case saveCocktailIds
     
     var localizedDescription: String {
         switch self {
         case .fetchCocktailIdsError:
             "Error trying fetchCocktailIdsError"
-        case .saveCocotailIds:
-            "Error trying saveCocotailIds"
+        case .saveCocktailIds:
+            "Error trying saveCocktailIds"
         }
     }
 }
