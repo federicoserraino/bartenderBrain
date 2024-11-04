@@ -22,6 +22,7 @@ final class GameCoordinator: Coordinator {
     private lazy var coreDataManager: CoreDataManager = { AppCoreDataManager.shared }()
     private lazy var loaderManager: LoaderManager = { AppLoaderManager.shared }()
     private lazy var topScoreManager: TopScoreManager = { AppTopScoreManager.shared }()
+    private lazy var notificationManager: NotificationManager = { AppNotificationManager.shared }()
     
     init(cocktailPairsNum: Int, networkProvier: NetworkProvier = AppNetworkProvier.shared) {
         self.cocktailPairsNum = cocktailPairsNum
@@ -129,6 +130,12 @@ final class GameCoordinator: Coordinator {
         // Try to save CocktailIds used during round - Error is not locking
         try? coreDataManager.saveCocotailIds(cocktails.map{ $0.id })
     }
+    
+    private func updateDailyNotificationWithGameHour() {
+        // Try to update hour of today dailyNotification trigger event
+        let gameHour = Date().hour
+        notificationManager.updateDailyNotificationHourIfNeeded(with: gameHour)
+    }
 }
 
 extension GameCoordinator: GamePageViewModelDelegate {
@@ -188,6 +195,8 @@ extension GameCoordinator: GamePageViewModelDelegate {
         
         // Store cocktails used during round
         storeCocktails()
+        // Update hour of today dailyNotification trigger event
+        updateDailyNotificationWithGameHour()
     }
     
     private func dismissCoordinatorFromPopup() {

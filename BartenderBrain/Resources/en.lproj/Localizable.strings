@@ -33,3 +33,7 @@
 "GAME_PAGE.END_GAME_POUP.MODE" = "Mode";
 "GAME_PAGE.END_GAME_POUP.FINAL_SCORE" = "Final score";
 "GAME_PAGE.END_GAME_POUP.RECORD" = "New record";
+
+// Mark: - Daily Notification
+"DAILY_NOTIFICATION.TITLE" = "Time to play!";
+"DAILY_NOTIFICATION.MESSAGE" = "Don't forget to play a game today";

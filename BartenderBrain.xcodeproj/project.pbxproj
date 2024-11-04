@@ -19,6 +19,9 @@
 		8167FD202CD8F051005CCBFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8167FD222CD8F051005CCBFA /* Localizable.strings */; };
 		8167FD252CD8F5D4005CCBFA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167FD242CD8F5D4005CCBFA /* String.swift */; };
 		8167FD272CD907F7005CCBFA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167FD262CD907F7005CCBFA /* Color.swift */; };
+		8167FD2A2CD936C0005CCBFA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167FD292CD936C0005CCBFA /* NotificationManager.swift */; };
+		8167FD2C2CD9370A005CCBFA /* DailyNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167FD2B2CD9370A005CCBFA /* DailyNotification.swift */; };
+		8167FD2E2CD93EA1005CCBFA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167FD2D2CD93EA1005CCBFA /* Date.swift */; };
 		8169A4F12CD2C0C20081DBDD /* ScrollSideBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169A4F02CD2C0C20081DBDD /* ScrollSideBasedView.swift */; };
 		818E75A62CD4CFF800B34F1C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75A52CD4CFF800B34F1C /* View.swift */; };
 		818E75A92CD4DEA800B34F1C /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75A82CD4DEA800B34F1C /* Double.swift */; };
@@ -90,6 +93,9 @@
 		8167FD212CD8F051005CCBFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8167FD242CD8F5D4005CCBFA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8167FD262CD907F7005CCBFA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8167FD292CD936C0005CCBFA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		8167FD2B2CD9370A005CCBFA /* DailyNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNotification.swift; sourceTree = "<group>"; };
+		8167FD2D2CD93EA1005CCBFA /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		8169A4F02CD2C0C20081DBDD /* ScrollSideBasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSideBasedView.swift; sourceTree = "<group>"; };
 		818E75A52CD4CFF800B34F1C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		818E75A82CD4DEA800B34F1C /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -213,6 +219,15 @@
 			path = HomePage;
 			sourceTree = "<group>";
 		};
+		8167FD282CD936A5005CCBFA /* NotifictionManager */ = {
+			isa = PBXGroup;
+			children = (
+				8167FD292CD936C0005CCBFA /* NotificationManager.swift */,
+				8167FD2B2CD9370A005CCBFA /* DailyNotification.swift */,
+			);
+			path = NotifictionManager;
+			sourceTree = "<group>";
+		};
 		8169A4EF2CD2C0540081DBDD /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +294,7 @@
 				818E75CA2CD6B9F500B34F1C /* UIImage.swift */,
 				8167FD242CD8F5D4005CCBFA /* String.swift */,
 				8167FD262CD907F7005CCBFA /* Color.swift */,
+				8167FD2D2CD93EA1005CCBFA /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -347,6 +363,7 @@
 				81FCD4B52CD0BCE700BD04AA /* NetworkLayer */,
 				810C0E982CD21F42009953DE /* PresentationLayer */,
 				81AFFEDB2CD7FAFD0062003B /* CoreData */,
+				8167FD282CD936A5005CCBFA /* NotifictionManager */,
 				8195E47E2CD36EE5006B2CEE /* Extensions */,
 				81AE05462CD0389600FE2323 /* AppDelegate.swift */,
 				81AE05482CD0389600FE2323 /* SceneDelegate.swift */,
@@ -644,6 +661,7 @@
 				818E75C32CD58FB600B34F1C /* GameCard.swift in Sources */,
 				81BCD8F12CD16A72003EA3F4 /* CocktailImageApiCatalog.swift in Sources */,
 				818E75A92CD4DEA800B34F1C /* Double.swift in Sources */,
+				8167FD2C2CD9370A005CCBFA /* DailyNotification.swift in Sources */,
 				818E75A62CD4CFF800B34F1C /* View.swift in Sources */,
 				818E75B22CD4ED9400B34F1C /* GamePageView.swift in Sources */,
 				81FCD4BA2CD0C05400BD04AA /* HTTPMethod.swift in Sources */,
@@ -652,10 +670,12 @@
 				810C0E972CD2175C009953DE /* HomeCoordinator.swift in Sources */,
 				81AFFEF72CD80B2B0062003B /* CoreDataError.swift in Sources */,
 				81BCD8EC2CD15A86003EA3F4 /* RandomConcktailApiCatalog.swift in Sources */,
+				8167FD2E2CD93EA1005CCBFA /* Date.swift in Sources */,
 				81AE05472CD0389600FE2323 /* AppDelegate.swift in Sources */,
 				818E75AF2CD4E46500B34F1C /* TopScoreManager.swift in Sources */,
 				81AFFEDE2CD7FB140062003B /* BartenderBrain.xcdatamodeld in Sources */,
 				81AFFEF52CD8036D0062003B /* CoreDataManager.swift in Sources */,
+				8167FD2A2CD936C0005CCBFA /* NotificationManager.swift in Sources */,
 				8169A4F12CD2C0C20081DBDD /* ScrollSideBasedView.swift in Sources */,
 				8167FD272CD907F7005CCBFA /* Color.swift in Sources */,
 				81BCD8F32CD16E84003EA3F4 /* NetworkProvier.swift in Sources */,
