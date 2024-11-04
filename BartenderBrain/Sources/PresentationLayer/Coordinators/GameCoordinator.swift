@@ -108,18 +108,18 @@ final class GameCoordinator: Coordinator {
     private func showNetworkErrorPopup(for error: NetworkError?) {
         guard let parentVC = parent?.rootViewController else { return }
         var popupItems: [PopupItem] = [
-            .title(text: "Oops..."),
-            .text(text: "Si è verificato un inaspettato problema tecnico.\nSi prega di riprovare più tardi.", topPadding: 20),
+            .title(text: "GAME_PAGE.NETWORK_ERROR.TITLE".localized),
+            .text(text: "GAME_PAGE.NETWORK_ERROR.DESC".localized, topPadding: 20),
         ]
         
         if let codeError = error?.codeError {
-            popupItems.append(.text(text: "CODE ERROR: \(codeError)", font: .system(size: 10, weight: .semibold)))
+            popupItems.append(.text(text: "GAME_PAGE.NETWORK_ERROR.CODE_ERROR".localized + codeError, font: .system(size: 10, weight: .semibold)))
         }
         
         rootViewController = PopupView(
             items: popupItems,
             estimatedSize: .init(width: 300, height: 220),
-            bottomButton: (text: "ok", action: { [weak self] in self?.dismissCoordinator() })
+            bottomButton: (text: "OK_BUTTON".localized, action: { [weak self] in self?.dismissCoordinator() })
         ).viewControllerEmbedded
         
         parentVC.present(rootViewController, animated: true)
@@ -135,23 +135,23 @@ extension GameCoordinator: GamePageViewModelDelegate {
     func didTapOnMenuButton(onNewGamePressed: @escaping () -> Void) {
         popupVC = PopupView(
             items: [
-                .title(text: "Menu"),
+                .title(text: "GAME_PAGE.MENU.TITLE".localized),
                 .iconWithText(
                     icon: .icon_cards,
                     size: .init(width: 40, height: 40),
-                    text: "Restart Game",
+                    text: "GAME_PAGE.MENU.RESTAT".localized,
                     topPadding: 20,
                     action: { [weak self] in self?.popupVC?.dismiss(animated: true, completion: onNewGamePressed) }
                 ),
                 .iconWithText(
                     icon: .icon_cancel,
                     size: .init(width: 20, height: 20),
-                    text: "Quit Game",
+                    text: "GAME_PAGE.MENU.QUIT".localized,
                     topPadding: 25,
                     action: { [weak self] in self?.dismissCoordinatorFromPopup() }
                 )
             ],
-            bottomButton: (text: "Close", action: { [weak self] in self?.popupVC?.dismiss(animated: true) })
+            bottomButton: (text: "CLOSE_BUTTON".localized, action: { [weak self] in self?.popupVC?.dismiss(animated: true) })
         ).viewControllerEmbedded
         
         rootViewController.present(popupVC!, animated: true)
@@ -163,21 +163,21 @@ extension GameCoordinator: GamePageViewModelDelegate {
         let bonusMultiplier = challegeMode.bonusScoreMultiplier
         let totalScore: Double = (score - timePenalty).toDouble() * bonusMultiplier
         var popupItems: [PopupItem] = [
-            .title(text: "Well done!"),
-            .text(text: "Base score → \(score)", alignment: .leading),
-            .text(text: "Duration → \(time.timeFormatFromSeconds)", alignment: .leading),
-            .text(text: "Mode → \(challegeMode.emoji)", alignment: .leading),
+            .title(text: "GAME_PAGE.END_GAME_POUP.TITLE".localized),
+            .text(text: "GAME_PAGE.END_GAME_POUP.SCORE".localized + " → \(score)", alignment: .leading),
+            .text(text: "GAME_PAGE.END_GAME_POUP.TIME".localized + " → \(time.timeFormatFromSeconds)", alignment: .leading),
+            .text(text: "GAME_PAGE.END_GAME_POUP.MODE".localized + " → \(challegeMode.emoji)", alignment: .leading),
             .divider(),
-            .text(text: "Final score → \(totalScore.stringFormatted)", font: .system(size: 14, weight: .semibold))
+            .text(text: "GAME_PAGE.END_GAME_POUP.FINAL_SCORE".localized + " → \(totalScore.stringFormatted)", font: .system(size: 14, weight: .semibold))
         ]
         let newScoreAdded = topScoreManager.setTopScore(totalScore)
         if newScoreAdded {
-            popupItems.append(.text(text: "🔥 NEW RECORD ", font: .system(size: 10, weight: .bold)))
+            popupItems.append(.text(text: "🔥 " + "GAME_PAGE.END_GAME_POUP.RECORD".localized, font: .system(size: 10, weight: .bold), topPadding: 5))
         }
         
         popupVC = PopupView(
             items: popupItems,
-            bottomButton: (text: "ok", action: { [weak self] in self?.dismissCoordinatorFromPopup() })
+            bottomButton: (text: "OK_BUTTON".localized, action: { [weak self] in self?.dismissCoordinatorFromPopup() })
         ).viewControllerEmbedded
        
         // Add delay to enhance UX

@@ -23,12 +23,12 @@ struct HomePageView: BaseSwiftUIView {
                         .padding(.top, 50)
                         .frame(maxWidth: .infinity)
                     
-                    Text("Coppie cocktail da trovare")
+                    Text("HOME_PAGE.FIND_COCKTAILS".localized)
                         .padding(.top, 20)
                         .frame(maxWidth: .infinity)
                     
                     VStack(alignment: .center, spacing: 10) {
-                        Image("icon_cards")
+                        Image(uiImage: .icon_cards)
                             .resizable()
                             .scaledToFill()
                             .size(.init(width: 220, height: 200))
@@ -46,10 +46,10 @@ struct HomePageView: BaseSwiftUIView {
                         Text(String(HomePageViewModel.maxCocktailPairs.toInt()))
                     }
                     
-                    Text("Challenge mode: \(viewModel.challengeMode.description)")
+                    Text("HOME_PAGE.CHALLENGE_MODE".localized + ": \(viewModel.challengeMode.description)")
                     
                     if let topScore = viewModel.topScore {
-                        Text("Top score: \(topScore)")
+                        Text("HOME_PAGE.TOP_SCORE".localized + " \(topScore)")
                     }
                 }
                 .padding(.horizontal, 20)
@@ -57,7 +57,7 @@ struct HomePageView: BaseSwiftUIView {
             .padding(.bottom, 50)
             
             FloatingButtonView(
-                text: "Start game",
+                text: "START_BUTTON".localized,
                 fontSize: 16,
                 elementSize: .init(width: 150, height: 50),
                 action: viewModel.didTapStartButton

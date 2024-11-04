@@ -60,7 +60,7 @@ struct GamePageView: BaseSwiftUIView {
                             }
                         }
                     
-                    Text("SCORE")
+                    Text("GAME_PAGE.SCORE".localized)
                         .font(.system(size: 10))
                         .foregroundColor(.white)
                 }
@@ -75,7 +75,7 @@ struct GamePageView: BaseSwiftUIView {
                                 .frame(width: 10, height: 12)
                                 .foregroundColor(.white)
                             
-                            Text("Menu")
+                            Text("GAME_PAGE.MENU.TITLE".localized)
                                 .font(.system(size: 10))
                                 .foregroundColor(.white)
                             

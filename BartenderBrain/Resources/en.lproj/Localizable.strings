@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  BartenderBrain
+
+  Created by Federico Serraino on 04/11/24.
+  
+*/
+
+// Mark: - Common
+"START_BUTTON" = "Start game";
+"OK_BUTTON" = "OK";
+"CLOSE_BUTTON" = "Close";
+
+// Mark: - HomePage
+"HOME_PAGE.FIND_COCKTAILS" = "Pairs of cocktails to find";
+"HOME_PAGE.CHALLENGE_MODE" = "Challenge mode";
+"HOME_PAGE.TOP_SCORE" = "Record: ";
+
+// Mark: - Game Page
+"GAME_PAGE.SCORE" = "SCORE";
+"GAME_PAGE.NETWORK_ERROR.TITLE" = "Oops...";
+"GAME_PAGE.NETWORK_ERROR.DESC" = "An unexpected technical issue occurred.\nPlease try again later";
+"GAME_PAGE.NETWORK_ERROR.CODE_ERROR" = "CODE ERROR: ";
+"GAME_PAGE.MENU.TITLE" = "Menu";
+"GAME_PAGE.MENU.RESTAT" = "Restart Game";
+"GAME_PAGE.MENU.QUIT" = "Quit Game";
+
+"GAME_PAGE.END_GAME_POUP.TITLE" = "Well done!";
+"GAME_PAGE.END_GAME_POUP.SCORE" = "Base score";
+"GAME_PAGE.END_GAME_POUP.TIME" = "Duration";
+"GAME_PAGE.END_GAME_POUP.MODE" = "Mode";
+"GAME_PAGE.END_GAME_POUP.FINAL_SCORE" = "Final score";
+"GAME_PAGE.END_GAME_POUP.RECORD" = "New record";

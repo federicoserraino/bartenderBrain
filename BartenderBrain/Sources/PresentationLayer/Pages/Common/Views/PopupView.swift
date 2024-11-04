@@ -98,34 +98,3 @@ enum PopupItem {
     }
 }
 
-/*
- #Preview {
- PopupView(items: [
- .title(text: "Well done!"),
- .text(text: "Score: 10", font: .system(size: 14)),
- .text(text: "Time: 10", font: .system(size: 14)),
- .text(text: "Mode: 10", font: .system(size: 14)),
- .divider(),
- .text(text: "Total score:\t 10", font: .system(size: 14, weight: .semibold)),
- .text(text: "🔥 NEW RECORD ", font: .system(size: 10, weight: .bold)),
- ],
- bottomButton: (text: "ok", action: {})
- )
- }
- */
-
-
-#Preview {
-    PopupView(items: [
-        .title(text: "Attenzione"),
-        .text(text: "Si è verificato un problema tecnico.\nSi prega di riprova più tardi.", font: .system(size: 14), topPadding: 20),
-        .text(text: "CODE ERROR: BR00", font: .system(size: 10, weight: .semibold)),
-       // .text(text: "Mode: 10", font: .system(size: 14)),
-        //.divider(),
-        //.text(text: "Total score:\t 10", font: .system(size: 14, weight: .semibold)),
-        //.text(text: "🔥 NEW RECORD ", font: .system(size: 10, weight: .bold)),
-    ],
-              bottomButton: (text: "ok", action: {})
-    )
-}
-
