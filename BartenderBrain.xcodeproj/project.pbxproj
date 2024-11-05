@@ -24,6 +24,8 @@
 		8167FD2E2CD93EA1005CCBFA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167FD2D2CD93EA1005CCBFA /* Date.swift */; };
 		8169A4F12CD2C0C20081DBDD /* ScrollSideBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169A4F02CD2C0C20081DBDD /* ScrollSideBasedView.swift */; };
 		8173B3A82CDA455D00105FA8 /* BartenderBrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173B3A72CDA455D00105FA8 /* BartenderBrainTests.swift */; };
+		8173B3B12CDA46A100105FA8 /* HomePageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173B3B02CDA46A100105FA8 /* HomePageViewModelTests.swift */; };
+		8173B3B32CDA478700105FA8 /* GamePageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173B3B22CDA478700105FA8 /* GamePageViewModelTests.swift */; };
 		818E75A62CD4CFF800B34F1C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75A52CD4CFF800B34F1C /* View.swift */; };
 		818E75A92CD4DEA800B34F1C /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75A82CD4DEA800B34F1C /* Double.swift */; };
 		818E75AB2CD4E33500B34F1C /* ChallengeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75AA2CD4E33500B34F1C /* ChallengeMode.swift */; };
@@ -91,6 +93,8 @@
 		8173B3A52CDA455D00105FA8 /* BartenderBrainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BartenderBrainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8173B3A72CDA455D00105FA8 /* BartenderBrainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartenderBrainTests.swift; sourceTree = "<group>"; };
 		8173B3AE2CDA457B00105FA8 /* BartenderBrain.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = BartenderBrain.xctestplan; sourceTree = SOURCE_ROOT; };
+		8173B3B02CDA46A100105FA8 /* HomePageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelTests.swift; sourceTree = "<group>"; };
+		8173B3B22CDA478700105FA8 /* GamePageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePageViewModelTests.swift; sourceTree = "<group>"; };
 		818E75A52CD4CFF800B34F1C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		818E75A82CD4DEA800B34F1C /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		818E75AA2CD4E33500B34F1C /* ChallengeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMode.swift; sourceTree = "<group>"; };
@@ -223,10 +227,20 @@
 		8173B3A62CDA455D00105FA8 /* BartenderBrainTests */ = {
 			isa = PBXGroup;
 			children = (
+				8173B3AF2CDA468A00105FA8 /* ViewModels */,
 				8173B3A72CDA455D00105FA8 /* BartenderBrainTests.swift */,
 				8173B3AE2CDA457B00105FA8 /* BartenderBrain.xctestplan */,
 			);
 			path = BartenderBrainTests;
+			sourceTree = "<group>";
+		};
+		8173B3AF2CDA468A00105FA8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8173B3B02CDA46A100105FA8 /* HomePageViewModelTests.swift */,
+				8173B3B22CDA478700105FA8 /* GamePageViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		818E75AC2CD4E33B00B34F1C /* Models */ = {
@@ -543,6 +557,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8173B3B32CDA478700105FA8 /* GamePageViewModelTests.swift in Sources */,
+				8173B3B12CDA46A100105FA8 /* HomePageViewModelTests.swift in Sources */,
 				8173B3A82CDA455D00105FA8 /* BartenderBrainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
