@@ -2,11 +2,10 @@
 //  BartenderBrainTests.swift
 //  BartenderBrainTests
 //
-//  Created by Federico Serraino on 28/10/24.
+//  Created by Federico Serraino on 05/11/24.
 //
 
 import XCTest
-@testable import BartenderBrain
 
 final class BartenderBrainTests: XCTestCase {
 
@@ -28,7 +27,7 @@ final class BartenderBrainTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

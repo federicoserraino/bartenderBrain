@@ -23,6 +23,7 @@
 		8167FD2C2CD9370A005CCBFA /* DailyNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167FD2B2CD9370A005CCBFA /* DailyNotification.swift */; };
 		8167FD2E2CD93EA1005CCBFA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167FD2D2CD93EA1005CCBFA /* Date.swift */; };
 		8169A4F12CD2C0C20081DBDD /* ScrollSideBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169A4F02CD2C0C20081DBDD /* ScrollSideBasedView.swift */; };
+		8173B3A82CDA455D00105FA8 /* BartenderBrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173B3A72CDA455D00105FA8 /* BartenderBrainTests.swift */; };
 		818E75A62CD4CFF800B34F1C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75A52CD4CFF800B34F1C /* View.swift */; };
 		818E75A92CD4DEA800B34F1C /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75A82CD4DEA800B34F1C /* Double.swift */; };
 		818E75AB2CD4E33500B34F1C /* ChallengeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75AA2CD4E33500B34F1C /* ChallengeMode.swift */; };
@@ -41,9 +42,6 @@
 		81AE05492CD0389600FE2323 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05482CD0389600FE2323 /* SceneDelegate.swift */; };
 		81AE05502CD0389700FE2323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81AE054F2CD0389700FE2323 /* Assets.xcassets */; };
 		81AE05532CD0389700FE2323 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AE05512CD0389700FE2323 /* LaunchScreen.storyboard */; };
-		81AE055E2CD0389800FE2323 /* BartenderBrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE055D2CD0389800FE2323 /* BartenderBrainTests.swift */; };
-		81AE05682CD0389800FE2323 /* BartenderBrainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05672CD0389800FE2323 /* BartenderBrainUITests.swift */; };
-		81AE056A2CD0389800FE2323 /* BartenderBrainUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05692CD0389800FE2323 /* BartenderBrainUITestsLaunchTests.swift */; };
 		81AFFEDE2CD7FB140062003B /* BartenderBrain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81AFFEDC2CD7FB140062003B /* BartenderBrain.xcdatamodeld */; };
 		81AFFEF32CD7FEAC0062003B /* GameRoundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AFFEF22CD7FEAC0062003B /* GameRoundEntity.swift */; };
 		81AFFEF52CD8036D0062003B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AFFEF42CD8036D0062003B /* CoreDataManager.swift */; };
@@ -62,14 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		81AE055A2CD0389800FE2323 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81AE053B2CD0389600FE2323 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 81AE05422CD0389600FE2323;
-			remoteInfo = BartenderBrain;
-		};
-		81AE05642CD0389800FE2323 /* PBXContainerItemProxy */ = {
+		8173B3A92CDA455D00105FA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 81AE053B2CD0389600FE2323 /* Project object */;
 			proxyType = 1;
@@ -97,6 +88,9 @@
 		8167FD2B2CD9370A005CCBFA /* DailyNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNotification.swift; sourceTree = "<group>"; };
 		8167FD2D2CD93EA1005CCBFA /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		8169A4F02CD2C0C20081DBDD /* ScrollSideBasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSideBasedView.swift; sourceTree = "<group>"; };
+		8173B3A52CDA455D00105FA8 /* BartenderBrainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BartenderBrainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8173B3A72CDA455D00105FA8 /* BartenderBrainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartenderBrainTests.swift; sourceTree = "<group>"; };
+		8173B3AE2CDA457B00105FA8 /* BartenderBrain.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = BartenderBrain.xctestplan; sourceTree = SOURCE_ROOT; };
 		818E75A52CD4CFF800B34F1C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		818E75A82CD4DEA800B34F1C /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		818E75AA2CD4E33500B34F1C /* ChallengeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMode.swift; sourceTree = "<group>"; };
@@ -117,11 +111,6 @@
 		81AE054F2CD0389700FE2323 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81AE05522CD0389700FE2323 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81AE05542CD0389700FE2323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81AE05592CD0389800FE2323 /* BartenderBrainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BartenderBrainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AE055D2CD0389800FE2323 /* BartenderBrainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartenderBrainTests.swift; sourceTree = "<group>"; };
-		81AE05632CD0389800FE2323 /* BartenderBrainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BartenderBrainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AE05672CD0389800FE2323 /* BartenderBrainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartenderBrainUITests.swift; sourceTree = "<group>"; };
-		81AE05692CD0389800FE2323 /* BartenderBrainUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartenderBrainUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		81AFFEDD2CD7FB140062003B /* BartenderBrain.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BartenderBrain.xcdatamodel; sourceTree = "<group>"; };
 		81AFFEF22CD7FEAC0062003B /* GameRoundEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoundEntity.swift; sourceTree = "<group>"; };
 		81AFFEF42CD8036D0062003B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -144,21 +133,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8173B3A22CDA455D00105FA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81AE05402CD0389600FE2323 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		81AE05562CD0389800FE2323 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		81AE05602CD0389800FE2323 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,6 +220,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		8173B3A62CDA455D00105FA8 /* BartenderBrainTests */ = {
+			isa = PBXGroup;
+			children = (
+				8173B3A72CDA455D00105FA8 /* BartenderBrainTests.swift */,
+				8173B3AE2CDA457B00105FA8 /* BartenderBrain.xctestplan */,
+			);
+			path = BartenderBrainTests;
+			sourceTree = "<group>";
+		};
 		818E75AC2CD4E33B00B34F1C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,8 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				81AE05452CD0389600FE2323 /* BartenderBrain */,
-				81AE055C2CD0389800FE2323 /* BartenderBrainTests */,
-				81AE05662CD0389800FE2323 /* BartenderBrainUITests */,
+				8173B3A62CDA455D00105FA8 /* BartenderBrainTests */,
 				81AE05442CD0389600FE2323 /* Products */,
 				E84D38D2AFF550AF42C34D6E /* Pods */,
 			);
@@ -314,8 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				81AE05432CD0389600FE2323 /* BartenderBrain.app */,
-				81AE05592CD0389800FE2323 /* BartenderBrainTests.xctest */,
-				81AE05632CD0389800FE2323 /* BartenderBrainUITests.xctest */,
+				8173B3A52CDA455D00105FA8 /* BartenderBrainTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -328,23 +317,6 @@
 				81AE05772CD03F2400FE2323 /* Sources */,
 			);
 			path = BartenderBrain;
-			sourceTree = "<group>";
-		};
-		81AE055C2CD0389800FE2323 /* BartenderBrainTests */ = {
-			isa = PBXGroup;
-			children = (
-				81AE055D2CD0389800FE2323 /* BartenderBrainTests.swift */,
-			);
-			path = BartenderBrainTests;
-			sourceTree = "<group>";
-		};
-		81AE05662CD0389800FE2323 /* BartenderBrainUITests */ = {
-			isa = PBXGroup;
-			children = (
-				81AE05672CD0389800FE2323 /* BartenderBrainUITests.swift */,
-				81AE05692CD0389800FE2323 /* BartenderBrainUITestsLaunchTests.swift */,
-			);
-			path = BartenderBrainUITests;
 			sourceTree = "<group>";
 		};
 		81AE05762CD03F1800FE2323 /* Resources */ = {
@@ -447,6 +419,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8173B3A42CDA455D00105FA8 /* BartenderBrainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8173B3AB2CDA455D00105FA8 /* Build configuration list for PBXNativeTarget "BartenderBrainTests" */;
+			buildPhases = (
+				8173B3A12CDA455D00105FA8 /* Sources */,
+				8173B3A22CDA455D00105FA8 /* Frameworks */,
+				8173B3A32CDA455D00105FA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8173B3AA2CDA455D00105FA8 /* PBXTargetDependency */,
+			);
+			name = BartenderBrainTests;
+			productName = BartenderBrainTests;
+			productReference = 8173B3A52CDA455D00105FA8 /* BartenderBrainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		81AE05422CD0389600FE2323 /* BartenderBrain */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81AE056D2CD0389800FE2323 /* Build configuration list for PBXNativeTarget "BartenderBrain" */;
@@ -465,44 +455,6 @@
 			productReference = 81AE05432CD0389600FE2323 /* BartenderBrain.app */;
 			productType = "com.apple.product-type.application";
 		};
-		81AE05582CD0389800FE2323 /* BartenderBrainTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 81AE05702CD0389800FE2323 /* Build configuration list for PBXNativeTarget "BartenderBrainTests" */;
-			buildPhases = (
-				666B00347089E49415DDD9AE /* [CP] Check Pods Manifest.lock */,
-				81AE05552CD0389800FE2323 /* Sources */,
-				81AE05562CD0389800FE2323 /* Frameworks */,
-				81AE05572CD0389800FE2323 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				81AE055B2CD0389800FE2323 /* PBXTargetDependency */,
-			);
-			name = BartenderBrainTests;
-			productName = BartenderBrainTests;
-			productReference = 81AE05592CD0389800FE2323 /* BartenderBrainTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		81AE05622CD0389800FE2323 /* BartenderBrainUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 81AE05732CD0389800FE2323 /* Build configuration list for PBXNativeTarget "BartenderBrainUITests" */;
-			buildPhases = (
-				71EFCBD9E975D7B8C102E3F9 /* [CP] Check Pods Manifest.lock */,
-				81AE055F2CD0389800FE2323 /* Sources */,
-				81AE05602CD0389800FE2323 /* Frameworks */,
-				81AE05612CD0389800FE2323 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				81AE05652CD0389800FE2323 /* PBXTargetDependency */,
-			);
-			name = BartenderBrainUITests;
-			productName = BartenderBrainUITests;
-			productReference = 81AE05632CD0389800FE2323 /* BartenderBrainUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -513,16 +465,12 @@
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
+					8173B3A42CDA455D00105FA8 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 81AE05422CD0389600FE2323;
+					};
 					81AE05422CD0389600FE2323 = {
 						CreatedOnToolsVersion = 15.1;
-					};
-					81AE05582CD0389800FE2323 = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = 81AE05422CD0389600FE2323;
-					};
-					81AE05622CD0389800FE2323 = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = 81AE05422CD0389600FE2323;
 					};
 				};
 			};
@@ -540,13 +488,19 @@
 			projectRoot = "";
 			targets = (
 				81AE05422CD0389600FE2323 /* BartenderBrain */,
-				81AE05582CD0389800FE2323 /* BartenderBrainTests */,
-				81AE05622CD0389800FE2323 /* BartenderBrainUITests */,
+				8173B3A42CDA455D00105FA8 /* BartenderBrainTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8173B3A32CDA455D00105FA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81AE05412CD0389600FE2323 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -554,20 +508,6 @@
 				81AE05532CD0389700FE2323 /* LaunchScreen.storyboard in Resources */,
 				8167FD202CD8F051005CCBFA /* Localizable.strings in Resources */,
 				81AE05502CD0389700FE2323 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		81AE05572CD0389800FE2323 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		81AE05612CD0389800FE2323 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,53 +536,17 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		666B00347089E49415DDD9AE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BartenderBrainTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		71EFCBD9E975D7B8C102E3F9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BartenderBrain-BartenderBrainUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8173B3A12CDA455D00105FA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8173B3A82CDA455D00105FA8 /* BartenderBrainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81AE053F2CD0389600FE2323 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -696,35 +600,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		81AE05552CD0389800FE2323 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				81AE055E2CD0389800FE2323 /* BartenderBrainTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		81AE055F2CD0389800FE2323 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				81AE05682CD0389800FE2323 /* BartenderBrainUITests.swift in Sources */,
-				81AE056A2CD0389800FE2323 /* BartenderBrainUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		81AE055B2CD0389800FE2323 /* PBXTargetDependency */ = {
+		8173B3AA2CDA455D00105FA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 81AE05422CD0389600FE2323 /* BartenderBrain */;
-			targetProxy = 81AE055A2CD0389800FE2323 /* PBXContainerItemProxy */;
-		};
-		81AE05652CD0389800FE2323 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 81AE05422CD0389600FE2323 /* BartenderBrain */;
-			targetProxy = 81AE05642CD0389800FE2323 /* PBXContainerItemProxy */;
+			targetProxy = 8173B3A92CDA455D00105FA8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -748,6 +630,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8173B3AC2CDA455D00105FA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = f.serraino.BartenderBrainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BartenderBrain.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BartenderBrain";
+			};
+			name = Debug;
+		};
+		8173B3AD2CDA455D00105FA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = f.serraino.BartenderBrainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BartenderBrain.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BartenderBrain";
+			};
+			name = Release;
+		};
 		81AE056B2CD0389800FE2323 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -929,93 +847,18 @@
 			};
 			name = Release;
 		};
-		81AE05712CD0389800FE2323 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D04C49569613458D9060F82E /* Pods-BartenderBrainTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = f.serraino.BartenderBrainTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BartenderBrain.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BartenderBrain";
-			};
-			name = Debug;
-		};
-		81AE05722CD0389800FE2323 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7B97BCC21691ED9D4B90744 /* Pods-BartenderBrainTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = f.serraino.BartenderBrainTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BartenderBrain.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BartenderBrain";
-			};
-			name = Release;
-		};
-		81AE05742CD0389800FE2323 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5DC3A247A69A1879035F664 /* Pods-BartenderBrain-BartenderBrainUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = f.serraino.BartenderBrainUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = BartenderBrain;
-			};
-			name = Debug;
-		};
-		81AE05752CD0389800FE2323 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A91800AB41B6E96D5A11BCE0 /* Pods-BartenderBrain-BartenderBrainUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = f.serraino.BartenderBrainUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = BartenderBrain;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8173B3AB2CDA455D00105FA8 /* Build configuration list for PBXNativeTarget "BartenderBrainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8173B3AC2CDA455D00105FA8 /* Debug */,
+				8173B3AD2CDA455D00105FA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		81AE053E2CD0389600FE2323 /* Build configuration list for PBXProject "BartenderBrain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1030,24 +873,6 @@
 			buildConfigurations = (
 				81AE056E2CD0389800FE2323 /* Debug */,
 				81AE056F2CD0389800FE2323 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		81AE05702CD0389800FE2323 /* Build configuration list for PBXNativeTarget "BartenderBrainTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				81AE05712CD0389800FE2323 /* Debug */,
-				81AE05722CD0389800FE2323 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		81AE05732CD0389800FE2323 /* Build configuration list for PBXNativeTarget "BartenderBrainUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				81AE05742CD0389800FE2323 /* Debug */,
-				81AE05752CD0389800FE2323 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

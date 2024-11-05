@@ -26,15 +26,20 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      shouldAutocreateTestPlan = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <TestPlans>
+         <TestPlanReference
+            reference = "container:BartenderBrain.xctestplan"
+            default = "YES">
+         </TestPlanReference>
+      </TestPlans>
       <Testables>
          <TestableReference
             skipped = "NO"
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "81AE05582CD0389800FE2323"
+               BlueprintIdentifier = "8173B3A42CDA455D00105FA8"
                BuildableName = "BartenderBrainTests.xctest"
                BlueprintName = "BartenderBrainTests"
                ReferencedContainer = "container:BartenderBrain.xcodeproj">
@@ -48,6 +53,17 @@
                BlueprintIdentifier = "81AE05622CD0389800FE2323"
                BuildableName = "BartenderBrainUITests.xctest"
                BlueprintName = "BartenderBrainUITests"
+               ReferencedContainer = "container:BartenderBrain.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8173B3A42CDA455D00105FA8"
+               BuildableName = "BartenderBrainTests.xctest"
+               BlueprintName = "BartenderBrainTests"
                ReferencedContainer = "container:BartenderBrain.xcodeproj">
             </BuildableReference>
          </TestableReference>
