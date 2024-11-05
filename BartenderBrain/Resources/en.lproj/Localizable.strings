@@ -21,7 +21,7 @@
 // Mark: - Game Page
 "GAME_PAGE.SCORE" = "SCORE";
 "GAME_PAGE.NETWORK_ERROR.TITLE" = "Oops...";
-"GAME_PAGE.NETWORK_ERROR.DESC" = "An unexpected technical issue occurred.\nPlease try again later";
+"GAME_PAGE.NETWORK_ERROR.DESC" = "An unexpected technical issue occurred. Please try again later.";
 "GAME_PAGE.NETWORK_ERROR.CODE_ERROR" = "CODE ERROR: ";
 "GAME_PAGE.MENU.TITLE" = "Menu";
 "GAME_PAGE.MENU.RESTAT" = "Restart Game";

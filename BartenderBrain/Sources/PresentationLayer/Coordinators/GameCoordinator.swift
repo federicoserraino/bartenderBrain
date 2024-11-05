@@ -110,7 +110,7 @@ final class GameCoordinator: Coordinator {
         guard let parentVC = parent?.rootViewController else { return }
         var popupItems: [PopupItem] = [
             .title(text: "GAME_PAGE.NETWORK_ERROR.TITLE".localized),
-            .text(text: "GAME_PAGE.NETWORK_ERROR.DESC".localized, topPadding: 20),
+            .text(text: "GAME_PAGE.NETWORK_ERROR.DESC".localized, topPadding: 20, horizzontalPadding: 10),
         ]
         
         if let codeError = error?.codeError {
