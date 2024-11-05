@@ -74,6 +74,26 @@ class GamePageViewModel: BaseViewModel {
         delegate?.didTapOnMenuButton(onNewGamePressed: restartGame)
     }
     
+    func didTapOnCard(_ card: GameCard) {
+        guard !card.isLogoCard, card.isFlipped else { return }
+        
+        card.isFlipped = false
+        if let selectedCard {
+            if selectedCard.image == card.image {
+                // Match Found! :D
+                handleMatchFound(for: card.image)
+            } else {
+                // Wrong match :(
+                increaseAttempsPerImage(card.image)
+                flipCards(cards: [card, selectedCard])
+            }
+            self.selectedCard = nil
+        } else {
+            increaseAttempsPerImage(card.image)
+            selectedCard = card
+        }
+    }
+    
     // MARK - Private Methods
     private func setupGameGrid() {
         guard matchesToFind > 0 else { return }
@@ -163,26 +183,6 @@ class GamePageViewModel: BaseViewModel {
         // Adddd delay to enhance UX
         DispatchQueue.main.asyncAfter(deadline: .now() + time) {
             cards.forEach{ $0.isFlipped = true }
-        }
-    }
-    
-    func didTapOnCard(_ card: GameCard) {
-        guard !card.isLogoCard, card.isFlipped else { return }
-        
-        card.isFlipped = false
-        if let selectedCard {
-            if selectedCard.image == card.image {
-                // Match Found! :D
-                handleMatchFound(for: card.image)
-            } else {
-                // Wrong match :(
-                increaseAttempsPerImage(card.image)
-                flipCards(cards: [card, selectedCard])
-            }
-            self.selectedCard = nil
-        } else {
-            increaseAttempsPerImage(card.image)
-            selectedCard = card
         }
     }
     
