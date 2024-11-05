@@ -60,7 +60,7 @@ final class GameCoordinator: Coordinator {
     private func downloadRandomCocktails() async throws -> Set<RandomCocktailOutput> {
         var cocktails: Set<RandomCocktailOutput> = Set()
         // Try to retrieve CocktailIds used during previous rounds - Error is not locking
-        let previousRoundCocktailIds: [String] = (try? coreDataManager.fetchCocktailIds()) ?? []
+        var previousRoundCocktailIds: [String] = (try? coreDataManager.fetchCocktailIds()) ?? []
         try await withThrowingTaskGroup(of: RandomCocktailOutput.self) { group in
             let getRandomCocktail: @Sendable () async throws -> RandomCocktailOutput = { [weak self] in
                 guard let self else { throw NetworkError.unknownError(code: "RC01") }
@@ -79,7 +79,7 @@ final class GameCoordinator: Coordinator {
                 }
             }
         }
-        
+        previousRoundCocktailIds.removeAll()
         return cocktails
     }
     

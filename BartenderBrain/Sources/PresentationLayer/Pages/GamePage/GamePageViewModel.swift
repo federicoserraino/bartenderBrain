@@ -67,6 +67,7 @@ class GamePageViewModel: BaseViewModel {
     }
     
     func endGame() {
+        previewTimerCancellables = nil
         cancellables.removeAll()
     }
     
