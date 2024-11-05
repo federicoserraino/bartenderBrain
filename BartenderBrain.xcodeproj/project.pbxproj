@@ -1,0 +1,924 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		810C0E972CD2175C009953DE /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0E962CD2175C009953DE /* HomeCoordinator.swift */; };
+		810C0E9B2CD21F61009953DE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0E9A2CD21F61009953DE /* Coordinator.swift */; };
+		810C0E9D2CD21FF1009953DE /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0E9C2CD21FF1009953DE /* GameCoordinator.swift */; };
+		810C0EA12CD25810009953DE /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0EA02CD25810009953DE /* BaseViewModel.swift */; };
+		810C0EA32CD25936009953DE /* BaseSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0EA22CD25936009953DE /* BaseSwiftUIView.swift */; };
+		810C0EA52CD28770009953DE /* BaseSwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0EA42CD28770009953DE /* BaseSwiftUIViewController.swift */; };
+		810C0EA82CD28DB5009953DE /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0EA72CD28DB5009953DE /* HomePageView.swift */; };
+		810C0EAA2CD28DC4009953DE /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0EA92CD28DC4009953DE /* HomePageViewModel.swift */; };
+		815AD4C72CD79E85007E9543 /* LoaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815AD4C62CD79E85007E9543 /* LoaderManager.swift */; };
+		8167FD202CD8F051005CCBFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8167FD222CD8F051005CCBFA /* Localizable.strings */; };
+		8167FD252CD8F5D4005CCBFA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167FD242CD8F5D4005CCBFA /* String.swift */; };
+		8167FD272CD907F7005CCBFA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167FD262CD907F7005CCBFA /* Color.swift */; };
+		8167FD2A2CD936C0005CCBFA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167FD292CD936C0005CCBFA /* NotificationManager.swift */; };
+		8167FD2C2CD9370A005CCBFA /* DailyNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167FD2B2CD9370A005CCBFA /* DailyNotification.swift */; };
+		8167FD2E2CD93EA1005CCBFA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8167FD2D2CD93EA1005CCBFA /* Date.swift */; };
+		8169A4F12CD2C0C20081DBDD /* ScrollSideBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169A4F02CD2C0C20081DBDD /* ScrollSideBasedView.swift */; };
+		8173B3B12CDA46A100105FA8 /* HomePageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173B3B02CDA46A100105FA8 /* HomePageViewModelTests.swift */; };
+		8173B3B32CDA478700105FA8 /* GamePageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173B3B22CDA478700105FA8 /* GamePageViewModelTests.swift */; };
+		8173B3B62CDA6CFB00105FA8 /* TopScoreManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173B3B52CDA6CFB00105FA8 /* TopScoreManagerTests.swift */; };
+		8173B3B82CDA6D1100105FA8 /* CoreDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173B3B72CDA6D1100105FA8 /* CoreDataManagerTests.swift */; };
+		818E75A62CD4CFF800B34F1C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75A52CD4CFF800B34F1C /* View.swift */; };
+		818E75A92CD4DEA800B34F1C /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75A82CD4DEA800B34F1C /* Double.swift */; };
+		818E75AB2CD4E33500B34F1C /* ChallengeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75AA2CD4E33500B34F1C /* ChallengeMode.swift */; };
+		818E75AF2CD4E46500B34F1C /* TopScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75AE2CD4E46500B34F1C /* TopScoreManager.swift */; };
+		818E75B22CD4ED9400B34F1C /* GamePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75B12CD4ED9400B34F1C /* GamePageView.swift */; };
+		818E75B42CD4EDA200B34F1C /* GamePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75B32CD4EDA200B34F1C /* GamePageViewModel.swift */; };
+		818E75B92CD50ADC00B34F1C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75B82CD50ADC00B34F1C /* Int.swift */; };
+		818E75BE2CD5279C00B34F1C /* GameCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75BD2CD5279C00B34F1C /* GameCardView.swift */; };
+		818E75C02CD537B000B34F1C /* GameGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75BF2CD537B000B34F1C /* GameGridView.swift */; };
+		818E75C32CD58FB600B34F1C /* GameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75C22CD58FB600B34F1C /* GameCard.swift */; };
+		818E75C52CD6109B00B34F1C /* CocktailDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75C42CD6109B00B34F1C /* CocktailDetails.swift */; };
+		818E75C72CD6880E00B34F1C /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75C62CD6880E00B34F1C /* PopupView.swift */; };
+		818E75C92CD695A700B34F1C /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75C82CD695A700B34F1C /* FloatingButtonView.swift */; };
+		818E75CB2CD6B9F500B34F1C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E75CA2CD6B9F500B34F1C /* UIImage.swift */; };
+		81AE05472CD0389600FE2323 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05462CD0389600FE2323 /* AppDelegate.swift */; };
+		81AE05492CD0389600FE2323 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE05482CD0389600FE2323 /* SceneDelegate.swift */; };
+		81AE05502CD0389700FE2323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81AE054F2CD0389700FE2323 /* Assets.xcassets */; };
+		81AE05532CD0389700FE2323 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AE05512CD0389700FE2323 /* LaunchScreen.storyboard */; };
+		81AFFEDE2CD7FB140062003B /* BartenderBrain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81AFFEDC2CD7FB140062003B /* BartenderBrain.xcdatamodeld */; };
+		81AFFEF32CD7FEAC0062003B /* GameRoundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AFFEF22CD7FEAC0062003B /* GameRoundEntity.swift */; };
+		81AFFEF52CD8036D0062003B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AFFEF42CD8036D0062003B /* CoreDataManager.swift */; };
+		81AFFEF72CD80B2B0062003B /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AFFEF62CD80B2B0062003B /* CoreDataError.swift */; };
+		81BCD8E62CD0E418003EA3F4 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCD8E52CD0E418003EA3F4 /* ApiRequest.swift */; };
+		81BCD8E82CD14047003EA3F4 /* BodyCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCD8E72CD14047003EA3F4 /* BodyCoding.swift */; };
+		81BCD8EA2CD14B7E003EA3F4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCD8E92CD14B7E003EA3F4 /* NetworkError.swift */; };
+		81BCD8EC2CD15A86003EA3F4 /* RandomConcktailApiCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCD8EB2CD15A86003EA3F4 /* RandomConcktailApiCatalog.swift */; };
+		81BCD8EF2CD15B6D003EA3F4 /* CodableVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCD8EE2CD15B6D003EA3F4 /* CodableVoid.swift */; };
+		81BCD8F12CD16A72003EA3F4 /* CocktailImageApiCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCD8F02CD16A72003EA3F4 /* CocktailImageApiCatalog.swift */; };
+		81BCD8F32CD16E84003EA3F4 /* NetworkProvier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCD8F22CD16E84003EA3F4 /* NetworkProvier.swift */; };
+		81DC66A82CD7E61D00C52D07 /* SubjectSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DC66A72CD7E61D00C52D07 /* SubjectSender.swift */; };
+		81FCD4B72CD0BD0800BD04AA /* ApiCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FCD4B62CD0BD0800BD04AA /* ApiCatalog.swift */; };
+		81FCD4BA2CD0C05400BD04AA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FCD4B92CD0C05400BD04AA /* HTTPMethod.swift */; };
+		81FCD4BE2CD0C38F00BD04AA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FCD4BD2CD0C38F00BD04AA /* NetworkManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8173B3A92CDA455D00105FA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81AE053B2CD0389600FE2323 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81AE05422CD0389600FE2323;
+			remoteInfo = BartenderBrain;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F6B79EB781FED465BDB8A5A /* Pods-BartenderBrain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrain.debug.xcconfig"; path = "Target Support Files/Pods-BartenderBrain/Pods-BartenderBrain.debug.xcconfig"; sourceTree = "<group>"; };
+		7DABE23EE67F2463F7F95C6D /* Pods-BartenderBrain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrain.release.xcconfig"; path = "Target Support Files/Pods-BartenderBrain/Pods-BartenderBrain.release.xcconfig"; sourceTree = "<group>"; };
+		810C0E962CD2175C009953DE /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		810C0E9A2CD21F61009953DE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		810C0E9C2CD21FF1009953DE /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
+		810C0EA02CD25810009953DE /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		810C0EA22CD25936009953DE /* BaseSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwiftUIView.swift; sourceTree = "<group>"; };
+		810C0EA42CD28770009953DE /* BaseSwiftUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwiftUIViewController.swift; sourceTree = "<group>"; };
+		810C0EA72CD28DB5009953DE /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		810C0EA92CD28DC4009953DE /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		815AD4C62CD79E85007E9543 /* LoaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderManager.swift; sourceTree = "<group>"; };
+		8167FD212CD8F051005CCBFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8167FD242CD8F5D4005CCBFA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8167FD262CD907F7005CCBFA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8167FD292CD936C0005CCBFA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		8167FD2B2CD9370A005CCBFA /* DailyNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNotification.swift; sourceTree = "<group>"; };
+		8167FD2D2CD93EA1005CCBFA /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		8169A4F02CD2C0C20081DBDD /* ScrollSideBasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSideBasedView.swift; sourceTree = "<group>"; };
+		8173B3A52CDA455D00105FA8 /* BartenderBrainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BartenderBrainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8173B3AE2CDA457B00105FA8 /* BartenderBrain.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = BartenderBrain.xctestplan; sourceTree = SOURCE_ROOT; };
+		8173B3B02CDA46A100105FA8 /* HomePageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelTests.swift; sourceTree = "<group>"; };
+		8173B3B22CDA478700105FA8 /* GamePageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePageViewModelTests.swift; sourceTree = "<group>"; };
+		8173B3B52CDA6CFB00105FA8 /* TopScoreManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScoreManagerTests.swift; sourceTree = "<group>"; };
+		8173B3B72CDA6D1100105FA8 /* CoreDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTests.swift; sourceTree = "<group>"; };
+		818E75A52CD4CFF800B34F1C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		818E75A82CD4DEA800B34F1C /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		818E75AA2CD4E33500B34F1C /* ChallengeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMode.swift; sourceTree = "<group>"; };
+		818E75AE2CD4E46500B34F1C /* TopScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScoreManager.swift; sourceTree = "<group>"; };
+		818E75B12CD4ED9400B34F1C /* GamePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePageView.swift; sourceTree = "<group>"; };
+		818E75B32CD4EDA200B34F1C /* GamePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePageViewModel.swift; sourceTree = "<group>"; };
+		818E75B82CD50ADC00B34F1C /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		818E75BD2CD5279C00B34F1C /* GameCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardView.swift; sourceTree = "<group>"; };
+		818E75BF2CD537B000B34F1C /* GameGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridView.swift; sourceTree = "<group>"; };
+		818E75C22CD58FB600B34F1C /* GameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCard.swift; sourceTree = "<group>"; };
+		818E75C42CD6109B00B34F1C /* CocktailDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetails.swift; sourceTree = "<group>"; };
+		818E75C62CD6880E00B34F1C /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		818E75C82CD695A700B34F1C /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
+		818E75CA2CD6B9F500B34F1C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		81AE05432CD0389600FE2323 /* BartenderBrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BartenderBrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AE05462CD0389600FE2323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81AE05482CD0389600FE2323 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		81AE054F2CD0389700FE2323 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81AE05522CD0389700FE2323 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81AE05542CD0389700FE2323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81AFFEDD2CD7FB140062003B /* BartenderBrain.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BartenderBrain.xcdatamodel; sourceTree = "<group>"; };
+		81AFFEF22CD7FEAC0062003B /* GameRoundEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoundEntity.swift; sourceTree = "<group>"; };
+		81AFFEF42CD8036D0062003B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		81AFFEF62CD80B2B0062003B /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
+		81BCD8E52CD0E418003EA3F4 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		81BCD8E72CD14047003EA3F4 /* BodyCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCoding.swift; sourceTree = "<group>"; };
+		81BCD8E92CD14B7E003EA3F4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		81BCD8EB2CD15A86003EA3F4 /* RandomConcktailApiCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomConcktailApiCatalog.swift; sourceTree = "<group>"; };
+		81BCD8EE2CD15B6D003EA3F4 /* CodableVoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableVoid.swift; sourceTree = "<group>"; };
+		81BCD8F02CD16A72003EA3F4 /* CocktailImageApiCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailImageApiCatalog.swift; sourceTree = "<group>"; };
+		81BCD8F22CD16E84003EA3F4 /* NetworkProvier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvier.swift; sourceTree = "<group>"; };
+		81DC66A72CD7E61D00C52D07 /* SubjectSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectSender.swift; sourceTree = "<group>"; };
+		81FCD4B62CD0BD0800BD04AA /* ApiCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCatalog.swift; sourceTree = "<group>"; };
+		81FCD4B92CD0C05400BD04AA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		81FCD4BD2CD0C38F00BD04AA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A7B97BCC21691ED9D4B90744 /* Pods-BartenderBrainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrainTests.release.xcconfig"; path = "Target Support Files/Pods-BartenderBrainTests/Pods-BartenderBrainTests.release.xcconfig"; sourceTree = "<group>"; };
+		A91800AB41B6E96D5A11BCE0 /* Pods-BartenderBrain-BartenderBrainUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrain-BartenderBrainUITests.release.xcconfig"; path = "Target Support Files/Pods-BartenderBrain-BartenderBrainUITests/Pods-BartenderBrain-BartenderBrainUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C5DC3A247A69A1879035F664 /* Pods-BartenderBrain-BartenderBrainUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrain-BartenderBrainUITests.debug.xcconfig"; path = "Target Support Files/Pods-BartenderBrain-BartenderBrainUITests/Pods-BartenderBrain-BartenderBrainUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D04C49569613458D9060F82E /* Pods-BartenderBrainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BartenderBrainTests.debug.xcconfig"; path = "Target Support Files/Pods-BartenderBrainTests/Pods-BartenderBrainTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8173B3A22CDA455D00105FA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81AE05402CD0389600FE2323 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		810C0E982CD21F42009953DE /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				810C0E992CD21F50009953DE /* Coordinators */,
+				810C0E9E2CD257E9009953DE /* Pages */,
+				818E75AD2CD4E45800B34F1C /* Common */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		810C0E992CD21F50009953DE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				810C0E9A2CD21F61009953DE /* Coordinator.swift */,
+				810C0E962CD2175C009953DE /* HomeCoordinator.swift */,
+				810C0E9C2CD21FF1009953DE /* GameCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		810C0E9E2CD257E9009953DE /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				810C0EA62CD28D94009953DE /* HomePage */,
+				818E75B02CD4ED6000B34F1C /* GamePage */,
+				810C0E9F2CD257F6009953DE /* Common */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		810C0E9F2CD257F6009953DE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8169A4EF2CD2C0540081DBDD /* Views */,
+				810C0EA02CD25810009953DE /* BaseViewModel.swift */,
+				810C0EA22CD25936009953DE /* BaseSwiftUIView.swift */,
+				810C0EA42CD28770009953DE /* BaseSwiftUIViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		810C0EA62CD28D94009953DE /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				818E75AC2CD4E33B00B34F1C /* Models */,
+				810C0EA72CD28DB5009953DE /* HomePageView.swift */,
+				810C0EA92CD28DC4009953DE /* HomePageViewModel.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		8167FD282CD936A5005CCBFA /* NotifictionManager */ = {
+			isa = PBXGroup;
+			children = (
+				8167FD292CD936C0005CCBFA /* NotificationManager.swift */,
+				8167FD2B2CD9370A005CCBFA /* DailyNotification.swift */,
+			);
+			path = NotifictionManager;
+			sourceTree = "<group>";
+		};
+		8169A4EF2CD2C0540081DBDD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8169A4F02CD2C0C20081DBDD /* ScrollSideBasedView.swift */,
+				818E75C62CD6880E00B34F1C /* PopupView.swift */,
+				818E75C82CD695A700B34F1C /* FloatingButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8173B3A62CDA455D00105FA8 /* BartenderBrainTests */ = {
+			isa = PBXGroup;
+			children = (
+				8173B3AF2CDA468A00105FA8 /* ViewModels */,
+				8173B3B42CDA6CEB00105FA8 /* Managers */,
+				8173B3AE2CDA457B00105FA8 /* BartenderBrain.xctestplan */,
+			);
+			path = BartenderBrainTests;
+			sourceTree = "<group>";
+		};
+		8173B3AF2CDA468A00105FA8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8173B3B02CDA46A100105FA8 /* HomePageViewModelTests.swift */,
+				8173B3B22CDA478700105FA8 /* GamePageViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8173B3B42CDA6CEB00105FA8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8173B3B52CDA6CFB00105FA8 /* TopScoreManagerTests.swift */,
+				8173B3B72CDA6D1100105FA8 /* CoreDataManagerTests.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		818E75AC2CD4E33B00B34F1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				818E75AA2CD4E33500B34F1C /* ChallengeMode.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		818E75AD2CD4E45800B34F1C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				818E75AE2CD4E46500B34F1C /* TopScoreManager.swift */,
+				815AD4C62CD79E85007E9543 /* LoaderManager.swift */,
+				81DC66A72CD7E61D00C52D07 /* SubjectSender.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		818E75B02CD4ED6000B34F1C /* GamePage */ = {
+			isa = PBXGroup;
+			children = (
+				818E75B52CD4FB7000B34F1C /* Models */,
+				818E75BC2CD5278700B34F1C /* Views */,
+				818E75B12CD4ED9400B34F1C /* GamePageView.swift */,
+				818E75B32CD4EDA200B34F1C /* GamePageViewModel.swift */,
+			);
+			path = GamePage;
+			sourceTree = "<group>";
+		};
+		818E75B52CD4FB7000B34F1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				818E75C42CD6109B00B34F1C /* CocktailDetails.swift */,
+				818E75C22CD58FB600B34F1C /* GameCard.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		818E75BC2CD5278700B34F1C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				818E75BF2CD537B000B34F1C /* GameGridView.swift */,
+				818E75BD2CD5279C00B34F1C /* GameCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8195E47E2CD36EE5006B2CEE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				818E75A52CD4CFF800B34F1C /* View.swift */,
+				818E75A82CD4DEA800B34F1C /* Double.swift */,
+				818E75B82CD50ADC00B34F1C /* Int.swift */,
+				818E75CA2CD6B9F500B34F1C /* UIImage.swift */,
+				8167FD242CD8F5D4005CCBFA /* String.swift */,
+				8167FD262CD907F7005CCBFA /* Color.swift */,
+				8167FD2D2CD93EA1005CCBFA /* Date.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		81AE053A2CD0389600FE2323 = {
+			isa = PBXGroup;
+			children = (
+				81AE05452CD0389600FE2323 /* BartenderBrain */,
+				8173B3A62CDA455D00105FA8 /* BartenderBrainTests */,
+				81AE05442CD0389600FE2323 /* Products */,
+				E84D38D2AFF550AF42C34D6E /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		81AE05442CD0389600FE2323 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81AE05432CD0389600FE2323 /* BartenderBrain.app */,
+				8173B3A52CDA455D00105FA8 /* BartenderBrainTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81AE05452CD0389600FE2323 /* BartenderBrain */ = {
+			isa = PBXGroup;
+			children = (
+				81AE05782CD03F5500FE2323 /* SupportingFiles */,
+				81AE05762CD03F1800FE2323 /* Resources */,
+				81AE05772CD03F2400FE2323 /* Sources */,
+			);
+			path = BartenderBrain;
+			sourceTree = "<group>";
+		};
+		81AE05762CD03F1800FE2323 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				81AE054F2CD0389700FE2323 /* Assets.xcassets */,
+				81AE05512CD0389700FE2323 /* LaunchScreen.storyboard */,
+				8167FD222CD8F051005CCBFA /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		81AE05772CD03F2400FE2323 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				81FCD4B52CD0BCE700BD04AA /* NetworkLayer */,
+				810C0E982CD21F42009953DE /* PresentationLayer */,
+				81AFFEDB2CD7FAFD0062003B /* CoreData */,
+				8167FD282CD936A5005CCBFA /* NotifictionManager */,
+				8195E47E2CD36EE5006B2CEE /* Extensions */,
+				81AE05462CD0389600FE2323 /* AppDelegate.swift */,
+				81AE05482CD0389600FE2323 /* SceneDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		81AE05782CD03F5500FE2323 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				81AE05542CD0389700FE2323 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		81AFFEDB2CD7FAFD0062003B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				81AFFEED2CD7FCDA0062003B /* Entities */,
+				81AFFEF42CD8036D0062003B /* CoreDataManager.swift */,
+				81AFFEF62CD80B2B0062003B /* CoreDataError.swift */,
+				81AFFEDC2CD7FB140062003B /* BartenderBrain.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		81AFFEED2CD7FCDA0062003B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				81AFFEF22CD7FEAC0062003B /* GameRoundEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		81BCD8F42CD18565003EA3F4 /* ApiCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				81FCD4B62CD0BD0800BD04AA /* ApiCatalog.swift */,
+				81BCD8E52CD0E418003EA3F4 /* ApiRequest.swift */,
+				81BCD8EB2CD15A86003EA3F4 /* RandomConcktailApiCatalog.swift */,
+				81BCD8F02CD16A72003EA3F4 /* CocktailImageApiCatalog.swift */,
+			);
+			path = ApiCatalog;
+			sourceTree = "<group>";
+		};
+		81FCD4B52CD0BCE700BD04AA /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				81BCD8F42CD18565003EA3F4 /* ApiCatalog */,
+				81FCD4B82CD0C03B00BD04AA /* Utils */,
+				81FCD4BD2CD0C38F00BD04AA /* NetworkManager.swift */,
+				81BCD8F22CD16E84003EA3F4 /* NetworkProvier.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		81FCD4B82CD0C03B00BD04AA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				81FCD4B92CD0C05400BD04AA /* HTTPMethod.swift */,
+				81BCD8E72CD14047003EA3F4 /* BodyCoding.swift */,
+				81BCD8E92CD14B7E003EA3F4 /* NetworkError.swift */,
+				81BCD8EE2CD15B6D003EA3F4 /* CodableVoid.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E84D38D2AFF550AF42C34D6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F6B79EB781FED465BDB8A5A /* Pods-BartenderBrain.debug.xcconfig */,
+				7DABE23EE67F2463F7F95C6D /* Pods-BartenderBrain.release.xcconfig */,
+				C5DC3A247A69A1879035F664 /* Pods-BartenderBrain-BartenderBrainUITests.debug.xcconfig */,
+				A91800AB41B6E96D5A11BCE0 /* Pods-BartenderBrain-BartenderBrainUITests.release.xcconfig */,
+				D04C49569613458D9060F82E /* Pods-BartenderBrainTests.debug.xcconfig */,
+				A7B97BCC21691ED9D4B90744 /* Pods-BartenderBrainTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8173B3A42CDA455D00105FA8 /* BartenderBrainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8173B3AB2CDA455D00105FA8 /* Build configuration list for PBXNativeTarget "BartenderBrainTests" */;
+			buildPhases = (
+				8173B3A12CDA455D00105FA8 /* Sources */,
+				8173B3A22CDA455D00105FA8 /* Frameworks */,
+				8173B3A32CDA455D00105FA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8173B3AA2CDA455D00105FA8 /* PBXTargetDependency */,
+			);
+			name = BartenderBrainTests;
+			productName = BartenderBrainTests;
+			productReference = 8173B3A52CDA455D00105FA8 /* BartenderBrainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		81AE05422CD0389600FE2323 /* BartenderBrain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81AE056D2CD0389800FE2323 /* Build configuration list for PBXNativeTarget "BartenderBrain" */;
+			buildPhases = (
+				3E232E6D0395AAA81F44EE27 /* [CP] Check Pods Manifest.lock */,
+				81AE053F2CD0389600FE2323 /* Sources */,
+				81AE05402CD0389600FE2323 /* Frameworks */,
+				81AE05412CD0389600FE2323 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BartenderBrain;
+			productName = BartenderBrain;
+			productReference = 81AE05432CD0389600FE2323 /* BartenderBrain.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81AE053B2CD0389600FE2323 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					8173B3A42CDA455D00105FA8 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 81AE05422CD0389600FE2323;
+					};
+					81AE05422CD0389600FE2323 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = 81AE053E2CD0389600FE2323 /* Build configuration list for PBXProject "BartenderBrain" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81AE053A2CD0389600FE2323;
+			productRefGroup = 81AE05442CD0389600FE2323 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81AE05422CD0389600FE2323 /* BartenderBrain */,
+				8173B3A42CDA455D00105FA8 /* BartenderBrainTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8173B3A32CDA455D00105FA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81AE05412CD0389600FE2323 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81AE05532CD0389700FE2323 /* LaunchScreen.storyboard in Resources */,
+				8167FD202CD8F051005CCBFA /* Localizable.strings in Resources */,
+				81AE05502CD0389700FE2323 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E232E6D0395AAA81F44EE27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BartenderBrain-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8173B3A12CDA455D00105FA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8173B3B82CDA6D1100105FA8 /* CoreDataManagerTests.swift in Sources */,
+				8173B3B32CDA478700105FA8 /* GamePageViewModelTests.swift in Sources */,
+				8173B3B62CDA6CFB00105FA8 /* TopScoreManagerTests.swift in Sources */,
+				8173B3B12CDA46A100105FA8 /* HomePageViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81AE053F2CD0389600FE2323 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81BCD8EF2CD15B6D003EA3F4 /* CodableVoid.swift in Sources */,
+				810C0EA52CD28770009953DE /* BaseSwiftUIViewController.swift in Sources */,
+				810C0EAA2CD28DC4009953DE /* HomePageViewModel.swift in Sources */,
+				818E75C92CD695A700B34F1C /* FloatingButtonView.swift in Sources */,
+				81FCD4B72CD0BD0800BD04AA /* ApiCatalog.swift in Sources */,
+				818E75AB2CD4E33500B34F1C /* ChallengeMode.swift in Sources */,
+				818E75B42CD4EDA200B34F1C /* GamePageViewModel.swift in Sources */,
+				810C0EA12CD25810009953DE /* BaseViewModel.swift in Sources */,
+				810C0EA32CD25936009953DE /* BaseSwiftUIView.swift in Sources */,
+				818E75C02CD537B000B34F1C /* GameGridView.swift in Sources */,
+				810C0E9B2CD21F61009953DE /* Coordinator.swift in Sources */,
+				818E75C32CD58FB600B34F1C /* GameCard.swift in Sources */,
+				81BCD8F12CD16A72003EA3F4 /* CocktailImageApiCatalog.swift in Sources */,
+				818E75A92CD4DEA800B34F1C /* Double.swift in Sources */,
+				8167FD2C2CD9370A005CCBFA /* DailyNotification.swift in Sources */,
+				818E75A62CD4CFF800B34F1C /* View.swift in Sources */,
+				818E75B22CD4ED9400B34F1C /* GamePageView.swift in Sources */,
+				81FCD4BA2CD0C05400BD04AA /* HTTPMethod.swift in Sources */,
+				81DC66A82CD7E61D00C52D07 /* SubjectSender.swift in Sources */,
+				8167FD252CD8F5D4005CCBFA /* String.swift in Sources */,
+				810C0E972CD2175C009953DE /* HomeCoordinator.swift in Sources */,
+				81AFFEF72CD80B2B0062003B /* CoreDataError.swift in Sources */,
+				81BCD8EC2CD15A86003EA3F4 /* RandomConcktailApiCatalog.swift in Sources */,
+				8167FD2E2CD93EA1005CCBFA /* Date.swift in Sources */,
+				81AE05472CD0389600FE2323 /* AppDelegate.swift in Sources */,
+				818E75AF2CD4E46500B34F1C /* TopScoreManager.swift in Sources */,
+				81AFFEDE2CD7FB140062003B /* BartenderBrain.xcdatamodeld in Sources */,
+				81AFFEF52CD8036D0062003B /* CoreDataManager.swift in Sources */,
+				8167FD2A2CD936C0005CCBFA /* NotificationManager.swift in Sources */,
+				8169A4F12CD2C0C20081DBDD /* ScrollSideBasedView.swift in Sources */,
+				8167FD272CD907F7005CCBFA /* Color.swift in Sources */,
+				81BCD8F32CD16E84003EA3F4 /* NetworkProvier.swift in Sources */,
+				81AE05492CD0389600FE2323 /* SceneDelegate.swift in Sources */,
+				818E75C52CD6109B00B34F1C /* CocktailDetails.swift in Sources */,
+				810C0EA82CD28DB5009953DE /* HomePageView.swift in Sources */,
+				81BCD8E82CD14047003EA3F4 /* BodyCoding.swift in Sources */,
+				81FCD4BE2CD0C38F00BD04AA /* NetworkManager.swift in Sources */,
+				818E75C72CD6880E00B34F1C /* PopupView.swift in Sources */,
+				81BCD8E62CD0E418003EA3F4 /* ApiRequest.swift in Sources */,
+				810C0E9D2CD21FF1009953DE /* GameCoordinator.swift in Sources */,
+				815AD4C72CD79E85007E9543 /* LoaderManager.swift in Sources */,
+				818E75B92CD50ADC00B34F1C /* Int.swift in Sources */,
+				81BCD8EA2CD14B7E003EA3F4 /* NetworkError.swift in Sources */,
+				818E75CB2CD6B9F500B34F1C /* UIImage.swift in Sources */,
+				818E75BE2CD5279C00B34F1C /* GameCardView.swift in Sources */,
+				81AFFEF32CD7FEAC0062003B /* GameRoundEntity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8173B3AA2CDA455D00105FA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81AE05422CD0389600FE2323 /* BartenderBrain */;
+			targetProxy = 8173B3A92CDA455D00105FA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8167FD222CD8F051005CCBFA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8167FD212CD8F051005CCBFA /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		81AE05512CD0389700FE2323 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81AE05522CD0389700FE2323 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8173B3AC2CDA455D00105FA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = f.serraino.BartenderBrainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BartenderBrain.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BartenderBrain";
+			};
+			name = Debug;
+		};
+		8173B3AD2CDA455D00105FA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = f.serraino.BartenderBrainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BartenderBrain.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BartenderBrain";
+			};
+			name = Release;
+		};
+		81AE056B2CD0389800FE2323 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		81AE056C2CD0389800FE2323 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81AE056E2CD0389800FE2323 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F6B79EB781FED465BDB8A5A /* Pods-BartenderBrain.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BartenderBrain/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Bartender Brain";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = f.serraino.BartenderBrain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		81AE056F2CD0389800FE2323 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DABE23EE67F2463F7F95C6D /* Pods-BartenderBrain.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BartenderBrain/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Bartender Brain";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = f.serraino.BartenderBrain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8173B3AB2CDA455D00105FA8 /* Build configuration list for PBXNativeTarget "BartenderBrainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8173B3AC2CDA455D00105FA8 /* Debug */,
+				8173B3AD2CDA455D00105FA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81AE053E2CD0389600FE2323 /* Build configuration list for PBXProject "BartenderBrain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81AE056B2CD0389800FE2323 /* Debug */,
+				81AE056C2CD0389800FE2323 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81AE056D2CD0389800FE2323 /* Build configuration list for PBXNativeTarget "BartenderBrain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81AE056E2CD0389800FE2323 /* Debug */,
+				81AE056F2CD0389800FE2323 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		81AFFEDC2CD7FB140062003B /* BartenderBrain.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				81AFFEDD2CD7FB140062003B /* BartenderBrain.xcdatamodel */,
+			);
+			currentVersion = 81AFFEDD2CD7FB140062003B /* BartenderBrain.xcdatamodel */;
+			path = BartenderBrain.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 81AE053B2CD0389600FE2323 /* Project object */;
+}

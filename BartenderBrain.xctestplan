@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "AAC3B857-27DD-4F94-9309-ACF29037809E",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:BartenderBrain.xcodeproj",
+        "identifier" : "8173B3A42CDA455D00105FA8",
+        "name" : "BartenderBrainTests"
+      }
+    }
+  ],
+  "version" : 1
+}
