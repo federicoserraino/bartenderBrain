@@ -59,7 +59,7 @@ final class AppNotificationManager: NotificationManager {
         content.title = "DAILY_NOTIFICATION.TITLE".localized
         content.body = "DAILY_NOTIFICATION.MESSAGE".localized
         content.sound = .default
-        // Create weelky trigger notification
+        // Create weelky triggered notification
         var dateComponents = DateComponents()
         dateComponents.weekday = notification.weekDay
         dateComponents.hour = hour ?? notification.defaultHour

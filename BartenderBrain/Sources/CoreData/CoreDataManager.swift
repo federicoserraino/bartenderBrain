@@ -10,7 +10,7 @@ import CoreData
 
 protocol CoreDataManager: AnyObject {
     func fetchCocktailIds() throws -> [String]
-    func saveCocotailIds(_ ids: [String]) throws
+    func saveCocktailIds(_ ids: [String]) throws
 }
 
 class AppCoreDataManager: CoreDataManager {
@@ -39,7 +39,7 @@ class AppCoreDataManager: CoreDataManager {
         }
     }
     
-    func saveCocotailIds(_ ids: [String]) throws {
+    func saveCocktailIds(_ ids: [String]) throws {
         let context = persistentContainer.viewContext
         let fetchTimestampOrderedRequest = GameRoundEntity.fetchTimestampOrderedRequest()
         do {

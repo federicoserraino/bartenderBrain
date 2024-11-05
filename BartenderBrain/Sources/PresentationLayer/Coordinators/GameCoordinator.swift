@@ -128,7 +128,7 @@ final class GameCoordinator: Coordinator {
     
     private func storeCocktails() {
         // Try to save CocktailIds used during round - Error is not locking
-        try? coreDataManager.saveCocotailIds(cocktails.map{ $0.id })
+        try? coreDataManager.saveCocktailIds(cocktails.map{ $0.id })
     }
     
     private func updateDailyNotificationWithGameHour() {

@@ -95,7 +95,7 @@ class GamePageViewModel: BaseViewModel {
         case 2: // Add logos in top-left and bottom-right corners
             cardsDeck.insert(GameCard.makeLogoCard(), at: 0)
             cardsDeck.append(GameCard.makeLogoCard())
-        case 3: // Add logos center, in top-left and bottom-right corners
+        case 3: // Add logos in center, top-left and bottom-right corners
             cardsDeck.insert(GameCard.makeLogoCard(), at: cardsDeck.count/2)
             cardsDeck.insert(GameCard.makeLogoCard(), at: 0)
             cardsDeck.append(GameCard.makeLogoCard())
