@@ -11,15 +11,15 @@ import Combine
 
 final class HomePageViewModelTests: XCTestCase {
     
-    private let subbedHomePageViewModelDelegate: SubbedHomePageViewModelDelegate = .init()
+    private let stubbedHomePageViewModelDelegate: StubbedHomePageViewModelDelegate = .init()
     private let stubbedTopScoreSender: SubjectSender<Double> = .init()
     private var homePageVM: HomePageViewModel!
     private var cancellables: Set<AnyCancellable> = []
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        subbedHomePageViewModelDelegate.resetDelegate()
-        homePageVM = .init(delegate: subbedHomePageViewModelDelegate, topScoreSender: stubbedTopScoreSender)
+        stubbedHomePageViewModelDelegate.resetDelegate()
+        homePageVM = .init(delegate: stubbedHomePageViewModelDelegate, topScoreSender: stubbedTopScoreSender)
     }
     
     override func tearDown() {
@@ -30,7 +30,7 @@ final class HomePageViewModelTests: XCTestCase {
 
     func testDidTapStartButton()  {
         homePageVM.didTapStartButton()
-        let res = subbedHomePageViewModelDelegate.startGameCalled
+        let res = stubbedHomePageViewModelDelegate.startGameCalled
         XCTAssertTrue(res)
     }
     
@@ -52,7 +52,7 @@ final class HomePageViewModelTests: XCTestCase {
 
 }
 
-fileprivate class SubbedHomePageViewModelDelegate: HomePageViewModelDelegate {
+fileprivate class StubbedHomePageViewModelDelegate: HomePageViewModelDelegate {
     var startGameCalled: Bool = false
     
     func startGame(with cocktailPairsNum: Int) {

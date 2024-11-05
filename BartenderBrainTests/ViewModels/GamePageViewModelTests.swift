@@ -11,12 +11,12 @@ import Combine
 
 final class GamePageViewModelTests: XCTestCase {
     
-    private let subbedHomePageViewModelDelegate: SubbedGamePageViewModelDelegate = .init()
+    private let stubbedHomePageViewModelDelegate: StubbedGamePageViewModelDelegate = .init()
     private var cancellables: Set<AnyCancellable> = []
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        subbedHomePageViewModelDelegate.resetDelegate()
+        stubbedHomePageViewModelDelegate.resetDelegate()
     }
 
     override func tearDown() {
@@ -28,7 +28,7 @@ final class GamePageViewModelTests: XCTestCase {
         let cards: [CocktailDetails] = []
         let logoCardNum = 0
         let expectedCards = (cards.count * 2) + logoCardNum
-        let sut = GamePageViewModel(cockstails: cards, delegate: subbedHomePageViewModelDelegate)
+        let sut = GamePageViewModel(cockstails: cards, delegate: stubbedHomePageViewModelDelegate)
         let res = sut.cardsDeck.count
         XCTAssertEqual(res, expectedCards)
     }
@@ -37,7 +37,7 @@ final class GamePageViewModelTests: XCTestCase {
         let cards: [CocktailDetails] = Array(repeating: CocktailDetails(id: "id", image: UIImage()), count: 4)
         let logoCardNum = 1
         let expectedCards = (cards.count * 2) + logoCardNum
-        let sut = GamePageViewModel(cockstails: cards, delegate: subbedHomePageViewModelDelegate)
+        let sut = GamePageViewModel(cockstails: cards, delegate: stubbedHomePageViewModelDelegate)
         let res = sut.cardsDeck.count
         XCTAssertEqual(res, expectedCards)
     }
@@ -46,7 +46,7 @@ final class GamePageViewModelTests: XCTestCase {
         let cards: [CocktailDetails] = Array(repeating: CocktailDetails(id: "id", image: UIImage()), count: 5)
         let logoCardNum = 2
         let expectedCards = (cards.count * 2) + logoCardNum
-        let sut = GamePageViewModel(cockstails: cards, delegate: subbedHomePageViewModelDelegate)
+        let sut = GamePageViewModel(cockstails: cards, delegate: stubbedHomePageViewModelDelegate)
         let res = sut.cardsDeck.count
         XCTAssertEqual(res, expectedCards)
     }
@@ -55,7 +55,7 @@ final class GamePageViewModelTests: XCTestCase {
         let cards: [CocktailDetails] = Array(repeating: CocktailDetails(id: "id", image: UIImage()), count: 11)
         let logoCardNum = 3
         let expectedCards = (cards.count * 2) + logoCardNum
-        let sut = GamePageViewModel(cockstails: cards, delegate: subbedHomePageViewModelDelegate)
+        let sut = GamePageViewModel(cockstails: cards, delegate: stubbedHomePageViewModelDelegate)
         let res = sut.cardsDeck.count
         XCTAssertEqual(res, expectedCards)
     }
@@ -64,14 +64,14 @@ final class GamePageViewModelTests: XCTestCase {
         let cards: [CocktailDetails] = Array(repeating: CocktailDetails(id: "id", image: UIImage()), count: 13)
         let logoCardNum = 4
         let expectedCards = (cards.count * 2) + logoCardNum
-        let sut = GamePageViewModel(cockstails: cards, delegate: subbedHomePageViewModelDelegate)
+        let sut = GamePageViewModel(cockstails: cards, delegate: stubbedHomePageViewModelDelegate)
         let res = sut.cardsDeck.count
         XCTAssertEqual(res, expectedCards)
     }
     
     func testBeginGame() {
         let cards: [CocktailDetails] = [.init(id: "id", image: UIImage())]
-        let sut = GamePageViewModel(cockstails: cards, delegate: subbedHomePageViewModelDelegate)
+        let sut = GamePageViewModel(cockstails: cards, delegate: stubbedHomePageViewModelDelegate)
         let expectation = XCTestExpectation()
         
         sut.$timerValueDescription
@@ -87,9 +87,9 @@ final class GamePageViewModelTests: XCTestCase {
     }
     
     func testDidtapOnMenu() {
-        let sut = GamePageViewModel(cockstails: [], delegate: subbedHomePageViewModelDelegate)
+        let sut = GamePageViewModel(cockstails: [], delegate: stubbedHomePageViewModelDelegate)
         sut.didtapOnMenu()
-        let res = subbedHomePageViewModelDelegate.didTapOnMenuButtoneCalled
+        let res = stubbedHomePageViewModelDelegate.didTapOnMenuButtoneCalled
         XCTAssertTrue(res)
     }
     
@@ -98,12 +98,12 @@ final class GamePageViewModelTests: XCTestCase {
         let card: CocktailDetails = .init(id: "id", image: image)
         let gameCard1: GameCard = .init(id: "id1", image: image, isFlipped: true)
         let gameCard2: GameCard = .init(id: "id2", image: image, isFlipped: true)
-        let sut = GamePageViewModel(cockstails: [card], delegate: subbedHomePageViewModelDelegate)
+        let sut = GamePageViewModel(cockstails: [card], delegate: stubbedHomePageViewModelDelegate)
         sut.didTapOnCard(gameCard1)
         XCTAssertFalse(gameCard1.isFlipped)
         sut.didTapOnCard(gameCard2)
         XCTAssertFalse(gameCard2.isFlipped)
-        let gameDidEnd = subbedHomePageViewModelDelegate.gameDidEndCalled
+        let gameDidEnd = stubbedHomePageViewModelDelegate.gameDidEndCalled
         XCTAssertTrue(gameDidEnd)
     }
     
@@ -113,18 +113,18 @@ final class GamePageViewModelTests: XCTestCase {
         let card: CocktailDetails = .init(id: "id", image: image1)
         let gameCard1: GameCard = .init(id: "id1", image: image1, isFlipped: true)
         let gameCard2: GameCard = .init(id: "id2", image: image2, isFlipped: true)
-        let sut = GamePageViewModel(cockstails: [card], delegate: subbedHomePageViewModelDelegate)
+        let sut = GamePageViewModel(cockstails: [card], delegate: stubbedHomePageViewModelDelegate)
         sut.didTapOnCard(gameCard1)
         XCTAssertFalse(gameCard1.isFlipped)
         sut.didTapOnCard(gameCard2)
         XCTAssertFalse(gameCard2.isFlipped)
-        let gameDidEnd = subbedHomePageViewModelDelegate.gameDidEndCalled
+        let gameDidEnd = stubbedHomePageViewModelDelegate.gameDidEndCalled
         XCTAssertFalse(gameDidEnd)
     }
 
 }
 
-fileprivate class SubbedGamePageViewModelDelegate: GamePageViewModelDelegate {
+fileprivate class StubbedGamePageViewModelDelegate: GamePageViewModelDelegate {
     var didTapOnMenuButtoneCalled: Bool = false
     var gameDidEndCalled: Bool = false
     
