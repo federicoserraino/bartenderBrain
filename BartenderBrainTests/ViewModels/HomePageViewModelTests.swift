@@ -16,25 +16,25 @@ final class HomePageViewModelTests: XCTestCase {
     private var homePageVM: HomePageViewModel!
     private var cancellables: Set<AnyCancellable> = []
     
-    override func setUpWithError() throws {
+    override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         subbedHomePageViewModelDelegate.resetDelegate()
         homePageVM = .init(delegate: subbedHomePageViewModelDelegate, topScoreSender: stubbedTopScoreSender)
     }
-
-    override func tearDownWithError() throws {
+    
+    override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         homePageVM = nil
         cancellables.removeAll()
     }
 
-    func testDidTapStartButton() throws {
+    func testDidTapStartButton()  {
         homePageVM.didTapStartButton()
         let res = subbedHomePageViewModelDelegate.startGameCalled
         XCTAssertTrue(res)
     }
     
-    func testDidTapStartButton2() throws {
+    func testTopScoreSender() throws {
         let value: Double = 10
         let expectation = XCTestExpectation()
         
@@ -52,7 +52,7 @@ final class HomePageViewModelTests: XCTestCase {
 
 }
 
-class SubbedHomePageViewModelDelegate: HomePageViewModelDelegate {
+fileprivate class SubbedHomePageViewModelDelegate: HomePageViewModelDelegate {
     var startGameCalled: Bool = false
     
     func startGame(with cocktailPairsNum: Int) {
