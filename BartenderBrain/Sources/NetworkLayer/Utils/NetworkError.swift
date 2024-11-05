@@ -39,8 +39,8 @@ enum NetworkError: Error {
             "BR03"
         case .serviceError:
             "BR04"
-        case .unknownError:
-            "BR00"
+        case .unknownError(let code):
+            code
         }
     }
            
